@@ -29,7 +29,7 @@ SECRET_KEY = 'my_super^secret@key'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [aron-portfolio.herokuapp.com/]
+ALLOWED_HOSTS = [aron-portfolio.herokuapp.com]
 
 
 # Application definition
