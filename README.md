@@ -1,39 +1,71 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Aron's Personal Potfolio Webpage
 
-Welcome,
+Welcome to to Aron's Personal Portfolio Webpage! 
 
-This is the Code Institute student template for Codeanywhere. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+**placeholder**
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **March 3rd, 2023**
+## Table of content:
 
-## Codeanywhere Reminders
+- [Motivation](#motivation)
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+- [User Experience](#user-experience-ux)
+    - [User Stories](#user-stories)
+    - [Website Goals](#website-goals)
+    - [Requirements](#requirements)
+    - [Expectations](#expectations)
+    - [Design](#design)
+    - [Wireframes](#wireframes)
+        - [Desktop](#desktop)
+        - [Tablet](#tablet)
+        - [Mobile](#mobile)
+- [Website Structure](#website-structure)
+- [Technology, Frameworks and Programs used](#technology-frameworks-and-programs-used)
+    - [Languages](#languages)
+    - [Frameworks and programs used](#frameworks-and-programs-used)
+- [Features](#features)
+    - [Navigation bar](#navigation-bar)
+- [Testing](#testing)
+- [Testing user stories](#testing-user-stories)
+- [Deployment](#deployment)
+- [Credits](#credits)
 
-`python3 -m http.server`
+# Motivation
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+The motivation behind creating this webpage is to introduce and showcase myself as a web developer to prospective employers and anyone the Web Development sector interested in learning more about my past and current programming knowledge & achievements.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+# User Experience (UX)
 
-`http_server`
+## User Stories
+- User Story
+    - As a user, I want to be able to access a user-friendly main page showcasing an overview of the developer.
+    - As a user, I want to be able to navigate to the About page.
+    - As a user, I want to be able to navigate to the Skills page.
+    - As a user, I want to be able to navigate to the Projects page.
+    - As a user, I want to access the developer's past projects via provided links.
+    - As a user, I want to be able to have access to relevant Social Media and GitHub account.
+    - As a user, I want to be able to download the developer's CV.
+    - As a user, I want to be able to contact the developer via a form.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+## Website Goals
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+This webpage aims to serve as an informational web application to showcase personal information, Software Development Skills & Languages as well as previous projects which I have done to the user (such as prospective employers) interested in finding out about me and my coding history. It will also give the user the ability to connect with the site owner (myself) via a form, get access to relevant Social Media and GitHub accounts as well as to download a .PDF CV on request. The site will also be 
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## Requirements
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+- Landing Page.
+- About Page.
+- Skills Page
+- Projects showcase page.
+- Contact Page
+- Download CV.
+- Links to Social Media and GitHub
+- Login Access for Admin in where to change/modify/update/delete data in certain fields.
 
----
+## Expectations
 
-Happy coding!
+- I expect my website to be easily accessible.
+- I expect my website to attract future employers.
+- I expect to showcase my projects and skills.
+- I expect my website to be editable on the front-end via logging in to an admin account.
