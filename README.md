@@ -49,7 +49,7 @@ The motivation behind creating this webpage is to introduce and showcase myself 
 
 ## Website Goals
 
-This webpage aims to serve as an informational web application to showcase personal information, Software Development Skills & Languages as well as previous projects which I have done to the user (such as prospective employers) interested in finding out about me and my coding history. It will also give the user the ability to connect with the site owner (myself) via a form, get access to relevant Social Media and GitHub accounts as well as to download a .PDF CV on request. The site will also be 
+This webpage aims to serve as an informational web application to showcase personal information, Software Development Skills & Languages as well as a list of prior projects done to the user (such as prospective employers) interested in finding out about me and my coding history. It will also give the user the ability to connect with the site owner (myself) via a form, get access to relevant Social Media and GitHub accounts as well as the ability to download a .PDF CV on request. Finally, the site will aim to provide the administrative front-en access to create, update and/or delete data within certain fields. 
 
 
 ## Requirements
@@ -69,3 +69,5 @@ This webpage aims to serve as an informational web application to showcase perso
 - I expect my website to attract future employers.
 - I expect to showcase my projects and skills.
 - I expect my website to be editable on the front-end via logging in to an admin account.
+
+
