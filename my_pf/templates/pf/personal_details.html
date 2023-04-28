@@ -1,55 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <h1>MY PERSONAL PORTFOLIO</h1>
-    <h2>Personal Details</h2>
-<div class="col-6" id="details-info">
-
-    <p><strong>Full Name:</strong> </p>
-    <p><strong>Age:</strong></p>
-    <p><strong>Nationality:</strong></p>
-    <p><strong>Residency:</strong></p>
-    <p><strong>Languages:</strong></p>
-    <p><strong>Address:</strong></p>
-
-</div>
-
-<div class="col-6" id="details-info-two">
-    <!-- Display details on aboutme page -->
-    {% for datas in data %}
-    <p >{{ datas.full_name }}</p>
-    <p>{{ datas.age }}</p>
-    <p>{{ datas.nationality }}</p>
-    <p>{{ datas.residency }}</p>
-    <p>{{ datas.languages }}</p>
-    <p>{{ datas.address }}</p>
+<h2>testestestests</h2>
+<table>
+    {% for data in data %}
+        <tr>
+            <td>{{ data }}</td>
+        </tr>
     {% endfor %}
-</div>
-    
+</table>
 
-        <h1>Add Personal Details</h1>
-        <form method="post">
-          {% csrf_token %}
-          <label for="full_name">Full Name:</label>
-          <input type="text" name="full_name" id="full_name"><br><br>
-          <label for="age">Age:</label>
-          <input type="number" name="age" id="age"><br><br>
-          <label for="nationality">Nationality:</label>
-          <input type="text" name="nationality" id="nationality"><br><br>
-          <label for="residency">Residency:</label>
-          <input type="text" name="residency" id="residency"><br><br>
-          <label for="languages">Languages:</label>
-          <input type="text" name="languages" id="languages"><br><br>
-          <label for="address">Address:</label>
-          <input type="text" name="address" id="address"><br><br>
-          <input type="submit" value="Save">
-        </form>
-        
 </body>
+
 </html>

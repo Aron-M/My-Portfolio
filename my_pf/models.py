@@ -1,7 +1,8 @@
 from django.db import models
-from django.contrib.auth.models import User
 
 # Create your models here.
+
+
 class PersonalDetails(models.Model):
     full_name = models.CharField(max_length=200, unique=False)
     age = models.PositiveBigIntegerField
@@ -10,10 +11,9 @@ class PersonalDetails(models.Model):
     languages = models.CharField(max_length=200, unique=False)
     address = models.CharField(max_length=200, unique=False)
 
-    class Meta:
+    def __str__(self):
+            return self.full_name
 
-        def __str__(self):
-            return self.title
 
     
     
