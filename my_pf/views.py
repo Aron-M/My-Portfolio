@@ -1,4 +1,4 @@
-from django.shortcuts import render,  redirect, get_object_or_404
+from django.shortcuts import render
 from .models import PersonalDetails
 
 def get_my_portfolio(request):
@@ -6,10 +6,11 @@ def get_my_portfolio(request):
 
 def personal_details(request):
     data = PersonalDetails.objects.all()
+    print(data)
     context = {
         'data': data
         }
-    return render(request, 'my_pf/templates/pf/personal_details.html' , context)
+    return render(request, 'pf/personal_details.html', context)
 
 
 
