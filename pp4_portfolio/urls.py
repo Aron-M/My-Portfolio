@@ -16,10 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from my_pf import views
-
+from my_pf.views import get_my_portfolio, display_personal_details
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.get_my_portfolio, name='my_portfolio'),
-    path('personal_details/', views.personal_details, name='personal_details'),
+    path('', get_my_portfolio, name='my_portfolio'),
+    path('personal_details/', display_personal_details, name='personal_details')
 ]
