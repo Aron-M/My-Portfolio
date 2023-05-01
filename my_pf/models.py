@@ -15,5 +15,11 @@ class PersonalDetails(models.Model):
             return self.full_name
 
 
+class Skills(models.Model):
+    languages = models.CharField(max_length=200, unique=False)
+    frameworks = models.CharField(max_length=200, unique=False)
+    version_control = models.CharField(max_length=200, unique=False) 
+
+
     
     

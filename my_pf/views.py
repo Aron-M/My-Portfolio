@@ -12,7 +12,8 @@ def display_personal_details(request):
         }
     return render(request, 'pf/personal_details.html', context)
 
-
+def display_skills_page(request):
+    return render(request, 'pf/skills.html')
 
 
 
