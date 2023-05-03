@@ -1,19 +1,17 @@
 from django.shortcuts import render
 from .models import PersonalDetails
 
-def get_my_portfolio(request):
-    return render(request, 'pf/home_page.html')
 
-def display_personal_details(request):
+def display_skills_page(request):
+    return render(request, 'pages/skills.html')
+
+def display_all(request):
     data = PersonalDetails.objects.all()
     print(data)
     context = {
         'data': data
         }
-    return render(request, 'pf/personal_details.html', context)
-
-def display_skills_page(request):
-    return render(request, 'pf/skills.html')
-
-
-
+    if request.path == "/":
+        return render(request, 'pages/home_page.html', context )
+    else:
+        return render(request, 'pages/personal_details.html', context)
