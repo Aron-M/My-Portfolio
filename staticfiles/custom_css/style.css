@@ -2,3 +2,8 @@
 #main-header {
     color: red;
 }
+
+#subheading {
+    display: flex;
+    justify-content: center;
+}
