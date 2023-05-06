@@ -23,4 +23,4 @@ def display_skills_model(request):
     context = {
         'data': data
         }
-    return render(request, 'pages/skills.html', context )
+    return render(request, 'pages/skills.html', context)

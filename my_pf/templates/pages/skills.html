@@ -7,6 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hi there</h1>
+    <h1>SKILLS</h1>
+
+{% for detail in data %}
+    <div> {{ detail.languages }} </div>
+    <div> {{ detail.frameworks }} </div>
+    <div> {{ detail.databases }} </div>
+    <div> {{ detail.version_control }} </div>
+{% endfor %}
 </body>
 </html>

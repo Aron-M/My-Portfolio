@@ -16,10 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from my_pf.views import display_skills_page, display_all
+from my_pf.views import display_skills_page, display_all, display_skills_model
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', display_all, name='my_portfolio'),
     path('about-me/', display_all, name='personal_details'),
-    path('skills/', display_skills_page, name='skills_page')
+    path('skills/',display_skills_model, name='skills_page')
 ]
