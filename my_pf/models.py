@@ -22,7 +22,8 @@ class Skills(models.Model):
     databases = models.CharField(max_length=200, unique=False)
 
     def __str__(self):
-            return self.full_name
+            return self.languages
+
 
     
     
