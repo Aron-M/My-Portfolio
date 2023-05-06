@@ -1,9 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>
+<h1 id="main-header">
     Welcome to my Portfolio Page
 </h1>
+
+<div>
+My name is Aron and this is my personal portfolio page
+</div>
 
 {% for detail in data %}
     <div> {{ detail.full_name }} </div>
