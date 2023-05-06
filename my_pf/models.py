@@ -18,8 +18,11 @@ class PersonalDetails(models.Model):
 class Skills(models.Model):
     languages = models.CharField(max_length=200, unique=False)
     frameworks = models.CharField(max_length=200, unique=False)
-    version_control = models.CharField(max_length=200, unique=False) 
+    version_control = models.CharField(max_length=200, unique=False)
+    databases = models.CharField(max_length=200, unique=False)
 
+    def __str__(self):
+            return self.full_name
 
     
     
