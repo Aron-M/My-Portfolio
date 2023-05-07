@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from my_pf.views import display_skills_page, display_all, display_skills_model
+from my_pf.views import display_skills_page, display_all, skills
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -24,6 +24,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', display_all, name='my_portfolio'),
     path('about-me/', display_all, name='personal_details'),
-    path('skills/',display_skills_model, name='skills_page')
+    path('skills/', skills, name='skills')
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

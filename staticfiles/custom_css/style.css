@@ -14,3 +14,32 @@
     display: flex;
     justify-content: center;
 }
+
+  .language-container h3 {
+    color: #333;
+  }
+  
+  .framework-container h3 {
+    color: #555;
+  }
+
+  /* .language-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    
+  } */
+.framework-container
+.language-container {
+    margin-right: 0;
+}
+
+.language-container img,
+.framework-container img {
+  flex: 0 0 auto; /* Set flex-grow, flex-shrink, and flex-basis to auto */
+  margin-right: 0; /* Add margin between images */
+  max-width: 100px; /* Set the maximum width of the images */
+  margin-bottom: 20px;
+  box-sizing: content-box;
+}
+  

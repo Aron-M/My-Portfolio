@@ -1,19 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+{% extends 'base.html' %}
+
+{% block content %}
 <body>
-    <h1>SKILLS</h1>
+    <!-- <h1>SKILLS</h1>
 
 {% for detail in data %}
     <div> {{ detail.languages }} </div>
     <div> {{ detail.frameworks }} </div>
     <div> {{ detail.databases }} </div>
     <div> {{ detail.version_control }} </div>
+{% endfor %} -->
+
+<h2>Languages:</h2>
+{% for language in languages %}
+  <div class=" language-container">
+    <img src="{{ language.image.url }}" alt="{{ language.name }}">
+  </div>
 {% endfor %}
+
+<h2>Frameworks:</h2>
+{% for framework in frameworks %}
+  <div class="framework.container">
+    <img src="{{ framework.image.url }}" alt="{{ framework.name }}">
+  </div>
+{% endfor %}
+
 </body>
+{% endblock %}
 </html>
