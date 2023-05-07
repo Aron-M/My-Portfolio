@@ -26,10 +26,13 @@ class Skills(models.Model):
     def __str__(self):
             return self.languages
 
-
 class Language(models.Model):
     name = models.CharField(max_length=100)
-    image = models.ImageField(upload_to='languages/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
+    image = models.ImageField(upload_to='skills/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
+    image = models.ImageField(upload_to='skills/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
+    image = models.ImageField(upload_to='skills/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
+    image = models.ImageField(upload_to='skills/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
+    image = models.ImageField(upload_to='skills/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
 
     def __str__(self):
         return self.name
@@ -37,7 +40,7 @@ class Language(models.Model):
 
 class Framework(models.Model):
     name = models.CharField(max_length=100)
-    image = models.ImageField(upload_to='frameworks/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
+    image = models.ImageField(upload_to='skills/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
 
     def __str__(self):
         return self.name

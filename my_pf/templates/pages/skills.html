@@ -13,16 +13,12 @@
 
 <h2>Languages:</h2>
 {% for language in languages %}
-  <div class=" language-container">
-    <img src="{{ language.image.url }}" alt="{{ language.name }}">
-  </div>
+    <img class="languages_images" src="{{ language.image.url }}" alt="{{ language.name }}">
 {% endfor %}
 
 <h2>Frameworks:</h2>
 {% for framework in frameworks %}
-  <div class="framework.container">
-    <img src="{{ framework.image.url }}" alt="{{ framework.name }}">
-  </div>
+    <img class="frameworks_images" src="{{ framework.image.url }}" alt="{{ framework.name }}">
 {% endfor %}
 
 </body>

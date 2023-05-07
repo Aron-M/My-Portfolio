@@ -1,11 +1,10 @@
-
 #main-header {
     display: flex;
     justify-content: center;
     color: red;
 }
 
-#hero-span{
+#hero-span {
     display: flex;
     justify-content: center;
 }
@@ -15,31 +14,28 @@
     justify-content: center;
 }
 
-  .language-container h3 {
+.language-container h3 {
     color: #333;
-  }
-  
-  .framework-container h3 {
-    color: #555;
-  }
+}
 
-  /* .language-container {
+.framework-container h3 {
+    color: #555;
+}
+
+
+img {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    
-  } */
-.framework-container
-.language-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:flex-start;
+    flex: 0 0 auto;
+    margin: 0;
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+.languages_images {
+    display:flex;
+    flex-direction: column;
     margin-right: 0;
 }
-
-.language-container img,
-.framework-container img {
-  flex: 0 0 auto; /* Set flex-grow, flex-shrink, and flex-basis to auto */
-  margin-right: 0; /* Add margin between images */
-  max-width: 100px; /* Set the maximum width of the images */
-  margin-bottom: 20px;
-  box-sizing: content-box;
-}
-  
