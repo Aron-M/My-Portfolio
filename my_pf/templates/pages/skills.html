@@ -1,26 +1,46 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
 <body>
-    <!-- <h1>SKILLS</h1>
 
-{% for detail in data %}
-    <div> {{ detail.languages }} </div>
-    <div> {{ detail.frameworks }} </div>
-    <div> {{ detail.databases }} </div>
-    <div> {{ detail.version_control }} </div>
-{% endfor %} -->
+    {% for language in languages %}
+    <div id="linebreak">
+    </div>
 
-<h2>Languages:</h2>
-{% for language in languages %}
-    <img class="languages_images" src="{{ language.image.url }}" alt="{{ language.name }}">
-{% endfor %}
+    <div class="image-container">
+        <li id="languages_img">
+            <ul>
+                <h2>Languages:</h2>
+            </ul>
+            <ul class="lang_img"><img class="languages_images modal-image" id="modalImage" src="{{ language.image1.url }}"
+                    alt="{{ language.name }}"  onclick="openModal(this)"></ul>
+            <ul class="lang_img"><img class="languages_images modal-image" id="modalImage" src="{{ language.image2.url }}"
+                    alt="{{ language.name }}"  onclick="openModal(this)"></ul>
+            <ul class="lang_img"><img class="languages_images modal-image" id="modalImage" src="{{ language.image3.url }}"
+                    alt="{{ language.name }}"  onclick="openModal(this)"></ul>
+            <ul class="lang_img"><img class="languages_images modal-image" id="python_image"
+                    src="{{ language.image4.url }}" alt="{{ language.name }}"" onclick="openModal(this)"></ul>
+        </li>
+        {% endfor %}
 
-<h2>Frameworks:</h2>
-{% for framework in frameworks %}
-    <img class="frameworks_images" src="{{ framework.image.url }}" alt="{{ framework.name }}">
-{% endfor %}
 
+        {% for framework in frameworks %}
+        <li id="frameworks_img">
+            <ul>
+                <h2>Frameworks:</h2>
+            </ul>
+            <ul><img class="frameworks_images" src="{{ framework.image.url }}" alt="{{ framework.name }}"></ul>
+            <ul></ul>
+            <ul></ul>
+        </li>
+
+        {% endfor %}
+
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" src="{{ language.image1.url }}" alt="Modal Image">
+            <div id="caption"></div>
+          </div>
 </body>
 {% endblock %}
-</html>

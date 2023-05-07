@@ -30,3 +30,5 @@ def skills(request):
     languages = Language.objects.all()
     frameworks = Framework.objects.all()
     return render(request, '/workspace/Project-4-Portfolio/my_pf/templates/pages/skills.html', {'languages': languages, 'frameworks': frameworks})
+
+

@@ -14,7 +14,7 @@ class PersonalDetails(models.Model):
     address = models.CharField(max_length=200, unique=False)
 
     def __str__(self):
-            return self.full_name
+        return self.full_name
 
 
 class Skills(models.Model):
@@ -24,15 +24,21 @@ class Skills(models.Model):
     databases = models.CharField(max_length=200, unique=False)
 
     def __str__(self):
-            return self.languages
+        return self.languages
+
 
 class Language(models.Model):
     name = models.CharField(max_length=100)
-    image = models.ImageField(upload_to='skills/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
-    image = models.ImageField(upload_to='skills/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
-    image = models.ImageField(upload_to='skills/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
-    image = models.ImageField(upload_to='skills/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
-    image = models.ImageField(upload_to='skills/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
+    image1 = models.ImageField(
+        upload_to='skills/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
+    image2 = models.ImageField(
+        upload_to='skills/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
+    image3 = models.ImageField(
+        upload_to='skills/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
+    image4 = models.ImageField(
+        upload_to='skills/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
+    image5 = models.ImageField(
+        upload_to='skills/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
 
     def __str__(self):
         return self.name
@@ -40,11 +46,8 @@ class Language(models.Model):
 
 class Framework(models.Model):
     name = models.CharField(max_length=100)
-    image = models.ImageField(upload_to='skills/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
+    image = models.ImageField(
+        upload_to='skills/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
 
     def __str__(self):
         return self.name
-
-
-    
-    
