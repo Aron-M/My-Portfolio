@@ -1,6 +1,13 @@
 
 #main-header {
+    display: flex;
+    justify-content: center;
     color: red;
+}
+
+#hero-span{
+    display: flex;
+    justify-content: center;
 }
 
 #subheading {
