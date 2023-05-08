@@ -91,21 +91,23 @@ body {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent dark background */
-    animation: fade-in 0.8s ease-in;
+    animation: fade-in 1.8s ease-in; /* Fade-in animation */
   }
   
   .modal-content {
     background-color: white; /* White background for modal content */
-    margin: auto;
-    display: block;
-    max-width: 80%;
-    max-height: 80%;
-    border-radius: 8px; /* Rounded corners */
-    padding: 20px;
-    animation: scale-in 0.3s ease-in;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px;
+  opacity: 0; /* Start with opacity 0 */
+  animation: fade-in-from-center 0.3s ease-in forwards; /* Fade-in from center animation */
   }
   
-  /* Close Button Style */
   .close {
     color: white;
     position: absolute;
@@ -122,7 +124,8 @@ body {
     text-decoration: none;
     cursor: pointer;
   }
-
+  
+  /* Animation Styles */
   @keyframes fade-in {
     from {
       opacity: 0;
@@ -132,11 +135,13 @@ body {
     }
   }
   
-  @keyframes scale-in {
+  @keyframes fade-in-from-center {
     from {
-      transform: scale(0);
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.5);
     }
     to {
-      transform: scale(1);
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
     }
   }
