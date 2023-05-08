@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import PersonalDetails, Language, Framework
+from .models import PersonalDetails, Language, Framework, Library, VersionControl
 
 
 def display_skills_page(request):
@@ -29,6 +29,8 @@ def display_all(request):
 def skills(request):
     languages = Language.objects.all()
     frameworks = Framework.objects.all()
-    return render(request, '/workspace/Project-4-Portfolio/my_pf/templates/pages/skills.html', {'languages': languages, 'frameworks': frameworks})
+    libraries = Library.objects.all()
+    versioncontrol = VersionControl.objects.all()
+    return render(request, '/workspace/Project-4-Portfolio/my_pf/templates/pages/skills.html', {'languages': languages, 'frameworks': frameworks, 'libraries': libraries, 'versioncontrol': versioncontrol})
 
 
