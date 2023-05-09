@@ -69,6 +69,10 @@ class Library(models.Model):
         upload_to='libraries/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
     image3 = models.ImageField(
         upload_to='libraries/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
+    image4 = models.ImageField(
+        upload_to='libraries/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
+    image5 = models.ImageField(
+        upload_to='libraries/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
 
     def __str__(self):
         return self.name
@@ -80,6 +84,10 @@ class VersionControl(models.Model):
     image2 = models.ImageField(
         upload_to='version-control/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
     image3 = models.ImageField(
+        upload_to='version-control/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
+    image4 = models.ImageField(
+        upload_to='version-control/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
+    image5 = models.ImageField(
         upload_to='version-control/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
 
     def __str__(self):

@@ -70,26 +70,40 @@ h1 {
   margin-right: 40px;
   margin-top: 20px;
   padding: 20px;
+  padding-left: 45px;
+  padding-right: 45px;
   width:100px;
   object-fit:fill;
   border: 2px solid rgb(250, 241, 241);
   border-radius: 12px;
 }
 
-.model-container {
-  transform: scale(0.8);
+.frame_img,
+.lib_img,
+.vc_img {
+padding-inline-start: 0;
+padding-right: 60px;
+padding-left: 30px;
 }
 
-.lang_img,
-.vc_img,
-.lib_img,
-.frame_img{
-  max-width: 100px;
+.model-container {
+  transform: scale(0.65);
+  transform-origin: left;
+  position: relative;
+  left: 20px; /* Adjust the value as needed */
+}
+
+
+.vc_images,
+.library_images,
+.frameworks_images{
+width: 120px;
 }
 
 #python_image {
-  height: 125px;
-  width: 100px;
+  height: 115px;
+  width: 80px;
+  padding-left: 0;
 }
 
 body {

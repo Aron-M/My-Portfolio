@@ -4,87 +4,99 @@
 
 <body>
 
-    {% for language in languages %}
-    <div id="linebreak">
-    </div>
-
-    <div class="model-container">
-        <li id="languages_img">
-            <ul class="model-title">
-                <h1>Languages:</h1>
-            </ul>
-            <ul class="lang_img"><img class="languages_images modal-image" id="modalImage"
-                    src="{{ language.image1.url }}" onclick="openModal(this)"></ul>
-            <ul class="lang_img"><img class="languages_images modal-image" id="modalImage"
-                    src="{{ language.image2.url }}" onclick="openModal(this)"></ul>
-            <ul class="lang_img"><img class="languages_images modal-image" id="modalImage"
-                    src="{{ language.image3.url }}" onclick="openModal(this)"></ul>
-            <ul class="lang_img"><img class="languages_images modal-image" id="python_image"
-                    src="{{ language.image4.url }}" onclick=" openModal(this)"></ul>
-        </li>
-        {% endfor %}
-
-
-        {% for framework in frameworks %}
-        <li id="frameworks_img">
-            <ul class="model-title">
-                <h1>Frameworks:</h1>
-            </ul>
-            <ul class="frame_img"><img class="frameworks_images" src="{{ framework.image1.url }}"
-                    alt="{{ framework.name }}"></ul>
-            <ul class="frame_img"><img class="frameworks_images" src="{{ framework.image2.url }}"
-                    alt="{{ framework.name }}"></ul>
-            <ul class="frame_img"><img class="frameworks_images" src="{{ framework.image3.url }}"
-                    alt="{{ framework.name }}"></ul>
-            <ul class="frame_img"><img class="frameworks_images" src="{{ framework.image4.url }}"
-                    alt="{{ framework.name }}"></ul>
-            <ul class="frame_img"><img class="frameworks_images" src="{{ framework.image5.url }}"
-                    alt="{{ framework.name }}"></ul>
-        </li>
-        {% endfor %}
-
-
-        {% for versioncontrol in versioncontrol %}
-        <li id="versioncontrol_img">
-            <ul class="model-title">
-                <h1>Version Control:</h1>
-            </ul>
-            <ul class="vc_img"><img class="vc_images" src="{{ versioncontrol.image1.url }}"
-                    alt="{{ versioncontrol.name }}">
-            </ul>
-            <ul class="vc_img"><img class="vc_images" src="{{ versioncontrol.image2.url }}"
-                    alt="{{ versioncontrol.name }}">
-            </ul>
-            <ul class="vc_img"><img class="vc_images" src="{{ versioncontrol.image3.url }}"
-                    alt="{{ versioncontrol.name }}">
-            </ul>
-        </li>
-
-        {% endfor %}
-
-
-        {% for libraries in libraries %}
-        <li id="library_img">
-            <ul class="model-title">
-                <h1>Libraries:</h1>
-            </ul>
-            <ul class="lib_img"><img class="library_images" src="{{ libraries.image1.url }}" alt="{{ libraries.name }}">
-            </ul>
-            <ul class="lib_img"><img class="library_images" src="{{ libraries.image2.url }}" alt="{{ libraries.name }}">
-            </ul>
-            <ul class="lib_img"><img class="library_images" src="{{ libraries.image3.url }}" alt="{{ libraries.name }}">
-            </ul>
-        </li>
-
-        {% endfor %}
-
         {% for language in languages %}
-        <div id="myModal" class="modal">
-            <ul><img src="{{ language.image2.url }}" class="modal-content"></ul>
-            <ul><span class="close">&times;</span></ul>
-            <div id="caption"></div>
+        <div id="linebreak">
         </div>
-        {% endfor %}
-    </div>
+        <div class="container-div">
+                <div class="model-container">
+                        <li id="languages_img">
+                                <ul class="model-title">
+                                        <h1>Languages:</h1>
+                                </ul>
+                                <ul class="lang_img"><img class="languages_images modal-image" id="modalImage"
+                                                src="{{ language.image1.url }}" onclick="openModal(this)"></ul>
+                                <ul class="lang_img"><img class="languages_images modal-image" id="modalImage"
+                                                src="{{ language.image2.url }}" onclick="openModal(this)"></ul>
+                                <ul class="lang_img"><img class="languages_images modal-image" id="modalImage"
+                                                src="{{ language.image3.url }}" onclick="openModal(this)"></ul>
+                                <ul class="lang_img"><img class="languages_images modal-image" id="python_image"
+                                                src="{{ language.image4.url }}" onclick=" openModal(this)"></ul>
+                                <ul class="lang_img"><img class="languages_images modal-image" id="python_image"
+                                                src="{{ language.image5.url }}" onclick=" openModal(this)"></ul>
+                        </li>
+                        {% endfor %}
+
+
+                        {% for framework in frameworks %}
+                        <li id="frameworks_img">
+                                <ul class="model-title">
+                                        <h1>Frameworks:</h1>
+                                </ul>
+                                <ul class="frame_img"><img class="frameworks_images" src="{{ framework.image1.url }}"
+                                                alt="{{ framework.name }}"></ul>
+                                <ul class="frame_img"><img class="frameworks_images" src="{{ framework.image2.url }}"
+                                                alt="{{ framework.name }}"></ul>
+                                <ul class="frame_img"><img class="frameworks_images" src="{{ framework.image3.url }}"
+                                                alt="{{ framework.name }}"></ul>
+                                <ul class="frame_img"><img class="frameworks_images" src="{{ framework.image4.url }}"
+                                                alt="{{ framework.name }}"></ul>
+                                <ul class="frame_img"><img class="frameworks_images" src="{{ framework.image5.url }}"
+                                                alt="{{ framework.name }}"></ul>
+                        </li>
+                        {% endfor %}
+
+
+                        {% for versioncontrol in versioncontrol %}
+                        <li id="versioncontrol_img">
+                                <ul class="model-title">
+                                        <h1>Version Control:</h1>
+                                </ul>
+                                <ul class="vc_img"><img class="vc_images" src="{{ versioncontrol.image1.url }}"
+                                                alt="{{ versioncontrol.name }}">
+                                </ul>
+                                <ul class="vc_img"><img class="vc_images" src="{{ versioncontrol.image2.url }}"
+                                                alt="{{ versioncontrol.name }}">
+                                </ul>
+                                <ul class="vc_img"><img class="vc_images" src="{{ versioncontrol.image3.url }}"
+                                                alt="{{ versioncontrol.name }}">
+                                </ul>
+                                <ul class="vc_img"><img class="vc_images" src="{{ versioncontrol.image3.url }}"
+                                                alt="{{ versioncontrol.name }}">
+                                </ul>
+                                <ul class="vc_img"><img class="vc_images" src="{{ versioncontrol.image3.url }}"
+                                                alt="{{ versioncontrol.name }}">
+                                </ul>
+                        </li>
+
+                        {% endfor %}
+
+
+                        {% for libraries in libraries %}
+                        <li id="library_img">
+                                <ul class="model-title">
+                                        <h1>Libraries:</h1>
+                                </ul>
+                                <ul class="lib_img"><img class="library_images" src="{{ libraries.image1.url }}"
+                                                alt="{{ libraries.name }}">
+                                </ul>
+                                <ul class="lib_img"><img class="library_images" src="{{ libraries.image2.url }}"
+                                                alt="{{ libraries.name }}">
+                                </ul>
+                                <ul class="lib_img"><img class="library_images" src="{{ libraries.image3.url }}"
+                                                alt="{{ libraries.name }}">
+                                </ul>
+                        </li>
+
+                        {% endfor %}
+
+                        {% for language in languages %}
+                        <div id="myModal" class="modal">
+                                <ul><img src="{{ language.image2.url }}" class="modal-content"></ul>
+                                <ul><span class="close">&times;</span></ul>
+                                <div id="caption"></div>
+                        </div>
+                        {% endfor %}
+                </div>
+        </div>
 </body>
 {% endblock %}
