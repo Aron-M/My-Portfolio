@@ -4,4 +4,40 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="Description" content="Enter your description here"/>
 <link rel="stylesheet" href="{% static 'pp4_portfolio/custom_css/style.css' %}">
+<script>// JavaScript code
+  document.addEventListener('DOMContentLoaded', function() {
+    var modalBox = document.getElementById('modal-box');
+  
+    // Click event listener for images
+    var modalImages = document.getElementsByClassName('modal-image');
+    for (var i = 0; i < modalImages.length; i++) {
+      modalImages[i].addEventListener('click', function() {
+        // Retrieve the data associated with the clicked image
+        var imageData = this.src;
+  
+        // Generate the modal content based on the retrieved data
+        var modalContent = '<div class="modal">' +
+                           '  <span class="close">&times;</span>' +
+                           '  <img class="modal-content" src="' + imageData + '">' +
+                           '</div>';
+  
+        // Insert the modal content into the modal-box element
+        modalBox.innerHTML = modalContent;
+  
+        // Add the fade-in effect to the modal
+        setTimeout(function() {
+          var modal = document.getElementsByClassName('modal')[0];
+          modal.style.opacity = 1;
+        }, 10);
+  
+        // Close button event listener
+        var closeButton = document.getElementsByClassName('close')[0];
+        closeButton.addEventListener('click', function() {
+          modalBox.innerHTML = ''; // Remove the modal content
+        });
+      });
+    }
+  });
+  
+  </script>
 <title> Title </title>
