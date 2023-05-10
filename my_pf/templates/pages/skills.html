@@ -21,8 +21,7 @@
                                                 src="{{ language.image3.url }}" onclick="openModal(this)"></ul>
                                 <ul class="lang_img"><img class="languages_images modal-image" id="python_image"
                                                 src="{{ language.image4.url }}" onclick=" openModal(this)"></ul>
-                                <ul class="lang_img"><img class="languages_images modal-image" id="python_image"
-                                                src="{{ language.image5.url }}" onclick=" openModal(this)"></ul>
+
                         </li>
                         {% endfor %}
 
@@ -40,9 +39,30 @@
                                                 alt="{{ framework.name }}"></ul>
                                 <ul class="frame_img"><img class="frameworks_images" src="{{ framework.image4.url }}"
                                                 alt="{{ framework.name }}"></ul>
-                                <ul class="frame_img"><img class="frameworks_images" src="{{ framework.image5.url }}"
-                                                alt="{{ framework.name }}"></ul>
+
                         </li>
+                        {% endfor %}
+
+                        {% for database in database %}
+                        <li id="databases_img">
+                                <ul class="model-title">
+                                        <h1>Databases:</h1>
+                                </ul>
+                                <ul class="db_img"><img class="database_images" src="{{ database.image1.url }}"
+                                                alt="{{ database.name }}">
+                                </ul>
+                                <ul class="db_img"><img class="database_images" src="{{ database.image2.url }}"
+                                                alt="{{ database.name }}">
+                                </ul>
+                                <ul class="db_img"><img class="database_images" src="{{ database.image3.url }}"
+                                                alt="{{ database.name }}">
+                                </ul>
+                                <ul class="db_img"><img class="database_images" src="{{ database.image4.url }}"
+                                                alt="{{ database.name }}">
+                                </ul>
+
+                        </li>
+
                         {% endfor %}
 
 
@@ -60,12 +80,10 @@
                                 <ul class="vc_img"><img class="vc_images" src="{{ versioncontrol.image3.url }}"
                                                 alt="{{ versioncontrol.name }}">
                                 </ul>
-                                <ul class="vc_img"><img class="vc_images" src="{{ versioncontrol.image3.url }}"
+                                <ul class="vc_img"><img class="vc_images" src="{{ versioncontrol.image4.url }}"
                                                 alt="{{ versioncontrol.name }}">
                                 </ul>
-                                <ul class="vc_img"><img class="vc_images" src="{{ versioncontrol.image3.url }}"
-                                                alt="{{ versioncontrol.name }}">
-                                </ul>
+
                         </li>
 
                         {% endfor %}
@@ -85,18 +103,17 @@
                                 <ul class="lib_img"><img class="library_images" src="{{ libraries.image3.url }}"
                                                 alt="{{ libraries.name }}">
                                 </ul>
+                                <ul class="lib_img"><img class="library_images" src="{{ libraries.image4.url }}"
+                                                alt="{{ libraries.name }}">
+                                </ul>
+
                         </li>
-
-                        {% endfor %}
-
-                        {% for language in languages %}
-                        <div id="myModal" class="modal">
-                                <ul><img src="{{ language.image2.url }}" class="modal-content"></ul>
-                                <ul><span class="close">&times;</span></ul>
-                                <div id="caption"></div>
-                        </div>
                         {% endfor %}
                 </div>
-        </div>
+                <div id="modal-div">
+                        <div id="modal-box">
+
+                        </div>
+                </div>
 </body>
 {% endblock %}

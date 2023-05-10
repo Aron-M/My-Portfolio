@@ -92,3 +92,19 @@ class VersionControl(models.Model):
 
     def __str__(self):
         return self.name
+
+class Database(models.Model):
+    name = models.CharField(max_length=100)
+    image1 = models.ImageField(
+        upload_to='database/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
+    image2 = models.ImageField(
+        upload_to='database/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
+    image3 = models.ImageField(
+        upload_to='database/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
+    image4 = models.ImageField(
+        upload_to='database/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
+    image5 = models.ImageField(
+        upload_to='database/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
+
+    def __str__(self):
+        return self.name

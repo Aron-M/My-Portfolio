@@ -4,22 +4,4 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="Description" content="Enter your description here"/>
 <link rel="stylesheet" href="{% static 'pp4_portfolio/custom_css/style.css' %}">
-<script>
-    function openModal(imageElement) {
-      let modal = document.getElementById("myModal");
-      let modalImg = document.getElementById("modalImage");
-      let captionText = document.getElementById("caption");
-  
-      modal.style.display = "block";
-      modal.classList.add("show");
-      modalImg.src = imageElement.src;
-      captionText.innerHTML = imageElement.alt;
-  
-      let span = document.getElementsByClassName("close")[0];
-      span.onclick = function() {
-        modal.style.display = "none";
-        modal.classList.remove("show");
-      }
-    }
-  </script>
 <title> Title </title>
