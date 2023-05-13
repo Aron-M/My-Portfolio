@@ -1,18 +1,3 @@
-#main-header {
-  display: flex;
-  justify-content: center;
-  color: red;
-}
-
-#hero-span {
-  display: flex;
-  justify-content: center;
-}
-
-#subheading {
-  display: flex;
-  justify-content: center;
-}
 
 .heading {
   display: flex;
@@ -111,13 +96,6 @@ h1 {
 }
 
 
-.vc_images,
-.library_images,
-.frameworks_images,
-.database_images,
-.languages_images {
-  width: 120px;
-}
 
 .languages_images {
   width: 6.5rem;
