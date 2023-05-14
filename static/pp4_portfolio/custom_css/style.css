@@ -165,3 +165,27 @@ body {
   margin-top: 5rem;
 }
 
+h2,
+p {
+color: #f7f6f6;
+}
+
+.img-fluid {
+  max-width: 14rem;
+  height: auto;
+}
+
+.sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  background-color: #292c31;
+}
+
+a,
+.nav-link {
+  color:#f7f6f6;
+}

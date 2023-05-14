@@ -32,14 +32,14 @@
                                 <ul class="model-title">
                                         <h1>Frameworks:</h1>
                                 </ul>
-                                <ul class="frame_img"><img class="frameworks_images modal-image" src="{{ framework.image1.url }}"
-                                                alt="{{ framework.name }}"></ul>
-                                <ul class="frame_img"><img class="frameworks_images modal-image" src="{{ framework.image2.url }}"
-                                                alt="{{ framework.name }}"></ul>
-                                <ul class="frame_img"><img class="frameworks_images modal-image" src="{{ framework.image3.url }}"
-                                                alt="{{ framework.name }}"></ul>
-                                <ul class="frame_img"><img class="frameworks_images modal-image" src="{{ framework.image4.url }}"
-                                                alt="{{ framework.name }}"></ul>
+                                <ul class="frame_img"><img class="frameworks_images modal-image"
+                                                src="{{ framework.image1.url }}" alt="{{ framework.name }}"></ul>
+                                <ul class="frame_img"><img class="frameworks_images modal-image"
+                                                src="{{ framework.image2.url }}" alt="{{ framework.name }}"></ul>
+                                <ul class="frame_img"><img class="frameworks_images modal-image"
+                                                src="{{ framework.image3.url }}" alt="{{ framework.name }}"></ul>
+                                <ul class="frame_img"><img class="frameworks_images modal-image"
+                                                src="{{ framework.image4.url }}" alt="{{ framework.name }}"></ul>
 
                         </li>
                         {% endfor %}
@@ -49,17 +49,17 @@
                                 <ul class="model-title">
                                         <h1>Databases:</h1>
                                 </ul>
-                                <ul class="db_img"><img class="database_images modal-image" src="{{ database.image1.url }}"
-                                                alt="{{ database.name }}">
+                                <ul class="db_img"><img class="database_images modal-image"
+                                                src="{{ database.image1.url }}" alt="{{ database.name }}">
                                 </ul>
-                                <ul class="db_img"><img class="database_images modal-image" src="{{ database.image2.url }}"
-                                                alt="{{ database.name }}">
+                                <ul class="db_img"><img class="database_images modal-image"
+                                                src="{{ database.image2.url }}" alt="{{ database.name }}">
                                 </ul>
-                                <ul class="db_img"><img class="database_images modal-image" src="{{ database.image3.url }}"
-                                                alt="{{ database.name }}">
+                                <ul class="db_img"><img class="database_images modal-image"
+                                                src="{{ database.image3.url }}" alt="{{ database.name }}">
                                 </ul>
-                                <ul class="db_img"><img class="database_images modal-image" src="{{ database.image4.url }}"
-                                                alt="{{ database.name }}">
+                                <ul class="db_img"><img class="database_images modal-image"
+                                                src="{{ database.image4.url }}" alt="{{ database.name }}">
                                 </ul>
 
                         </li>
@@ -72,17 +72,17 @@
                                 <ul class="model-title">
                                         <h1>Version Control:</h1>
                                 </ul>
-                                <ul class="vc_img"><img class="vc_images modal-image" src="{{ versioncontrol.image1.url }}"
-                                                alt="{{ versioncontrol.name }}">
+                                <ul class="vc_img"><img class="vc_images modal-image"
+                                                src="{{ versioncontrol.image1.url }}" alt="{{ versioncontrol.name }}">
                                 </ul>
-                                <ul class="vc_img"><img class="vc_images modal-image" src="{{ versioncontrol.image2.url }}"
-                                                alt="{{ versioncontrol.name }}">
+                                <ul class="vc_img"><img class="vc_images modal-image"
+                                                src="{{ versioncontrol.image2.url }}" alt="{{ versioncontrol.name }}">
                                 </ul>
-                                <ul class="vc_img"><img class="vc_images modal-image" src="{{ versioncontrol.image3.url }}"
-                                                alt="{{ versioncontrol.name }}">
+                                <ul class="vc_img"><img class="vc_images modal-image"
+                                                src="{{ versioncontrol.image3.url }}" alt="{{ versioncontrol.name }}">
                                 </ul>
-                                <ul class="vc_img"><img class="vc_images modal-image" src="{{ versioncontrol.image4.url }}"
-                                                alt="{{ versioncontrol.name }}">
+                                <ul class="vc_img"><img class="vc_images modal-image"
+                                                src="{{ versioncontrol.image4.url }}" alt="{{ versioncontrol.name }}">
                                 </ul>
 
                         </li>
@@ -95,24 +95,29 @@
                                 <ul class="model-title">
                                         <h1>Libraries:</h1>
                                 </ul>
-                                <ul class="lib_img"><img class="library_images modal-image" src="{{ libraries.image1.url }}"
-                                                alt="{{ libraries.name }}">
+                                <ul class="lib_img"><img class="library_images modal-image"
+                                                src="{{ libraries.image1.url }}" alt="{{ libraries.name }}">
                                 </ul>
-                                <ul class="lib_img"><img class="library_images modal-image" src="{{ libraries.image2.url }}"
-                                                alt="{{ libraries.name }}">
+                                <ul class="lib_img"><img class="library_images modal-image"
+                                                src="{{ libraries.image2.url }}" alt="{{ libraries.name }}">
                                 </ul>
-                                <ul class="lib_img"><img class="library_images modal-image" src="{{ libraries.image3.url }}"
-                                                alt="{{ libraries.name }}">
+                                <ul class="lib_img"><img class="library_images modal-image"
+                                                src="{{ libraries.image3.url }}" alt="{{ libraries.name }}">
                                 </ul>
-                                <ul class="lib_img"><img class="library_images modal-image" src="{{ libraries.image4.url }}"
-                                                alt="{{ libraries.name }}">
+                                <ul class="lib_img"><img class="library_images modal-image"
+                                                src="{{ libraries.image4.url }}" alt="{{ libraries.name }}">
                                 </ul>
 
                         </li>
                         {% endfor %}
                 </div>
-                <div id="modal-div" class="custom-modal-div">
-                        <div id="modal-box">
+                <div id="modal-box" class="modal">
+                        <div class="modal-content">
+                                <img id="modal-image" src="" alt="Modal Image">
+                                <div class="modal-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+                                                Praesent libero. Sed cursus ante dapibus diam.</p>
+                                </div>
                         </div>
                 </div>
 </body>
