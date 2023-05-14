@@ -32,6 +32,6 @@ def skills(request):
     libraries = Library.objects.all()
     versioncontrol = VersionControl.objects.all()
     database = Database.objects.all()
-    return render(request, 'my_pf/templates/pages/home_page.html', {'languages': languages, 'frameworks': frameworks, 'libraries': libraries, 'versioncontrol': versioncontrol, 'database': database})
+    return render(request, 'pages/home_page.html', {'languages': languages, 'frameworks': frameworks, 'libraries': libraries, 'versioncontrol': versioncontrol, 'database': database})
 
 
