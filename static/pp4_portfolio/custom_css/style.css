@@ -165,9 +165,30 @@ body {
   margin-top: 5rem;
 }
 
-h2,
+h2 {
+  color:#f7f6f6;
+}
+
+.text-center {
+  color: black;
+  margin-bottom: 3rem;;
+}
+
+h1 {
+  color:#f7f6f6;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: start;
+}
+
+.display-4 {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
 p {
-color: #f7f6f6;
+  color:#f7f6f6;
 }
 
 .img-fluid {
