@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import PersonalDetails, Skills, Language, Framework, Library, VersionControl, Database, Home
+from .models import PersonalDetails, Skills, Language, Framework, Library, VersionControl, Database, Headings
 
 
 admin.site.register(PersonalDetails)
@@ -9,4 +9,4 @@ admin.site.register(Framework)
 admin.site.register(Library)
 admin.site.register(VersionControl)
 admin.site.register(Database)
-admin.site.register(Home)
+admin.site.register(Headings)
