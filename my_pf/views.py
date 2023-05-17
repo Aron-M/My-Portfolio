@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import PersonalDetails, Language, Framework, Library, VersionControl, Database
+from .models import PersonalDetails, Language, Framework, Library, VersionControl, Database, Headings
 
 
 def display_skills_page(request):
@@ -12,8 +12,9 @@ def display_all(request):
     libraries = Library.objects.all()
     versioncontrol = VersionControl.objects.all()
     database = Database.objects.all()
+    headings = Headings.objects.all()
     context = {
-        'data': data, 'languages': languages, 'frameworks': frameworks, 'libraries': libraries, 'versioncontrol': versioncontrol, 'database': database
+        'data': data, 'headings': headings, 'languages': languages, 'frameworks': frameworks, 'libraries': libraries, 'versioncontrol': versioncontrol, 'database': database
         }
     if request.path == "/":
         return render(request, 'pages/home_page.html', context )

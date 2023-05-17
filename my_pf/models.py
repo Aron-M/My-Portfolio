@@ -118,4 +118,4 @@ class Headings(models.Model):
     par3 = models.CharField(max_length=300)
     
     def __str__(self):
-        return self.name
+        return self.big_header
