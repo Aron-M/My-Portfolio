@@ -23,7 +23,7 @@
             <a class="nav-link" href="#skills">Skills</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Contact</a>
+            <a class="nav-link" href="#contact">Contact</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="">CV</a>
@@ -37,7 +37,7 @@
   <header class="bg-primary text-white text-center py-5">
     <div class="container">
       <h1 class="display-4">Welcome to My Portfolio</h1>
-      <p class="lead">Showcasing my work and skills</p>
+      <p class="lead">where I showcase my work and skills as a Software Developer</p>
     </div>
   </header>
 
@@ -45,35 +45,56 @@
   <section id="about" class="py-5">
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
-          <h2>About Me</h2>
+        <div class="col-md-5">
+          <h1>About Me</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante
             dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante
             dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante
-            dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante
-            dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
         </div>
-        <div class="col-md-6">
-          <img src="media/images/Aron-face-image.JPG" alt="Profile Picture" class="img-fluid rounded-circle">
+        <div class="col-md-2">
+          <img src="media/images/Aron-face-image.JPG" alt="Profile Picture" class="img-fluid square prof-pic">
+        </div>
+        <div class="col-md-4 personal-details">
+          {% for detail in data %}
+          <div class="personal-details-field row">
+            <div class="col-4 personal-details-field-name">Name:</div>
+            <div class="col-8">{{ detail.full_name }}</div>
+          </div>
+          <div class="personal-details-field row">
+            <div class="col-4 personal-details-field-name">Nationality:</div>
+            <div class="col-8">{{ detail.nationality }}</div>
+          </div>
+          <div class="personal-details-field row">
+            <div class="col-4 personal-details-field-name">Residency:</div>
+            <div class="col-8">{{ detail.residency }}</div>
+          </div>
+          <div class="personal-details-field row">
+            <div class="col-4 personal-details-field-name">Languages:</div>
+            <div class="col-8">{{ detail.languages }}</div>
+          </div>
+          <div class="personal-details-field row">
+            <div class="col-4 personal-details-field-name">Studying:</div>
+            <div class="col-8">{{ detail.studying }}</div>
+          </div>
+            {% endfor %}
         </div>
       </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section  class="bg-light py-5">
+  <section class="bg-light py-5">
     <div class="container">
-      <h1 class="text-center" id="projects">PROJECTS</h1>
+      <h1 class="text-center" id="projects">Projects</h1>
       <div class="row">
         <div class="col-md-4">
           <div class="card mb-4">
             <img src="" alt="Project 1" class="card-img-top">
             <div class="card-body">
               <h5 class="card-title">Project 1</h5>
-              <p class="card-text">Decription.</p>
+              <p class="card-text">Description.</p>
               <a href="#" class="btn btn-primary">Learn More</a>
             </div>
           </div>
@@ -83,7 +104,7 @@
             <img src="" alt="Project 2" class="card-img-top">
             <div class="card-body">
               <h5 class="card-title">Project 2</h5>
-              <p class="card-text">Decription.</p>
+              <p class="card-text">Description.</p>
               <a href="#" class="btn btn-primary">Learn More</a>
             </div>
           </div>
@@ -93,7 +114,7 @@
             <img src="" alt="Project 3" class="card-img-top">
             <div class="card-body">
               <h5 class="card-title">Project 3</h5>
-              <p class="card-text">Decription.</p>
+              <p class="card-text">Description.</p>
               <a href="#" class="btn btn-primary">Learn More</a>
             </div>
           </div>
@@ -102,119 +123,170 @@
     </div>
   </section>
 
-  <section id="skills">
-  <h1>SKILLS</h1>
-  <div class="container-div">
-  
-    <div class="model-container">
+  <section id="skills" class="container skills-container">
+    <h1 id="skills-id">Skills</h1>
+    <div class="container-div">
+      <div class="model-container">
 
-      {% for language in languages %}
-      <li id="languages_img">
-        <ul class="model-title">
-          <h1>Languages:</h1>
-        </ul>
-        <ul class="lang_img"><img class="languages_images modal-image" id="modalImage" src="{{ language.image1.url }}">
-        </ul>
-        <ul class="lang_img"><img class="languages_images modal-image" id="modalImage" src="{{ language.image2.url }}">
-        </ul>
-        <ul class="lang_img"><img class="languages_images modal-image" id="modalImage" src="{{ language.image3.url }}">
-        </ul>
-        <ul class="lang_img"><img class="languages_images modal-image" id="python_image"
-            src="{{ language.image4.url }}"></ul>
+        {% for language in languages %}
+        <li id="languages_img">
+          <ul class="model-title">
+            <h1>Languages:</h1>
+          </ul>
+          <ul class="lang_img">
+            <img class="languages_images modal-image" id="modalImage" src="{{ language.image1.url }}">
+          </ul>
+          <ul class="lang_img"><img class="languages_images modal-image" id="modalImage"
+              src="{{ language.image2.url }}">
+          </ul>
+          <ul class="lang_img"><img class="languages_images modal-image" id="modalImage"
+              src="{{ language.image3.url }}">
+          </ul>
+          <ul class="lang_img"><img class="languages_images modal-image" id="python_image"
+              src="{{ language.image4.url }}"></ul>
 
-      </li>
-      {% endfor %}
+        </li>
+        {% endfor %}
 
-      {% for framework in frameworks %}
-      <li id="frameworks_img">
-        <ul class="model-title">
-          <h1>Frameworks:</h1>
-        </ul>
-        <ul class="frame_img"><img class="frameworks_images modal-image" src="{{ framework.image1.url }}"
-            alt="{{ framework.name }}"></ul>
-        <ul class="frame_img"><img class="frameworks_images modal-image" src="{{ framework.image2.url }}"
-            alt="{{ framework.name }}"></ul>
-        <ul class="frame_img"><img class="frameworks_images modal-image" src="{{ framework.image3.url }}"
-            alt="{{ framework.name }}"></ul>
-        <ul class="frame_img"><img class="frameworks_images modal-image" src="{{ framework.image4.url }}"
-            alt="{{ framework.name }}"></ul>
+        {% for framework in frameworks %}
+        <li id="frameworks_img">
+          <ul class="model-title">
+            <h1>Frameworks:</h1>
+          </ul>
+          <ul class="frame_img"><img class="frameworks_images modal-image" src="{{ framework.image1.url }}"
+              alt="{{ framework.name }}"></ul>
+          <ul class="frame_img"><img class="frameworks_images modal-image" src="{{ framework.image2.url }}"
+              alt="{{ framework.name }}"></ul>
+          <ul class="frame_img"><img class="frameworks_images modal-image" src="{{ framework.image3.url }}"
+              alt="{{ framework.name }}"></ul>
+          <ul class="frame_img"><img class="frameworks_images modal-image" src="{{ framework.image4.url }}"
+              alt="{{ framework.name }}"></ul>
 
-      </li>
-      {% endfor %}
+        </li>
+        {% endfor %}
 
-      {% for database in database %}
-      <li id="databases_img">
-        <ul class="model-title">
-          <h1>Databases:</h1>
-        </ul>
-        <ul class="db_img"><img class="database_images modal-image" src="{{ database.image1.url }}"
-            alt="{{ database.name }}">
-        </ul>
-        <ul class="db_img"><img class="database_images modal-image" src="{{ database.image2.url }}"
-            alt="{{ database.name }}">
-        </ul>
-        <ul class="db_img"><img class="database_images modal-image" src="{{ database.image3.url }}"
-            alt="{{ database.name }}">
-        </ul>
-        <ul class="db_img"><img class="database_images modal-image" src="{{ database.image4.url }}"
-            alt="{{ database.name }}">
-        </ul>
+        {% for database in database %}
+        <li id="databases_img">
+          <ul class="model-title">
+            <h1>Databases:</h1>
+          </ul>
+          <ul class="db_img"><img class="database_images modal-image" src="{{ database.image1.url }}"
+              alt="{{ database.name }}">
+          </ul>
+          <ul class="db_img"><img class="database_images modal-image" src="{{ database.image2.url }}"
+              alt="{{ database.name }}">
+          </ul>
+          <ul class="db_img"><img class="database_images modal-image" src="{{ database.image3.url }}"
+              alt="{{ database.name }}">
+          </ul>
+          <ul class="db_img"><img class="database_images modal-image" src="{{ database.image4.url }}"
+              alt="{{ database.name }}">
+          </ul>
 
-      </li>
+        </li>
 
-      {% endfor %}
-
-
-      {% for versioncontrol in versioncontrol %}
-      <li id="versioncontrol_img">
-        <ul class="model-title">
-          <h1>Version Control:</h1>
-        </ul>
-        <ul class="vc_img"><img class="vc_images modal-image" src="{{ versioncontrol.image1.url }}"
-            alt="{{ versioncontrol.name }}">
-        </ul>
-        <ul class="vc_img"><img class="vc_images modal-image" src="{{ versioncontrol.image2.url }}"
-            alt="{{ versioncontrol.name }}">
-        </ul>
-        <ul class="vc_img"><img class="vc_images modal-image" src="{{ versioncontrol.image3.url }}"
-            alt="{{ versioncontrol.name }}">
-        </ul>
-        <ul class="vc_img"><img class="vc_images modal-image" src="{{ versioncontrol.image4.url }}"
-            alt="{{ versioncontrol.name }}">
-        </ul>
-
-      </li>
-
-      {% endfor %}
+        {% endfor %}
 
 
-      {% for libraries in libraries %}
-      <li id="library_img">
-        <ul class="model-title">
-          <h1>Libraries:</h1>
-        </ul>
-        <ul class="lib_img"><img class="library_images modal-image" src="{{ libraries.image1.url }}"
-            alt="{{ libraries.name }}">
-        </ul>
-        <ul class="lib_img"><img class="library_images modal-image" src="{{ libraries.image2.url }}"
-            alt="{{ libraries.name }}">
-        </ul>
-        <ul class="lib_img"><img class="library_images modal-image" src="{{ libraries.image3.url }}"
-            alt="{{ libraries.name }}">
-        </ul>
-        <ul class="lib_img"><img class="library_images modal-image" src="{{ libraries.image4.url }}"
-            alt="{{ libraries.name }}">
-        </ul>
+        {% for versioncontrol in versioncontrol %}
+        <li id="versioncontrol_img">
+          <ul class="model-title">
+            <h1>Version Control:</h1>
+          </ul>
+          <ul class="vc_img"><img class="vc_images modal-image" src="{{ versioncontrol.image1.url }}"
+              alt="{{ versioncontrol.name }}">
+          </ul>
+          <ul class="vc_img"><img class="vc_images modal-image" src="{{ versioncontrol.image2.url }}"
+              alt="{{ versioncontrol.name }}">
+          </ul>
+          <ul class="vc_img"><img class="vc_images modal-image" src="{{ versioncontrol.image3.url }}"
+              alt="{{ versioncontrol.name }}">
+          </ul>
+          <ul class="vc_img"><img class="vc_images modal-image" src="{{ versioncontrol.image4.url }}"
+              alt="{{ versioncontrol.name }}">
+          </ul>
 
-      </li>
-      {% endfor %}
-    </div>
-    <div id="modal-div" class="custom-modal-div">
-      <div id="modal-box">
+        </li>
+
+        {% endfor %}
+
+
+        {% for libraries in libraries %}
+        <li id="library_img">
+          <ul class="model-title">
+            <h1>Libraries:</h1>
+          </ul>
+          <ul class="lib_img"><img class="library_images modal-image" src="{{ libraries.image1.url }}"
+              alt="{{ libraries.name }}">
+          </ul>
+          <ul class="lib_img"><img class="library_images modal-image" src="{{ libraries.image2.url }}"
+              alt="{{ libraries.name }}">
+          </ul>
+          <ul class="lib_img"><img class="library_images modal-image" src="{{ libraries.image3.url }}"
+              alt="{{ libraries.name }}">
+          </ul>
+          <ul class="lib_img"><img class="library_images modal-image" src="{{ libraries.image4.url }}"
+              alt="{{ libraries.name }}">
+          </ul>
+
+        </li>
+        {% endfor %}
+      </div>
+      <div id="modal-div">
+        <div id="modal-box">
+        </div>
       </div>
     </div>
-  </div>
-  </div>
-</section>
+  </section>
+
+  <section id="cv" class="bg-light py-5">
+    <div class="container text-center">
+      <h1 class="cv-text">Download CV</h1>
+      <p class="cv-text">Click the button below to download my CV in PDF format.</p>
+      <a href="path/to/your/cv.pdf" class="btn btn-primary" download>Download CV</a>
+    </div>
+  </section>
+
+  <section id="contact" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>Contact Me</h1>
+          <form>
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="8" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+          </form>
+        </div>
+        <div class="col-md-6">
+          <h1>Where am I?</h1>
+          <div id="location-map">
+            <iframe width="100%" height="380" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2845511.1018018126!2d-8.80145866936307!3d54.14996831559382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485ee9b5677caee9%3A0xa00c7a997317380!2sSligo%2C%20Ireland!5e0!3m2!1sen!2sus!4v1684179425631!5m2!1sen!2sus"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
 
   {% endblock %}

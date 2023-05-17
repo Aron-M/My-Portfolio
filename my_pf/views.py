@@ -7,14 +7,16 @@ def display_skills_page(request):
 
 def display_all(request):
     data = PersonalDetails.objects.all()
-    print(data)
+    languages = Language.objects.all()
+    frameworks = Framework.objects.all()
+    libraries = Library.objects.all()
+    versioncontrol = VersionControl.objects.all()
+    database = Database.objects.all()
     context = {
-        'data': data
+        'data': data, 'languages': languages, 'frameworks': frameworks, 'libraries': libraries, 'versioncontrol': versioncontrol, 'database': database
         }
     if request.path == "/":
         return render(request, 'pages/home_page.html', context )
-    else:
-        return render(request, 'pages/personal_details.html', context)
 
 
 # def display_skills_model(request):

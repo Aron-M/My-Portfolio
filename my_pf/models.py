@@ -11,7 +11,7 @@ class PersonalDetails(models.Model):
     nationality = models.CharField(max_length=200, unique=False)
     residency = models.CharField(max_length=200, unique=False)
     languages = models.CharField(max_length=200, unique=False)
-    address = models.CharField(max_length=200, unique=False)
+    studying = models.CharField(max_length=200, unique=False)
 
     def __str__(self):
         return self.full_name

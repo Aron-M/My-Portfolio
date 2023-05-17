@@ -13,8 +13,7 @@
 }
 
 .model-title {
-  margin-right: 6rem;
-  padding-left: 5px;
+  margin-right: 14rem;
   max-width: 150px;
   min-width: 150px;
   margin-top: 45px;
@@ -139,24 +138,27 @@ body {
   transform-origin: top left;
   display: flex;
   justify-content: first baseline;
-  height: 126vh;
-  width: 97rem;
+  height: 138vh;
+  width: 75rem;
   border: darkcyan solid;
   border-width: 3px;
   border-radius: 6px;
   margin-right: 2rem;
-  margin-top:10px;
+}
+
+#skills-id {
+  margin-left: 3rem;
+  margin-top: 6rem;
 }
 
 
 .model-container .modal-image {
-  width:10rem; /* Adjust the width as desired */
-  height: 10rem; /* Adjust the height as desired */
-  border: 1px solid #fff; /* Thin white border */
-  border-radius: 5px; /* Smooth edges */
-  object-fit:contain; /* Maintain aspect ratio and cover the container */
-  object-position: center; /* Center the image within the container */
-  padding: 5px; /* Adjust the padding as desired */
+  width:10rem; 
+  height: 10rem; 
+  border-radius: 5px;
+  object-fit:contain; 
+  object-position: center; 
+  padding: 5px; 
   margin-bottom: 1rem;
 }
 
@@ -165,18 +167,23 @@ body {
   margin-top: 5rem;
 }
 
+.skills-container {
+  margin-top: 50px; 
+  margin-bottom: 50px; 
+}
+
+
 h2 {
   color:#f7f6f6;
 }
 
 .text-center {
-  color: black;
+  color:#f7f6f6;
   margin-bottom: 3rem;;
 }
 
 h1 {
   color:#f7f6f6;
-  margin-top: 3rem;
   display: flex;
   justify-content: start;
 }
@@ -209,4 +216,43 @@ p {
 a,
 .nav-link {
   color:#f7f6f6;
+}
+
+#contact label {
+    color:#f7f6f6;
+  }
+
+#location-map {
+  margin-top: 2.3rem;
+}
+
+.container-div {
+  display: flex;
+}
+
+#modal-div {
+  width: 100%;
+}
+
+#modal-box {
+  max-width: calc(100% - 2rem);
+  width:fit-content;
+  margin-left: 2rem;
+}
+
+.colored {
+  font-size: 5rem;
+}
+
+.personal-details {
+  margin-left:6rem;
+  color:#f7f6f6;
+}
+
+.personal-details-field-name {
+  margin-bottom: 10px;
+}
+
+.prof-pic {
+  margin-left: 1rem;
 }
