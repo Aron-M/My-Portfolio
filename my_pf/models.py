@@ -108,3 +108,16 @@ class Database(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Home(models.Model):
+    big_header = models.CharField(max_length=100)
+    sub_header = models.CharField(max_length=100)
+    par1 = models.CharField(max_length=300)
+    par1 = models.CharField(max_length=300)
+    par1 = models.CharField(max_length=300)
+    profile_pic = models.ImageField(
+        upload_to='home/', validators=[FileExtensionValidator(['png', 'jpg', 'jpeg'])])
+    
+    def __str__(self):
+        return self.name
