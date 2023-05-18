@@ -7,11 +7,13 @@ from django.core.validators import FileExtensionValidator
 
 class PersonalDetails(models.Model):
     full_name = models.CharField(max_length=200, unique=False)
-    age = models.PositiveBigIntegerField
+    age = models.PositiveBigIntegerField(default='2')
     nationality = models.CharField(max_length=200, unique=False)
     residency = models.CharField(max_length=200, unique=False)
     languages = models.CharField(max_length=200, unique=False)
     studying = models.CharField(max_length=200, unique=False)
+    flag_nationality = models.ImageField(upload_to='flags/', null=True, blank=True)
+    flag_residency = models.ImageField(upload_to='flags/', null=True, blank=True)
 
     def __str__(self):
         return self.full_name

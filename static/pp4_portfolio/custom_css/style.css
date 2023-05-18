@@ -205,12 +205,12 @@ a,
 }
 
 #modal-div {
-  width: 100%;
+  width: 40rem;
 }
 
 #modal-box {
+  width: 40rem;
   max-width: calc(100% - 2rem);
-  width:fit-content;
   margin-left: 2rem;
 }
 
@@ -229,4 +229,8 @@ a,
 
 #projects-header {
   color: black;
+}
+
+.flag-icon {
+  width:2rem;
 }

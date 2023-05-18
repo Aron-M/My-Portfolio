@@ -63,11 +63,21 @@
           </div>
           <div class="personal-details-field row">
             <div class="col-4 personal-details-field-name">Nationality:</div>
-            <div class="col-8">{{ detail.nationality }}</div>
+            <div class="col-8">
+              {% if detail.flag_nationality %}
+              <img src="{{ detail.flag_nationality.url }}" class="flag-icon" alt="Flag">
+              {% endif %}
+              {{ detail.nationality }}
+            </div>
           </div>
           <div class="personal-details-field row">
             <div class="col-4 personal-details-field-name">Residency:</div>
-            <div class="col-8">{{ detail.residency }}</div>
+            <div class="col-8">
+              {% if detail.flag_residency %}
+              <img src="{{ detail.flag_residency.url }}" class="flag-icon" alt="Flag">
+              {% endif %}
+              {{ detail.residency }}
+            </div>
           </div>
           <div class="personal-details-field row">
             <div class="col-4 personal-details-field-name">Languages:</div>
@@ -128,24 +138,18 @@
       <div class="model-container">
 
         {% for language in languages %}
-        <li id="languages_img">
-          <ul class="model-title">
-            <h1>Languages:</h1>
-          </ul>
-          <ul class="lang_img">
-            <img class="languages_images modal-image" id="modalImage" src="{{ language.image1.url }}">
-          </ul>
-          <ul class="lang_img"><img class="languages_images modal-image" id="modalImage"
-              src="{{ language.image2.url }}">
-          </ul>
-          <ul class="lang_img"><img class="languages_images modal-image" id="modalImage"
-              src="{{ language.image3.url }}">
-          </ul>
-          <ul class="lang_img"><img class="languages_images modal-image" id="python_image"
-              src="{{ language.image4.url }}"></ul>
-
-        </li>
-        {% endfor %}
+      <li id="languages_img">
+        <ul class="model-title">
+          <h1>Languages:</h1>
+        </ul>
+        <ul class="lang_img">
+          <img class="languages_images modal-image" src="{{ language.image1.url }}">
+        </ul>
+        <ul class="lang_img"><img class="languages_images modal-image" src="{{ language.image2.url }}"></ul>
+        <ul class="lang_img"><img class="languages_images modal-image" src="{{ language.image3.url }}"></ul>
+        <ul class="lang_img"><img class="languages_images modal-image python-image" src="{{ language.image4.url }}"></ul>
+      </li>
+      {% endfor %}
 
         {% for framework in frameworks %}
         <li id="frameworks_img">
@@ -231,11 +235,7 @@
         </li>
         {% endfor %}
       </div>
-      <div id="modal-div">
-        <div id="modal-box">
-        </div>
-      </div>
-    </div>
+  </div>
   </section>
 
   <section id="cv" class="bg-light py-5">
