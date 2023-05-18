@@ -92,27 +92,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Projects Section -->
-  <section class="bg-light py-5">
-    <div class="container">
-      <h1 class="text-center" id="projects-header">Projects</h1>
-      <div class="row">
-        {% for project in projects %}
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <img src="{{ project.image.url }}" alt="{{ project.name }}" class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title">{{ project.name }}</h5>
-              <p class="card-text">Description.</p>
-              <a href="{{ project.github_url }}" class="btn btn-primary">Learn More</a>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </section>
   
 
   <section id="skills" class="container skills-container">
@@ -219,6 +198,27 @@
         {% endfor %}
       </div>
   </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="bg-light py-5">
+    <div class="container">
+      <h1 class="text-center" id="projects-header">Projects</h1>
+      <div class="row">
+        {% for project in projects %}
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <img src="{{ project.image.url }}" alt="{{ project.name }}" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">{{ project.name }}</h5>
+              <p class="card-text">Description.</p>
+              <a href="{{ project.github_url }}" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
   </section>
 
   <section id="cv" class="bg-light py-5">
