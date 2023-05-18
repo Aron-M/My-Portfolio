@@ -98,39 +98,22 @@
     <div class="container">
       <h1 class="text-center" id="projects-header">Projects</h1>
       <div class="row">
+        {% for project in projects %}
         <div class="col-md-4">
           <div class="card mb-4">
-            <img src="" alt="Project 1" class="card-img-top">
+            <img src="{{ project.image.url }}" alt="{{ project.name }}" class="card-img-top">
             <div class="card-body">
-              <h5 class="card-title">Project 1</h5>
+              <h5 class="card-title">{{ project.name }}</h5>
               <p class="card-text">Description.</p>
-              <a href="#" class="btn btn-primary">Learn More</a>
+              <a href="{{ project.github_url }}" class="btn btn-primary">Learn More</a>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <img src="" alt="Project 2" class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title">Project 2</h5>
-              <p class="card-text">Description.</p>
-              <a href="#" class="btn btn-primary">Learn More</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <img src="" alt="Project 3" class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title">Project 3</h5>
-              <p class="card-text">Description.</p>
-              <a href="#" class="btn btn-primary">Learn More</a>
-            </div>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </section>
+  
 
   <section id="skills" class="container skills-container">
     <h1 id="skills-id">Skills</h1>
