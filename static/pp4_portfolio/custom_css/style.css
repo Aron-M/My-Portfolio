@@ -13,12 +13,14 @@
 }
 
 .model-title {
-  margin-right: 14rem;
+  margin-right: 4rem;
   max-width: 150px;
   min-width: 150px;
   margin-top: 45px;
   margin-bottom: 5px;
   font-size: 1.2rem;
+  padding: 0;
+  max-height: 2rem;
 }
 
 h1 {
@@ -72,18 +74,13 @@ h1 {
 
 
 
-.frame_img,
+/* .frame_img,
 .lib_img,
 .vc_img,
 .db_img {
   padding-inline-start: 0;
   padding-left: 30px;
-}
-
-.db_img {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
+} */
 
 .model-container {
   transform: scale(0.50);
@@ -125,29 +122,7 @@ body {
   margin-bottom: 10px;
 }
 
-
-#modal-div {
-  width: 90vw;
-  height:80vh;
-  display: flex;
-  justify-content: left;
-}
-
-#modal-box {
-  transform: scale(0.50);
-  transform-origin: top left;
-  display: flex;
-  justify-content: first baseline;
-  height: 138vh;
-  width: 75rem;
-  border: darkcyan solid;
-  border-width: 3px;
-  border-radius: 6px;
-  margin-right: 2rem;
-}
-
 #skills-id {
-  margin-left: 3rem;
   margin-top: 6rem;
 }
 
@@ -163,14 +138,13 @@ body {
 }
 
 .container-div {
-  margin-left: 2rem;
   margin-top: 5rem;
 }
 
-.skills-container {
+/* .skills-container {
   margin-top: 50px; 
   margin-bottom: 50px; 
-}
+} */
 
 
 h2 {
@@ -253,6 +227,6 @@ a,
   margin-bottom: 10px;
 }
 
-.prof-pic {
-  margin-left: 1rem;
+#projects-header {
+  color: black;
 }

@@ -47,16 +47,15 @@
     <div class="container">
       <div class="row">
         <div class="col-md-5 about-me-par">
-          <h1>About Me</h1>
           <p>{{ headings.par1 }}</p>
           <p>{{ headings.par2 }}</p>
-          <p>{{ headings.par3 }}</p>
         </div>
         {% endfor %}
         <div class="col-md-2 profile-pic">
           <img src="media/images/Aron-face-image.JPG" alt="Profile Picture" class="img-fluid square prof-pic">
         </div>
         <div class="col-md-4 personal-details">
+          <h4>Personal Details:</h4>
           {% for detail in data %}
           <div class="personal-details-field row">
             <div class="col-4 personal-details-field-name">Name:</div>
@@ -87,7 +86,7 @@
   <!-- Projects Section -->
   <section class="bg-light py-5">
     <div class="container">
-      <h1 class="text-center" id="projects">Projects</h1>
+      <h1 class="text-center" id="projects-header">Projects</h1>
       <div class="row">
         <div class="col-md-4">
           <div class="card mb-4">
@@ -284,6 +283,7 @@
       </div>
     </div>
   </section>
+</body>
 
 
 

@@ -9,5 +9,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <link rel="stylesheet" href="{% static 'pp4_portfolio/custom_css/style.css' %}">
-
+<script>
+    document.getElementById('toggleButton').addEventListener('click', function() {
+      var dropdownMenu = document.getElementById('dropdownMenu');
+      dropdownMenu.style.display = (dropdownMenu.style.display === 'none') ? 'block' : 'none';
+    });
+  </script>
 </head>
