@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import PersonalDetails, Language, Framework, Library, VersionControl, Database, Headings, Project
+from .models import PersonalDetails, Skills, Headings, Project
 
 
 def display_skills_page(request):
@@ -7,15 +7,11 @@ def display_skills_page(request):
 
 def display_all(request):
     data = PersonalDetails.objects.all()
-    languages = Language.objects.all()
-    frameworks = Framework.objects.all()
-    libraries = Library.objects.all()
-    versioncontrol = VersionControl.objects.all()
-    database = Database.objects.all()
+    skills = Skills.objects.all()
     headings = Headings.objects.all()
     projects = Project.objects.all()
     context = {
-        'data': data, 'headings': headings, 'projects': projects, 'languages': languages, 'frameworks': frameworks, 'libraries': libraries, 'versioncontrol': versioncontrol, 'database': database
+        'data': data, 'headings': headings, 'projects': projects, 'skills':skills
         }
     if request.path == "/":
         return render(request, 'pages/home_page.html', context )
@@ -28,14 +24,3 @@ def display_all(request):
 #         'data': data
 #         }
 #     return render(request, 'pages/skills.html', context)
-
-
-def skills(request):
-    languages = Language.objects.all()
-    frameworks = Framework.objects.all()
-    libraries = Library.objects.all()
-    versioncontrol = VersionControl.objects.all()
-    database = Database.objects.all()
-    return render(request, 'pages/home_page.html', {'languages': languages, 'frameworks': frameworks, 'libraries': libraries, 'versioncontrol': versioncontrol, 'database': database})
-
-

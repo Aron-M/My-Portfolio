@@ -16,13 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from my_pf.views import display_skills_page, display_all, skills
+from my_pf.views import display_all
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', display_all, name='my_portfolio'),
-    path('skills/', skills, name='skills')
+    path('', display_all, name='all')
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

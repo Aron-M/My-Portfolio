@@ -21,6 +21,7 @@
   font-size: 1.2rem;
   padding: 0;
   max-height: 2rem;
+  color:#f7f6f6;
 }
 
 h1 {
@@ -74,40 +75,38 @@ h1 {
 
 
 
-/* .frame_img,
+.frame_img,
 .lib_img,
 .vc_img,
 .db_img {
   padding-inline-start: 0;
   padding-left: 30px;
-} */
-
+}
+/* 
 .model-container {
   transform: scale(0.50);
   transform-origin: top left;
   left: 2vw;
   height:auto;
-  width: 100%;
-  margin-right: 30rem;
-}
+} */
 
 
 
-.languages_images {
+/* .languages_images {
   width: 6.5rem;
-}
+} */
 
 
 body {
   background-color: #292c31;
 }
 
-.container-div {
+/* .container-div {
   display: flex;
   flex-direction: row;
   height: 40rem;
   width: 40rem;
-}
+} */
 
 
 #frameworks_img,
@@ -118,7 +117,6 @@ body {
   display: flex;
   flex-direction: row;
   margin-right: 0px;
-  max-width: 180px;
   margin-bottom: 10px;
 }
 
@@ -129,22 +127,13 @@ body {
 
 .model-container .modal-image {
   width:10rem; 
-  height: 10rem; 
+  height: 5rem; 
   border-radius: 5px;
   object-fit:contain; 
   object-position: center; 
   padding: 5px; 
   margin-bottom: 1rem;
 }
-
-.container-div {
-  margin-top: 5rem;
-}
-
-/* .skills-container {
-  margin-top: 50px; 
-  margin-bottom: 50px; 
-} */
 
 
 h2 {
@@ -200,26 +189,12 @@ a,
   margin-top: 2.3rem;
 }
 
-.container-div {
-  display: flex;
-}
-
-#modal-div {
-  width: 40rem;
-}
-
-#modal-box {
-  width: 40rem;
-  max-width: calc(100% - 2rem);
-  margin-left: 2rem;
-}
-
 .colored {
   font-size: 5rem;
 }
 
 .personal-details {
-  margin-left:6rem;
+  margin-left:4rem;
   color:#f7f6f6;
 }
 
