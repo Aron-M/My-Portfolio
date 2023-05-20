@@ -34,7 +34,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["aron-portfolio.herokuapp.com", "localhost"]
+ALLOWED_HOSTS = ["aron-portfolio.herokuapp.com", "localhost", '8000-aronm-project4portfoli-e3zn0a2avrd.ws-eu97.gitpod.io']
 
 
 # Application definition
