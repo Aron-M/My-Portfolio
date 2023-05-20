@@ -97,13 +97,13 @@
   <section id="skills" class="container skills-container">
     <div class="skills-container">
       <h1 id="skills-id">SKILLS</h1>
-      <div class="container-div">
+      <div class="container-div row">
         <div class="model-container col-lg-6">
 
           {% for language in skills %}
           <li id="languages_img">
             <ul class="model-title">{{ language.language_name }}</ul>
-            <ul class="lang_img"><img class="languages_images modal-image" src="{{ language.image1.url }}"></ul>
+            <ul class="lang_img"><img class="languages_images modal-image"src="{{ language_image1.url }}"></ul>
             <ul class="lang_img"><img class="languages_images modal-image" src="{{ language.image2.url }}"></ul>
             <ul class="lang_img"><img class="languages_images modal-image" src="{{ language.image3.url }}"></ul>
             <ul class="lang_img"><img class="languages_images modal-image" src="{{ language.image4.url }}"></ul>

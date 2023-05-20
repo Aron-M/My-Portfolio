@@ -59,24 +59,6 @@ class Skills(models.Model):
     def __str__(self):
         return self.language_name
 
-class SkillsAdmin(admin.ModelAdmin):
-    fieldsets = (
-        ('Languages', {
-            'fields': ('language_name', 'language_href1', 'language_href2', 'language_href3', 'language_href4', 'language_href5'),
-        }),
-        ('Frameworks', {
-            'fields': ('framework_name', 'framework_href1', 'framework_href2', 'framework_href3', 'framework_href4', 'framework_href5'),
-        }),
-        ('Databases', {
-            'fields': ('database_name', 'database_href1', 'database_href2', 'database_href3', 'database_href4', 'database_href5'),
-        }),
-        ('Version Control', {
-            'fields': ('versioncontrol_name', 'versioncontrol_href1', 'versioncontrol_href2', 'versioncontrol_href3', 'versioncontrol_href4', 'versioncontrol_href5'),
-        }),
-        ('Libraries', {
-            'fields': ('library_name', 'library_href1', 'library_href2', 'library_href3', 'library_href4', 'library_href5'),
-        }),
-    )
 
 
 

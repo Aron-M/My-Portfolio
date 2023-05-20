@@ -13,7 +13,7 @@
 }
 
 .model-title {
-  margin-right: 4rem;
+  margin-right: 3rem;
   max-width: 150px;
   min-width: 150px;
   margin-top: 45px;
@@ -78,9 +78,10 @@ h1 {
 .frame_img,
 .lib_img,
 .vc_img,
+.lang_img,
 .db_img {
   padding-inline-start: 0;
-  padding-left: 30px;
+  padding:1rem;
 }
 /* 
 .model-container {
@@ -117,7 +118,8 @@ body {
   display: flex;
   flex-direction: row;
   margin-right: 0px;
-  margin-bottom: 10px;
+  max-width: fit-content;
+  height: 6rem;
 }
 
 #skills-id {
@@ -125,13 +127,11 @@ body {
 }
 
 
-.model-container .modal-image {
-  width:10rem; 
-  height: 5rem; 
-  border-radius: 5px;
+.modal-image {
+  width:5rem; 
+  height: 5rem;
   object-fit:contain; 
   object-position: center; 
-  padding: 5px; 
   margin-bottom: 1rem;
 }
 
@@ -213,4 +213,8 @@ a,
 #about {
   margin-bottom:3rem;
   margin-top: 4rem;
+}
+
+#skills{
+  padding: 0;
 }
