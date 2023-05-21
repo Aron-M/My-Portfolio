@@ -49,6 +49,7 @@
         <div class="col-md-5 about-me-par">
           <p>{{ headings.par1 }}</p>
           <p>{{ headings.par2 }}</p>
+          <p>{{ headings.par3 }}</p>
         </div>
         {% endfor %}
         <div class="col-md-2 profile-pic">
@@ -97,10 +98,9 @@
   <section id="skills">
     <div class="container">
       <h1 id="skills-id">SKILLS</h1>
-      <h6 id="skills-subheader">Click an icon for more details</h6>
+      <h5 id="skills-subheader">Click an icon for more details</h5>
       <div class="container-div row">
         <div class="model-container col-lg-6">
-
           {% for language in skills %}
           <li id="languages_img">
             <ul class="model-title">
@@ -148,7 +148,6 @@
                 >
             </ul> -->
           </li>
-
           {% endfor %}
 
 
@@ -166,7 +165,7 @@
                 alt="{{ versioncontrol.version_control_name3 }}">
             </ul>
             <!-- <ul class="vc_img"><img class="vc_images modal-image" src="{{ versioncontrol.image4.url }}"
-                alt="{{ versioncontrol.versioncontrol_name5 }}">
+                alt="{{ versioncontrol.versioncontrol_name4 }}">
             </ul> -->
 
           </li>
@@ -215,6 +214,7 @@
             </div>
           </div>
         </div>
+
   </section>
 
 
@@ -282,7 +282,7 @@
     <div class="container text-center">
       <h1 class="cv-text">Download CV</h1>
       <p class="cv-text">Click the button below to download my CV in PDF format.</p>
-      <a href="path/to/your/cv.pdf" class="btn btn-primary cv-button" download>Download CV</a>
+      <a href="path/to/your/cv.pdf" class="btn btn-primary" download>Download CV</a>
     </div>
   </section>
 

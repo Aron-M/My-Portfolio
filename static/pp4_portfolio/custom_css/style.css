@@ -139,7 +139,7 @@ body {
   margin-bottom: 3rem;;
 }
 
-h1,h6 {
+h1,h5 {
   color:#f7f6f6;
   display: flex;
   justify-content: start;
@@ -192,8 +192,12 @@ a,
 }
 
 .personal-details {
-  margin-left:4rem;
+  margin-left:3rem;
+  padding:0;
   color:#f7f6f6;
+  border-radius: 1rem;
+  border-width: 2px;
+  border-color: #f7f6f6;
 }
 
 .personal-details-field-name {
