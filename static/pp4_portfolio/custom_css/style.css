@@ -13,19 +13,15 @@
 }
 
 .model-title {
-  margin-right: 3rem;
-  max-width: 150px;
-  min-width: 150px;
-  margin-top: 45px;
-  margin-bottom: 5px;
+  margin-right: 7.5rem;
+  max-width: 1rem;
+  min-width: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   font-size: 1.2rem;
   padding: 0;
   max-height: 2rem;
-  color:#f7f6f6;
-}
-
-h1 {
-  color: #f7f6f6;
+  color:#fdf8f8;
 }
 
 .lang_img,
@@ -126,7 +122,8 @@ body {
 }
 
 #skills-id {
-  margin-top: 6rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 
@@ -245,4 +242,8 @@ a,
   height: auto;
   padding-top: 1rem;
   padding-left:1rem;
+}
+
+#modal-box {
+  display: none;
 }
