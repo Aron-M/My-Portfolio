@@ -23,11 +23,16 @@ class PersonalDetails(models.Model):
 class Skills(models.Model):
     language_name = models.CharField(max_length=100)
     language_icon1 = models.URLField(max_length=100, blank=True, null=True)
+    language_name1 = models.CharField(max_length=100, blank=True, null=True)
     language_icon2 = models.URLField(max_length=100, blank=True, null=True)
+    language_name2 = models.CharField(max_length=100, blank=True, null=True)
     language_icon3 = models.URLField(max_length=100, blank=True, null=True)
+    language_name3 = models.CharField(max_length=100, blank=True, null=True)
     language_icon4 = models.URLField(max_length=100, blank=True, null=True)
+    language_name4 = models.CharField(max_length=100, blank=True, null=True)
     language_icon5 = models.URLField(max_length=100, blank=True, null=True)
-    
+    language_name5 = models.CharField(max_length=100, blank=True, null=True)
+
     framework_name = models.CharField(max_length=100)
     framework_icon1 = models.URLField(max_length=100, blank=True, null=True)
     framework_icon2 = models.URLField(max_length=100, blank=True, null=True)

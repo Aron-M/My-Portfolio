@@ -117,10 +117,10 @@
                 alt="{{ framework.name }}"></ul>
             <ul class="frame_img"><img class="frameworks_images modal-image" src="{{ framework.framework_icon2 }}"
                 alt="{{ framework.name }}"></ul>
-            <ul class="frame_img"><img class="frameworks_images modal-image" src="{{ framework.framework_icon3 }}"
+            <!-- <ul class="frame_img"><img class="frameworks_images modal-image" src="{{ framework.framework_icon3 }}"
                 alt="{{ framework.name }}"></ul>
             <ul class="frame_img"><img class="frameworks_images modal-image" src="{{ framework.framework_icon4 }}"
-                alt="{{ framework.name }}"></ul>
+                alt="{{ framework.name }}"></ul> -->
 
           </li>
           {% endfor %}
@@ -131,7 +131,7 @@
             <ul class="db_img"><img class="database_images modal-image" src="{{ database.database_icon1 }}"
                 alt="{{ database.name }}">
             </ul>
-            <ul class="db_img"><img class="database_images modal-image" src="/"
+            <!-- <ul class="db_img"><img class="database_images modal-image" src="/"
                 >
             </ul>
             <ul class="db_img"><img class="database_images modal-image" src="/"
@@ -139,7 +139,7 @@
             </ul>
             <ul class="db_img"><img class="database_images modal-image" src="/"
                 >
-            </ul>
+            </ul> -->
 
           </li>
 
@@ -158,9 +158,9 @@
             <ul class="vc_img"><img class="vc_images modal-image" src="{{ versioncontrol.version_control_icon3 }}"
                 alt="{{ versioncontrol.name }}">
             </ul>
-            <ul class="vc_img"><img class="vc_images modal-image" src="{{ versioncontrol.image4.url }}"
+            <!-- <ul class="vc_img"><img class="vc_images modal-image" src="{{ versioncontrol.image4.url }}"
                 alt="{{ versioncontrol.name }}">
-            </ul>
+            </ul> -->
 
           </li>
 
@@ -173,7 +173,7 @@
             <ul class="lib_img"><img class="library_images modal-image" src="{{ libraries.library_icon1 }}"
                 alt="{{ libraries.name }}">
             </ul>
-            <ul class="lib_img"><img class="library_images modal-image" src="{{ libraries.image2.url }}"
+            <!-- <ul class="lib_img"><img class="library_images modal-image" src="{{ libraries.image2.url }}"
                 alt="{{ libraries.name }}">
             </ul>
             <ul class="lib_img"><img class="library_images modal-image" src="{{ libraries.image3.url }}"
@@ -181,22 +181,22 @@
             </ul>
             <ul class="lib_img"><img class="library_images modal-image" src="{{ libraries.image4.url }}"
                 alt="{{ libraries.name }}">
-            </ul>
+            </ul> -->
 
           </li>
           {% endfor %}
         </div>
        
-       <div id="modal-div" class="col-lg-6">
+        <div id="modal-div" class="col-lg-6">
           <div id="modal-box">
             <div class="modal-content">
-              <img id="modal-image" class="modal-image" src="" alt="Modal Image">
+              <span class="modal-close-button">&times;</span>
+              <img id="modal-image" class="modal-image modal-image-inside" src="" alt="Modal Image">
+              <h4></h4>
               <p id="modal-text"></p>
             </div>
           </div>
         </div>
-      </div>
-    </div>
   </section>
 
   <!-- Projects Section -->
@@ -265,6 +265,47 @@
       </div>
     </div>
   </section>
+  <script>
+    // Get the modal element
+    var modal = document.getElementById("modal-box");
+  
+    // Get the image and text elements inside the modal
+    var modalImage = document.getElementById("modal-image");
+    var modalText = document.getElementById("modal-text");
+  
+    // Function to open the modal and display the content
+    function openModal(imageSrc, textContent) {
+      modal.style.display = "block";
+      modalImage.src = imageSrc;
+      modalText.innerText = textContent;
+    }
+  
+    // Function to close the modal
+    function closeModal() {
+      modal.style.display = "none";
+    }
+  
+    // Attach click event listeners to the icons
+    var icons = document.querySelectorAll(".modal-image");
+    icons.forEach(function (icon) {
+      icon.addEventListener("click", function () {
+        var imageSrc = icon.src;
+        var textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."; // Replace with your desired text content
+        openModal(imageSrc, textContent);
+      });
+    });
+  
+    // Attach click event listener to the close button
+    var closeButton = document.getElementById("modal-close-button");
+    closeButton.addEventListener("click", closeModal);
+  
+    // Close the modal when clicking outside of it
+    window.addEventListener("click", function (event) {
+      if (event.target == modal) {
+        closeModal();
+      }
+    });
+  </script>
 </body>
 
 
