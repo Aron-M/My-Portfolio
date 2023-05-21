@@ -102,33 +102,42 @@
 
           {% for language in skills %}
           <li id="languages_img">
-            <ul class="model-title" alt="{{ language.name }}">{{ language.language_name }}</ul>
-            <ul class="lang_img"><img class="languages_images modal-image" src="{{ language.language_icon1 }}"></ul>
-            <ul class="lang_img"><img class="languages_images modal-image" src="{{ language.language_icon2 }}"></ul>
-            <ul class="lang_img"><img class="languages_images modal-image" src="{{ language.language_icon3 }}"></ul>
-            <ul class="lang_img"><img class="languages_images modal-image" src="{{ language.language_icon4 }}"></ul>
+            <ul class="model-title" alt="{{ language.name }}">
+              {{ language.language_name }}</ul>
+            <ul class="lang_img"><img class="languages_images modal-image" 
+              src="{{ language.language_icon1 }}"></ul>
+            <ul class="lang_img"><img class="languages_images modal-image" 
+              src="{{ language.language_icon2 }}"></ul>
+            <ul class="lang_img"><img class="languages_images modal-image" 
+              src="{{ language.language_icon3 }}"></ul>
+            <ul class="lang_img"><img class="languages_images modal-image" 
+              src="{{ language.language_icon4 }}"></ul>
           </li>
           {% endfor %}
 
           {% for framework in skills %}
           <li id="frameworks_img">
-            <ul class="model-title" alt="{{ framework.name }}">{{ framework.framework_name }}</ul>
-            <ul class="frame_img"><img class="frameworks_images modal-image" src="{{ framework.framework_icon1 }}"
-                alt="{{ framework.name }}"></ul>
-            <ul class="frame_img"><img class="frameworks_images modal-image" src="{{ framework.framework_icon2 }}"
+            <ul class="model-title" alt="{{ framework.name }}">
+              {{ framework.framework_name }}</ul>
+            <ul class="frame_img"><img class="frameworks_images modal-image" 
+              src="{{ framework.framework_icon1 }}"
+              alt="{{ framework.name }}"></ul>
+            <ul class="frame_img"><img class="frameworks_images modal-image" 
+              src="{{ framework.framework_icon2 }}"
                 alt="{{ framework.name }}"></ul>
             <!-- <ul class="frame_img"><img class="frameworks_images modal-image" src="{{ framework.framework_icon3 }}"
                 alt="{{ framework.name }}"></ul>
             <ul class="frame_img"><img class="frameworks_images modal-image" src="{{ framework.framework_icon4 }}"
                 alt="{{ framework.name }}"></ul> -->
-
           </li>
           {% endfor %}
 
           {% for database in skills %}
           <li id="databases_img">
-            <ul class="model-title" alt="{{ databasename }}">{{ database.database_name }}</ul>
-            <ul class="db_img"><img class="database_images modal-image" src="{{ database.database_icon1 }}"
+            <ul class="model-title" alt="{{ databasename }}">
+              {{ database.database_name }}</ul>
+            <ul class="db_img"><img class="database_images modal-image" 
+              src="{{ database.database_icon1 }}"
                 alt="{{ database.name }}">
             </ul>
             <!-- <ul class="db_img"><img class="database_images modal-image" src="/"
@@ -140,7 +149,6 @@
             <ul class="db_img"><img class="database_images modal-image" src="/"
                 >
             </ul> -->
-
           </li>
 
           {% endfor %}
@@ -148,14 +156,18 @@
 
           {% for versioncontrol in skills %}
           <li id="versioncontrol_img">
-            <ul class="model-title" alt="{{ versioncontrol.name }}">{{ versioncontrol.version_control_name }}</ul>
-            <ul class="vc_img"><img class="vc_images modal-image" src="{{ versioncontrol.version_control_icon1 }}"
+            <ul class="model-title" alt="{{ versioncontrol.name }}">
+              {{ versioncontrol.version_control_name }}</ul>
+            <ul class="vc_img"><img class="vc_images modal-image" 
+              src="{{ versioncontrol.version_control_icon1 }}"
                 alt="{{ versioncontrol.name }}">
             </ul>
-            <ul class="vc_img"><img class="vc_images modal-image" src="{{ versioncontrol.version_control_icon2 }}"
+            <ul class="vc_img"><img class="vc_images modal-image" 
+              src="{{ versioncontrol.version_control_icon2 }}"
                 alt="{{ versioncontrol.name }}">
             </ul>
-            <ul class="vc_img"><img class="vc_images modal-image" src="{{ versioncontrol.version_control_icon3 }}"
+            <ul class="vc_img"><img class="vc_images modal-image" 
+              src="{{ versioncontrol.version_control_icon3 }}"
                 alt="{{ versioncontrol.name }}">
             </ul>
             <!-- <ul class="vc_img"><img class="vc_images modal-image" src="{{ versioncontrol.image4.url }}"
@@ -169,8 +181,10 @@
 
           {% for libraries in skills %}
           <li id="library_img">
-            <ul class="model-title" alt="{{ libraries.name }}">{{ libraries.library_name }}</ul>
-            <ul class="lib_img"><img class="library_images modal-image" src="{{ libraries.library_icon1 }}"
+            <ul class="model-title" alt="{{ libraries.name }}">
+              {{ libraries.library_name }}</ul>
+            <ul class="lib_img"><img class="library_images modal-image" 
+              src="{{ libraries.library_icon1 }}"
                 alt="{{ libraries.name }}">
             </ul>
             <!-- <ul class="lib_img"><img class="library_images modal-image" src="{{ libraries.image2.url }}"
@@ -182,11 +196,11 @@
             <ul class="lib_img"><img class="library_images modal-image" src="{{ libraries.image4.url }}"
                 alt="{{ libraries.name }}">
             </ul> -->
-
           </li>
           {% endfor %}
         </div>
-       
+        
+      <!--modal section-->
         <div id="modal-div" class="col-lg-6">
           <div id="modal-box">
             <div class="modal-content">

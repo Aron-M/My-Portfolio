@@ -14,13 +14,5 @@ def display_all(request):
         'data': data, 'headings': headings, 'projects': projects, 'skills':skills
         }
     if request.path == "/":
-        return render(request, 'pages/home_page.html', context )
+        return render(request, 'pages/home-page.html', context )
 
-
-# def display_skills_model(request):
-#     data = Skills.objects.all()
-#     print(data)
-#     context = {
-#         'data': data
-#         }
-#     return render(request, 'pages/skills.html', context)
