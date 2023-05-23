@@ -3,7 +3,7 @@
 {% block content %}
 
 <body>
-  <!-- Navigation -->
+  <!-- Nav Bar -->
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
       <a class="navbar-brand" href="#">My Portfolio</a>
@@ -26,14 +26,14 @@
             <a class="nav-link" href="#contact">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">CV</a>
+            <a class="nav-link" href="#cv">CV</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Headings Section -->
   <header class="bg-primary text-white text-center py-5">
     <div class="container">
       {% for headings in headings %}
@@ -42,7 +42,6 @@
     </div>
   </header>
 
-  <!-- About Section -->
   <section id="about" class="py-5">
     <div class="container">
       <div class="row">
@@ -55,6 +54,8 @@
         <div class="col-md-2 profile-pic">
           <img src="media/images/Aron-face-image.JPG" alt="Profile Picture" class="img-fluid square prof-pic">
         </div>
+
+        <!-- Personal Details Section -->
         <div class="col-md-4 personal-details">
           <h4>Personal Details:</h4>
           {% for detail in data %}
@@ -167,9 +168,7 @@
             <!-- <ul class="vc_img"><img class="vc_images modal-image" src="{{ versioncontrol.image4.url }}"
                 alt="{{ versioncontrol.versioncontrol_name4 }}">
             </ul> -->
-
           </li>
-
           {% endfor %}
 
 
@@ -193,7 +192,7 @@
           {% endfor %}
         </div>
 
-        <!--modal section-->
+        <!--Skills Modal-->
         <div id="modal-div" class="col-lg-6">
           <div id="modal-box">
             <div class="modal-content">
@@ -214,12 +213,13 @@
             </div>
           </div>
         </div>
-
+        
+      </div>
   </section>
 
 
   <!-- Projects Section -->
-  <section class="bg-light py-5">
+  <section id="projects" class="bg-light py-5">
     <div class="container projects-section">
       <h1 class="text-center" id="projects-header">Projects</h1>
       <div class="row">
@@ -229,8 +229,8 @@
             <img src="{{ project.image.url }}" alt="{{ project.name }}" class="card-img-top">
             <div class="card-body">
               <h5 class="card-title">{{ project.name }}</h5>
-              <p class="card-text">Description.</p>
-              <a href="{{ project.github_url }}" class="btn btn-primary">Learn More</a>
+              <p class="card-text">{{ project.description }}</p>
+              <a href="{{ project.github_url }}" class="btn btn-primary" target="_blank">Learn More</a>
             </div>
           </div>
         </div>
@@ -238,9 +238,8 @@
       </div>
     </div>
   </section>
-  </section>
 
-
+<!--Contact Section-->
   <section id="contact" class="py-5">
     <div class="container">
       <div class="row">
@@ -279,14 +278,16 @@
     </div>
   </section>
 
+  <!--CV Download Section-->
   <section id="cv" class="bg-light py-5">
     <div class="container text-center">
       <h1 class="cv-text">Download CV</h1>
       <p class="cv-text">Click the button below to download my CV in PDF format.</p>
-      <a href="path/to/your/cv.pdf" class="btn btn-primary" download>Download CV</a>
+      <a href="media/cv-pdf/Aron Moelich Resume CV.pdf" class="btn btn-primary" download>Download CV</a>
     </div>
   </section>
 
+<!--Footer Section-->
   <footer class="text-light text-center py-4">
     <div class="container d-flex flex-column">
       <div class="row flex-grow-1">
@@ -319,48 +320,43 @@
 
     // Function to open the modal and display the content with fade-in effect
     function openModal(imageSrc, textContent, titleContent) {
-  modal.style.display = "block";
-  modal.classList.add("fade-in");
-  modalImage.src = imageSrc;
-  modalText.innerText = textContent;
-  modalTitle.innerText = titleContent;
+      modal.style.display = "block";
+      modal.classList.add("fade-in");
+      modalImage.src = imageSrc;
+      modalText.innerText = textContent;
+      modalTitle.innerText = titleContent;
 
-setTimeout(function () {
-    modal.classList.remove("fade-in");
-  }, 1000); // Adjust the delay duration as needed
-}
+      setTimeout(function () {
+        modal.classList.remove("fade-in");
+      }, 1000); // Adjust the delay duration as needed
+    }
 
-// Function to close the modal
-function closeModal() {
-  modal.style.display = "none";
-  modal.classList.remove("fade-in");
-}
+    // Function to close the modal
+    function closeModal() {
+      modal.style.display = "none";
+      modal.classList.remove("fade-in");
+    }
 
-var icons = document.querySelectorAll(".modal-image");
-icons.forEach(function (icon) {
-  icon.addEventListener("click", function () {
-    var imageSrc = icon.src;
-    var textContent = "This text needs to display unique information about each individual skill displayed within this modal"; // Replace with your desired text content
-    var titleContent = icon.alt;
-    openModal(imageSrc, textContent, titleContent);
-  });
-}); 
+    var icons = document.querySelectorAll(".modal-image");
+    icons.forEach(function (icon) {
+      icon.addEventListener("click", function () {
+        var imageSrc = icon.src;
+        var textContent = "This text needs to display unique information about each individual skill displayed within this modal"; // Replace with your desired text content
+        var titleContent = icon.alt;
+        openModal(imageSrc, textContent, titleContent);
+      });
+    });
 
 
-var closeButton = document.querySelector(".modal-close-button");
-closeButton.addEventListener("click", closeModal);
+    var closeButton = document.querySelector(".modal-close-button");
+    closeButton.addEventListener("click", closeModal);
 
-// Close the modal when clicking outside of it
-window.addEventListener("click", function (event) {
-  if (event.target === modal) {
-    closeModal();
-  }
-});
+    // Close the modal when clicking outside of it
+    window.addEventListener("click", function (event) {
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
   </script>
 </body>
-
-
-
-
-
 {% endblock %}

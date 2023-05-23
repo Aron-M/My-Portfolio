@@ -1,3 +1,40 @@
+/* General */
+
+body {
+  background-color: #292c31;
+}
+
+h1,
+h5 {
+  color: #f7f6f6;
+  display: flex;
+  justify-content: start;
+}
+
+p {
+  color: #f7f6f6;
+}
+
+a,
+.nav-link {
+  color: #f7f6f6;
+}
+
+
+/* Nav-Bar */
+
+.sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  background-color: #292c31;
+}
+
+
+/*Header Section*/
 
 .heading {
   display: flex;
@@ -12,6 +49,32 @@
   color: #f7f6f6;
 }
 
+#about {
+  margin-bottom: 3rem;
+  margin-top: 4rem;
+}
+
+/* Personal Details Model & Section */
+
+.personal-details {
+  margin-left: 3rem;
+  padding: 0;
+  color: #f7f6f6;
+  border-radius: 1rem;
+  border-width: 2px;
+  border-color: #f7f6f6;
+}
+
+.personal-details-field-name {
+  margin-bottom: 10px;
+}
+
+.flag-icon {
+  width: 2rem;
+}
+
+/* Skills Section & Model with Modal */
+
 .model-title {
   margin-right: 7.5rem;
   max-width: 1rem;
@@ -21,7 +84,7 @@
   font-size: 1.2rem;
   padding: 0;
   max-height: 2rem;
-  color:#fdf8f8;
+  color: #fdf8f8;
 }
 
 .lang_img,
@@ -49,28 +112,6 @@
   transform: scale(1.3);
 }
 
-/* .lang_img,
-.frame_img,
-.lib_img,
-.vc_img,
-.db_img {
-  display: inline-block;
-  display: flex;
-  flex-direction: column;
-  max-width: 18vw;
-  margin-bottom: 0px;
-  margin-right: 40px;
-  margin-top: 20px;
-  padding: 20px;
-  padding-left: 45px;
-  padding-right: 45px;
-  object-fit: fill;
-  border: 2px solid rgb(250, 241, 241);
-  border-radius: 12px;
-} */
-
-
-
 .frame_img,
 .lib_img,
 .vc_img,
@@ -78,35 +119,9 @@
 .db_img {
   padding-inline-start: 0;
   padding-right: 1.5rem;
-  height:fit-content;
-  border:none;
+  height: fit-content;
+  border: none;
 }
-/* 
-.model-container {
-  transform: scale(0.50);
-  transform-origin: top left;
-  left: 2vw;
-  height:auto;
-} */
-
-
-
-/* .languages_images {
-  width: 6.5rem;
-} */
-
-
-body {
-  background-color: #292c31;
-}
-
-/* .container-div {
-  display: flex;
-  flex-direction: row;
-  height: 40rem;
-  width: 40rem;
-} */
-
 
 #frameworks_img,
 #languages_img,
@@ -118,31 +133,27 @@ body {
   margin-right: 0px;
   max-width: fit-content;
   height: 6rem;
-  padding:0;
+  padding: 0;
 }
 
 #skills-subheader {
   margin-bottom: 4rem;
 }
 
+/* Modal for Skills-Section */
 
 .modal-image {
-  width:4rem; 
+  width: 4rem;
   height: 4rem;
-  object-fit:contain; 
-  object-position: center; 
+  object-fit: contain;
+  object-position: center;
   margin-bottom: 1rem;
 }
 
 .text-center {
-  color:#f7f6f6;
-  margin-bottom: 3rem;;
-}
-
-h1,h5 {
-  color:#f7f6f6;
-  display: flex;
-  justify-content: start;
+  color: #f7f6f6;
+  margin-bottom: 3rem;
+  ;
 }
 
 .display-4 {
@@ -151,75 +162,11 @@ h1,h5 {
   margin: 0;
 }
 
-p {
-  color:#f7f6f6;
-}
-
 .img-fluid {
   max-width: 14rem;
   height: auto;
 }
 
-.sticky-top {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.navbar {
-  background-color: #292c31;
-}
-
-a,
-.nav-link {
-  color:#f7f6f6;
-}
-
-#contact label {
-    color:#f7f6f6;
-  }
-
-#location-map {
-  margin-top: 2.3rem;
-}
-
-.cv-text{
-  color: black;
-}
-
-.colored {
-  font-size: 5rem;
-}
-
-.personal-details {
-  margin-left:3rem;
-  padding:0;
-  color:#f7f6f6;
-  border-radius: 1rem;
-  border-width: 2px;
-  border-color: #f7f6f6;
-}
-
-.personal-details-field-name {
-  margin-bottom: 10px;
-}
-
-#projects-header {
-  color: black;
-}
-
-.flag-icon {
-  width:2rem;
-}
-
-#about {
-  margin-bottom:3rem;
-  margin-top: 4rem;
-}
-
-#skills{
-  padding: 0;
-}
 .modal-image {
   border: none;
 }
@@ -241,11 +188,11 @@ a,
   color: black;
 }
 
-.modal-image-inside{
-  width:10rem;
+.modal-image-inside {
+  width: 10rem;
   height: auto;
   padding-top: 1rem;
-  padding-left:1rem;
+  padding-left: 1rem;
 }
 
 #modal-box {
@@ -254,11 +201,11 @@ a,
 
 #modal-title {
   font-size: 3.5rem;
-  margin-top:2rem;
+  margin-top: 2rem;
 }
 
 #modal-text {
-  padding:2rem;
+  padding: 2rem;
 }
 
 .fade-in {
@@ -269,29 +216,60 @@ a,
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
 
-.card-img-top {
-  height: 200px; /* Set the desired height for the images */
-  object-fit: cover; /* Maintain aspect ratio and cover the entire space */
+/* Contact Section */
+
+#contact label {
+  color: #f7f6f6;
 }
 
-.social-icons {
-  margin-top: 10px; /* Adjust the margin as needed */
+#location-map {
+  margin-top: 2.3rem;
 }
+
+.cv-text {
+  color: black;
+}
+
+.colored {
+  font-size: 5rem;
+}
+
+
+/* Projects Section */
+
+#projects-header {
+  color: black;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+
+
+.projects-section .card-title,
+.projects-section .card-text,
+.projects-section .btn-primary {
+  color: black;
+}
+
+
+/* Footer */
 
 .social-icon {
   display: inline-block;
-  font-size: 24px; /* Adjust the font size as needed */
-  margin-right: 10px; /* Adjust the spacing between icons as needed */
-  color: #fff; /* Adjust the icon color as needed */
+  font-size: 24px;
+  margin-right: 10px;
+  color: #fff;
 }
 
-.projects-section .card-title,
-    .projects-section .card-text,
-    .projects-section .btn-primary {
-      color: black;
-    }
+.social-icons {
+  margin-top: 10px;
+}

@@ -100,6 +100,7 @@ class Headings(models.Model):
 class Project(models.Model):
     name = models.CharField(max_length=200)
     image = models.ImageField(upload_to='project_images/')
+    description = models.CharField(max_length=200)
     github_url = models.URLField()
 
     def __str__(self):
