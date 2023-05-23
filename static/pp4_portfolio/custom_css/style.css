@@ -289,3 +289,9 @@ a,
   margin-right: 10px; /* Adjust the spacing between icons as needed */
   color: #fff; /* Adjust the icon color as needed */
 }
+
+.projects-section .card-title,
+    .projects-section .card-text,
+    .projects-section .btn-primary {
+      color: black;
+    }
