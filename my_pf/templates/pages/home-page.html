@@ -55,45 +55,49 @@
           <img src="media/images/Aron-face-image.JPG" alt="Profile Picture" class="img-fluid square prof-pic">
         </div>
 
-        <!-- Personal Details Section -->
-        <div class="col-md-4 personal-details">
-          <h4>Personal Details:</h4>
-          {% for detail in data %}
-          <div class="personal-details-field row">
-            <div class="col-4 personal-details-field-name">Name:</div>
-            <div class="col-8">{{ detail.full_name }}</div>
-          </div>
-          <div class="personal-details-field row">
-            <div class="col-4 personal-details-field-name">Nationality:</div>
-            <div class="col-8">
-              {% if detail.flag_nationality %}
-              <img src="{{ detail.flag_nationality.url }}" class="flag-icon" alt="Flag">
-              {% endif %}
-              {{ detail.nationality }}
-            </div>
-          </div>
-          <div class="personal-details-field row">
-            <div class="col-4 personal-details-field-name">Residency:</div>
-            <div class="col-8">
-              {% if detail.flag_residency %}
-              <img src="{{ detail.flag_residency.url }}" class="flag-icon" alt="Flag">
-              {% endif %}
-              {{ detail.residency }}
-            </div>
-          </div>
-          <div class="personal-details-field row">
-            <div class="col-4 personal-details-field-name">Languages:</div>
-            <div class="col-8">{{ detail.languages }}</div>
-          </div>
-          <div class="personal-details-field row">
-            <div class="col-4 personal-details-field-name">Studying:</div>
-            <div class="col-8">{{ detail.studying }}</div>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
+       <!-- Personal Details Section -->
+<div class="col-md-4 personal-details">
+  <h4>Personal Details:</h4>
+  {% for detail in data %}
+  <div class="personal-details-field row">
+    <div class="col-4 personal-details-field-name">Name:</div>
+    <div class="col-8">{{ detail.full_name }}</div>
+  </div>
+  <div class="personal-details-field row">
+    <div class="col-4 personal-details-field-name">Nationality:</div>
+    <div class="col-8">
+      {% if detail.flag_nationality %}
+      <img src="{{ detail.flag_nationality.url }}" class="flag-icon" alt="Flag">
+      {% endif %}
+      {{ detail.nationality }}
     </div>
-  </section>
+  </div>
+  <div class="personal-details-field row">
+    <div class="col-4 personal-details-field-name">Residency:</div>
+    <div class="col-8">
+      {% if detail.flag_residency %}
+      <img src="{{ detail.flag_residency.url }}" class="flag-icon" alt="Flag">
+      {% endif %}
+      {{ detail.residency }}
+    </div>
+  </div>
+  <div class="personal-details-field row">
+    <div class="col-4 personal-details-field-name">Languages:</div>
+    <div class="col-8">{{ detail.languages }}</div>
+  </div>
+  <div class="personal-details-field row">
+    <div class="col-4 personal-details-field-name">Studying:</div>
+    <div class="col-8">{{ detail.studying }}</div>
+  </div>
+  <div class="personal-details-field row">
+    <div class="col-4 personal-details-field-name"></div>
+    <img src="{{ detail.study_icon.url }}" class="ci-icon">
+  </div>
+  {% endfor %}
+</div>
+</div>
+</div>
+</section>
 
 
   <section id="skills" class="container skills-container">
@@ -111,7 +115,7 @@
             <ul class="lang_img">
               {% for skill in skill %}
               {% if skill.category == category %}
-              <li class="d-inline-block"><img class="modal-image" 
+              <li class="d-inline-block icon-box"><img class="modal-image" 
                 src="{{ skill.icon }}" alt="{{ skill.name }}" title="{{ skill.description }}"></li>
               {% endif %}
               {% endfor %}
@@ -131,7 +135,7 @@
                 <img id="modal-image" class="modal-image modal-image-inside" src="" alt="Modal Image">
               </div>
               <div class="col-md-8">
-                <h2 id="modal-title"></h2>
+                <h2 id="modal-title">Click to view more info</h2>
               </div>
             </div>
             <div class="row">
