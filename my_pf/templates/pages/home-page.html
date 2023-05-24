@@ -96,30 +96,40 @@
   </section>
 
 
-        <!--Skills Modal-->
-        <div id="modal-div" class="col-lg-6">
-          <div id="modal-box">
-            <div class="modal-content">
-              <span class="modal-close-button">&times;</span>
-              <div class="row">
-                <div class="col-md-4">
-                  <img id="modal-image" class="modal-image modal-image-inside" src="" alt="Modal Image">
-                </div>
-                <div class="col-md-8">
-                  <h2 id="modal-title"></h2>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md12">
-                  <p id="modal-text"></p>
-                </div>
-              </div>
-            </div>
+  <section id="skills" class="container skills-container">
+    <div class="skills-container">
+      <h1 id="skills-id">SKILLS</h1>
+      <div class="row">
+        <div class="model-container col-lg-6">
+          {% for category in category %}
+        <div class="row">
+          <div class="model-item col-md-2">
+            <h6 class="category-names">{{ category.name }}</h6>
+          </div>
+          <div class="model-item col-md-10">
+            <ul class="lang_img">
+              {% for skill in skill %}
+              {% if skill.category == category %}
+              <li class="d-inline-block"><img class="languages_images modal-image" src="{{ skill.icon }}" alt="{{ skill.name }}"></li>
+              {% endif %}
+              {% endfor %}
+            </ul>
           </div>
         </div>
-        
+        {% endfor %}
+    </div>
+
+    <div id="modal-div" class="col-lg-6">
+      <div id="modal-box">
+        <div class="modal-content">
+          <img id="modal-image" class="modal-image" src="" alt="Modal Image">
+          <p id="modal-text"></p>
+        </div>
       </div>
+    </div>
+    </div>
   </section>
+
 
 
   <!-- Projects Section -->
@@ -143,7 +153,7 @@
     </div>
   </section>
 
-<!--Contact Section-->
+  <!--Contact Section-->
   <section id="contact" class="py-5">
     <div class="container">
       <div class="row">
@@ -191,7 +201,7 @@
     </div>
   </section>
 
-<!--Footer Section-->
+  <!--Footer Section-->
   <footer class="text-light text-center py-4">
     <div class="container d-flex flex-column">
       <div class="row flex-grow-1">
