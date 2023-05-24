@@ -76,7 +76,6 @@ a,
 /* Skills Section & Model with Modal */
 
 .model-title {
-  margin-right: 7.5rem;
   max-width: 1rem;
   min-width: 1rem;
   margin-top: 1rem;
@@ -136,9 +135,10 @@ a,
   padding: 0;
 }
 
-#skills-subheader {
+.skills-subheader {
   margin-bottom: 4rem;
 }
+
 
 /* Modal for Skills-Section */
 
@@ -148,6 +148,7 @@ a,
   object-fit: contain;
   object-position: center;
   margin-bottom: 1rem;
+  margin-right: 2rem;
 }
 
 .text-center {
@@ -165,10 +166,6 @@ a,
 .img-fluid {
   max-width: 14rem;
   height: auto;
-}
-
-.modal-image {
-  border: none;
 }
 
 .modal-content {
@@ -276,4 +273,5 @@ a,
 
 .category-names {
   color:#f7f6f6;
+  margin-top: 1rem;
 }

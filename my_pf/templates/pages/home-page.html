@@ -99,6 +99,7 @@
   <section id="skills" class="container skills-container">
     <div class="skills-container">
       <h1 id="skills-id">SKILLS</h1>
+      <h5 id="skills-id" class="skills-subheader">Click icons to view details</h5>
       <div class="row">
         <div class="model-container col-lg-6">
           {% for category in category %}
@@ -110,7 +111,8 @@
             <ul class="lang_img">
               {% for skill in skill %}
               {% if skill.category == category %}
-              <li class="d-inline-block"><img class="languages_images modal-image" src="{{ skill.icon }}" alt="{{ skill.name }}"></li>
+              <li class="d-inline-block"><img class="modal-image" 
+                src="{{ skill.icon }}" alt="{{ skill.name }}" title="{{ skill.description }}"></li>
               {% endif %}
               {% endfor %}
             </ul>
@@ -151,7 +153,7 @@
     <div class="container projects-section">
       <h1 class="text-center" id="projects-header">Projects</h1>
       <div class="row">
-        {% for project in projects %}
+        {% for project in project %}
         <div class="col-md-3">
           <div class="card mb-3">
             <img src="{{ project.image.url }}" alt="{{ project.name }}" class="card-img-top">
@@ -269,7 +271,7 @@
     icons.forEach(function (icon) {
       icon.addEventListener("click", function () {
         var imageSrc = icon.src;
-        var textContent = "This text needs to display unique information about each individual skill displayed within this modal"; // Replace with your desired text content
+        var textContent = icon.title;
         var titleContent = icon.alt;
         openModal(imageSrc, textContent, titleContent);
       });
