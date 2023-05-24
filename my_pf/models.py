@@ -8,7 +8,6 @@ from django.core.validators import FileExtensionValidator
 
 class PersonalDetails(models.Model):
     full_name = models.CharField(max_length=200, unique=False)
-    age = models.PositiveBigIntegerField(default='2')
     nationality = models.CharField(max_length=200, unique=False)
     residency = models.CharField(max_length=200, unique=False)
     languages = models.CharField(max_length=200, unique=False)
@@ -97,11 +96,11 @@ class Headings(models.Model):
     def __str__(self):
         return self.big_header
 
-class Project(models.Model):
-    name = models.CharField(max_length=200)
-    image = models.ImageField(upload_to='project_images/')
-    description = models.CharField(max_length=200)
-    github_url = models.URLField()
+# class Project(models.Model):
+#     name = models.CharField(max_length=200)
+#     image = models.ImageField(upload_to='project_images/')
+#     description = models.CharField(max_length=200)
+#     github_url = models.URLField()
 
-    def __str__(self):
-        return self.name
+#     def __str__(self):
+#         return self.name
