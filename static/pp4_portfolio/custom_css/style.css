@@ -264,3 +264,18 @@ a,
 .card-header{
   color:black;
 }
+
+
+/* Dashboard */
+
+.mt-4 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.header-container {
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+
+

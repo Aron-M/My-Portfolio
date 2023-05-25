@@ -1,59 +1,74 @@
 {% extends 'base.html' %}
-
 {% block content %}
+
 <body>
-  {% include 'navbar.html' %}
+  <div class="container">
+    <div class="header-container d-flex justify-content-center">
+      <h1>Admin Dashboard</h1>
+    </div>
+
     <div class="container">
-      <div class="header-container">
-        <h1 class="text-center">Admin Dashboard</h1>
-      </div>
-  
       <div class="row">
         <div class="col-md-6">
-          <div class="card mt-4">
+          <div class="card h-100">
             <div class="card-header text-center">Headings</div>
-            <div class="card-body text-center">
-              <img src="media/dashboard-images/header-edit.png" alt="Headings Image">
-              <button class="btn btn-primary mt-2">Edit</button>
+            <div class="card-body d-flex flex-column justify-content-center">
+              <div class="image-container">
+                <img src="../media/dashboard-images/header-edit.png" alt="Headings Image" class="img-fluid">
+              </div>
+              <div class="text-center">
+                <button class="btn btn-primary edit-button">Edit</button>
+              </div>
             </div>
           </div>
         </div>
-  
+    
         <div class="col-md-6">
-          <div class="card mt-4">
+          <div class="card h-100">
             <div class="card-header text-center">Personal Details</div>
-            <div class="card-body text-center">
-              <img src="path_to_image" alt="Personal Details Image">
-              <button class="btn btn-primary mt-2">Edit</button>
+            <div class="card-body d-flex flex-column justify-content-center">
+              <div class="image-container">
+                <img src="../media/dashboard-images/personal-details.png" alt="Personal Details Image" class="img-fluid">
+              </div>
+              <div class="text-center">
+                <button class="btn btn-primary edit-button">Edit</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-  
+    
       <div class="row">
         <div class="col-md-6">
-          <div class="card mt-4">
+          <div class="card h-100">
             <div class="card-header text-center">Skills</div>
-            <div class="card-body text-center">
-              <img src="path_to_image" alt="Skills Image">
-              <button class="btn btn-primary mt-2">Edit</button>
+            <div class="card-body d-flex flex-column justify-content-center">
+              <div class="image-container">
+                <img src="../media/dashboard-images/skills-section.png" alt="Skills Image" class="img-fluid">
+              </div>
+              <div class="text-center">
+                <button class="btn btn-primary edit-button">Edit</button>
+              </div>
             </div>
           </div>
         </div>
-  
+    
         <div class="col-md-6">
-          <div class="card mt-4">
+          <div class="card h-100">
             <div class="card-header text-center">Projects</div>
-            <div class="card-body text-center">
-              <img src="path_to_image" alt="Projects Image">
-              <button class="btn btn-primary mt-2">Edit</button>
+            <div class="card-body d-flex flex-column justify-content-center">
+              <div class="image-container">
+                <img src="../media/dashboard-images/projects-section.png" alt="Projects Image" class="img-fluid">
+              </div>
+              <div class="text-center">
+                <button class="btn btn-primary edit-button">Edit</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    {% include 'footer.html' %}
-  </body>
+    
 
 
 {% endblock %}
