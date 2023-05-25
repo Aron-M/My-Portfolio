@@ -1,0 +1,31 @@
+<section id="skills" class="container skills-container">
+    <div class="skills-container">
+      <h1 id="skills-id">SKILLS</h1>
+      <h5 id="skills-id" class="skills-subheader">Click icons to view details</h5>
+      <div class="row">
+        <div class="model-container col-lg-6">
+          {% for category in category %}
+        <div class="row">
+          <div class="model-item col-md-2">
+            <h6 class="category-names">{{ category.name }}</h6>
+          </div>
+          <div class="model-item col-md-10">
+            <ul class="lang_img">
+              {% for skill in skill %}
+              {% if skill.category == category %}
+              <li class="d-inline-block icon-box"><img class="modal-image" 
+                src="{{ skill.icon }}" alt="{{ skill.name }}" title="{{ skill.description }}"></li>
+              {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        {% endfor %}
+    </div>
+
+      <!--Skills Modal-->
+      
+      {% include 'components/skills/modal.html' %}
+      
+    </div>
+  </section>

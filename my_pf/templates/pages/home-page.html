@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<body>
+
 
   <!-- Headings Section -->
   <header class="bg-primary text-white text-center py-5">
@@ -71,56 +71,8 @@
 </section>
 
 
-  <section id="skills" class="container skills-container">
-    <div class="skills-container">
-      <h1 id="skills-id">SKILLS</h1>
-      <h5 id="skills-id" class="skills-subheader">Click icons to view details</h5>
-      <div class="row">
-        <div class="model-container col-lg-6">
-          {% for category in category %}
-        <div class="row">
-          <div class="model-item col-md-2">
-            <h6 class="category-names">{{ category.name }}</h6>
-          </div>
-          <div class="model-item col-md-10">
-            <ul class="lang_img">
-              {% for skill in skill %}
-              {% if skill.category == category %}
-              <li class="d-inline-block icon-box"><img class="modal-image" 
-                src="{{ skill.icon }}" alt="{{ skill.name }}" title="{{ skill.description }}"></li>
-              {% endif %}
-              {% endfor %}
-            </ul>
-          </div>
-        </div>
-        {% endfor %}
-    </div>
-
-      <!--Skills Modal-->
-      <div id="modal-div" class="col-lg-6">
-        <div id="modal-box">
-          <div class="modal-content">
-            <span class="modal-close-button">&times;</span>
-            <div class="row">
-              <div class="col-md-4">
-                <img id="modal-image" class="modal-image modal-image-inside" src="" alt="Modal Image">
-              </div>
-              <div class="col-md-8">
-                <h2 id="modal-title"></h2>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md12">
-                <p id="modal-text"></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </section>
-
+  
+{% include 'components/skills/skills.html' %}
 
 
   <!-- Projects Section -->
@@ -193,55 +145,4 @@
   </section>
 
   <!--Footer Section-->
-
-  <script>
-    // Get the modal element
-    var modal = document.getElementById("modal-box");
-
-    // Get the image and text elements inside the modal
-    var modalImage = document.getElementById("modal-image");
-    var modalText = document.getElementById("modal-text");
-    var modalTitle = document.querySelector("#modal-box h2");
-
-    // Function to open the modal and display the content with fade-in effect
-    function openModal(imageSrc, textContent, titleContent) {
-      modal.style.display = "block";
-      modal.classList.add("fade-in");
-      modalImage.src = imageSrc;
-      modalText.innerText = textContent;
-      modalTitle.innerText = titleContent;
-
-      setTimeout(function () {
-        modal.classList.remove("fade-in");
-      }, 1000); // Adjust the delay duration as needed
-    }
-
-    // Function to close the modal
-    function closeModal() {
-      modal.style.display = "none";
-      modal.classList.remove("fade-in");
-    }
-
-    var icons = document.querySelectorAll(".modal-image");
-    icons.forEach(function (icon) {
-      icon.addEventListener("click", function () {
-        var imageSrc = icon.src;
-        var textContent = icon.title;
-        var titleContent = icon.alt;
-        openModal(imageSrc, textContent, titleContent);
-      });
-    });
-
-
-    var closeButton = document.querySelector(".modal-close-button");
-    closeButton.addEventListener("click", closeModal);
-
-    // Close the modal when clicking outside of it
-    window.addEventListener("click", function (event) {
-      if (event.target === modal) {
-        closeModal();
-      }
-    });
-  </script>
-</body>
 {% endblock %}
