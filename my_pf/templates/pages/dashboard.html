@@ -1,9 +1,8 @@
 {% extends 'base.html' %}
 
-
-
 {% block content %}
 <body>
+  {% include 'navbar.html' %}
     <div class="container">
       <div class="header-container">
         <h1 class="text-center">Admin Dashboard</h1>
@@ -53,6 +52,8 @@
         </div>
       </div>
     </div>
+    {% include 'footer.html' %}
   </body>
+
 
 {% endblock %}
