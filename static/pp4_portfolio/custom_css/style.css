@@ -316,3 +316,7 @@ a,
 .box-row {
   margin-bottom: 2rem;
 }
+
+.left-div {
+  background-color:lightgray;
+}
