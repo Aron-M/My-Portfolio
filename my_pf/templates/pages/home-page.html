@@ -28,6 +28,9 @@
           <li class="nav-item">
             <a class="nav-link" href="#cv">CV</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'dashboard' %}">Admin</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -50,11 +53,11 @@
           <p>{{ headings.par2 }}</p>
           <p>{{ headings.par3 }}</p>
         </div>
-        {% endfor %}
+        
         <div class="col-md-2 profile-pic">
-          <img src="media/images/Aron-face-image.JPG" alt="Profile Picture" class="img-fluid square prof-pic">
+          <img src={{ headings.profile_image }} alt="Profile Picture" class="img-fluid square prof-pic">
         </div>
-
+        {% endfor %}
        <!-- Personal Details Section -->
 <div class="col-md-4 personal-details">
   <h4>Personal Details:</h4>
@@ -135,7 +138,7 @@
                 <img id="modal-image" class="modal-image modal-image-inside" src="" alt="Modal Image">
               </div>
               <div class="col-md-8">
-                <h2 id="modal-title">Click to view more info</h2>
+                <h2 id="modal-title"></h2>
               </div>
             </div>
             <div class="row">

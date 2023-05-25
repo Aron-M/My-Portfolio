@@ -76,6 +76,7 @@ a,
 .ci-icon {
   width: 6rem;
   height: 2.5rem;
+  border-radius: 10px;
   margin-top: 0.5rem;
 }
 /* Skills Section & Model with Modal */
@@ -176,9 +177,9 @@ a,
   padding-left: 1rem;
 }
 
-/* #modal-box {
+#modal-box {
   display: none;
-} */
+}
 
 #modal-title {
   font-size: 3.5rem;

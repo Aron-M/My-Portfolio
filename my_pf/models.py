@@ -22,6 +22,7 @@ class PersonalDetails(models.Model):
 class Headings(models.Model):
     big_header = models.CharField(max_length=100)
     sub_header = models.CharField(max_length=100)
+    profile_image = models.ImageField(upload_to='images/', null=True, blank=True)
     par1 = models.CharField(max_length=300)
     par2 = models.CharField(max_length=300)
     par3 = models.CharField(max_length=300)

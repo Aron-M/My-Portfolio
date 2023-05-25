@@ -17,3 +17,7 @@ def display_all(request):
     if request.path == "/":
         return render(request, 'pages/home-page.html', context )
 
+def dashboard_view(request):
+    return render(request, 'pages/dashboard.html')
+
+

@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+<body>
+    <div class="container">
+      <div class="header-container">
+        <h1 class="text-center">Admin Dashboard</h1>
+      </div>
+  
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card mt-4">
+            <div class="card-header text-center">Headings</div>
+            <div class="card-body text-center">
+              <img src="media/dashboard-images/header-edit.png" alt="Headings Image">
+              <button class="btn btn-primary mt-2">Edit</button>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-6">
+          <div class="card mt-4">
+            <div class="card-header text-center">Personal Details</div>
+            <div class="card-body text-center">
+              <img src="path_to_image" alt="Personal Details Image">
+              <button class="btn btn-primary mt-2">Edit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card mt-4">
+            <div class="card-header text-center">Skills</div>
+            <div class="card-body text-center">
+              <img src="path_to_image" alt="Skills Image">
+              <button class="btn btn-primary mt-2">Edit</button>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-6">
+          <div class="card mt-4">
+            <div class="card-header text-center">Projects</div>
+            <div class="card-body text-center">
+              <img src="path_to_image" alt="Projects Image">
+              <button class="btn btn-primary mt-2">Edit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+{% endblock %}
