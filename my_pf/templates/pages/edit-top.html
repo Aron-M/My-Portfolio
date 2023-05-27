@@ -2,13 +2,14 @@
 
 {% block content %}
 <div class="container-lg">
-    <div class="row">
-      <div class="col">
-        <form method="POST" class="edit">
-          {% csrf_token %}
-          <h1>Edit Personal Details</h1>
-          <div class="row">
-            <div class="col-md-4 left-div">
+  <div class="row">
+    <div class="col">
+      <form method="POST" class="edit">
+        {% csrf_token %}
+        <h1 class="mb-4">Edit Personal Details</h1>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="p-3 bg-light">
               <div class="mb-3">
                 {{ personal_details_form.full_name.label_tag }}
                 {{ personal_details_form.full_name }}
@@ -38,17 +39,20 @@
                 {{ personal_details_form.flag_residency }}
               </div>
             </div>
-            <div class="col-md-8 right-div">
-                {% include 'components/personal-details.html' %}
+          </div>
+          <div class="col-md-8 mb-4">
+            <div class="p-3" style="background-color: #000000;">
+              {% include 'components/personal-details.html' %}
             </div>
           </div>
-          <div>
-            <button type="submit" class="btn btn-primary">Update</button>
-          </div>
-        </form>
-      </div>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Update</button>
+        </div>
+      </form>
     </div>
   </div>
-  
+</div>
+
 
 {% endblock %}
