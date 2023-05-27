@@ -2,11 +2,13 @@
 
 {% block content %}
 <div class="container-lg">
-  <div class="row">
+  <div class="row justify-content-center mt-4">
     <div class="col">
       <form method="POST" class="edit">
         {% csrf_token %}
-        <h1 class="mb-4">Edit Personal Details</h1>
+        <div class="text-center mb-4">
+          <h1>Edit Personal Details</h1>
+        </div>
         <div class="row">
           <div class="col-md-4 mb-4">
             <div class="p-3 bg-light">
@@ -41,18 +43,23 @@
             </div>
           </div>
           <div class="col-md-8 mb-4">
-            <div class="p-3" style="background-color: #000000;">
+            <div class="p-3 bg-dark">
               {% include 'components/personal-details.html' %}
             </div>
           </div>
         </div>
         <div class="text-center">
-          <button type="submit" class="btn btn-primary">Update</button>
+          <button type="submit" class="btn btn-primary">Edit</button>
+          <button type="button" class="btn btn-danger">Delete</button>
+        </div>
+        <div class="text-center mt-3">
+          <a href="{% url 'home' %}" class="btn btn-warning">Back to Home</a>
         </div>
       </form>
     </div>
   </div>
 </div>
+
 
 
 {% endblock %}
