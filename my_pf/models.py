@@ -48,7 +48,7 @@ class SkillCategory(models.Model):
     def __str__(self):
         return self.name
 
-class Skill(models.Model):
+class Skills(models.Model):
     name = models.CharField(max_length=100, blank=True, null=True)
     icon = models.URLField(max_length=100, blank=True)
     description = models.CharField(max_length=300, blank=True, null=True)

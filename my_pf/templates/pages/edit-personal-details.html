@@ -7,7 +7,7 @@
       <form method="POST" class="edit">
         {% csrf_token %}
         <div class="text-center mb-4">
-          <h1>Edit Personal Details</h1>
+          <h1 class="justify-content-center" style="margin-bottom: 4rem;">Edit Personal Details</h1>
         </div>
         <div class="row">
           <div class="col-md-4 mb-4">
@@ -47,10 +47,11 @@
             </div>
           </div>
           <div class="col-md-8 mb-4">
+            <h2 class="text-center">Preview:</h2>
             <div class="bg-dark">
               {% include 'components/personal-details.html' %}
             </div>
-            <div style="margin-bottom: 5rem;">
+            <div style="margin-bottom: 3rem;">
 
             </div>
             <div class="text-center">

@@ -11,10 +11,10 @@
           </div>
           <div class="model-item col-md-10">
             <ul class="lang_img">
-              {% for skill in skill %}
-              {% if skill.category == category %}
+              {% for skills in skills %}
+              {% if skills.category == category %}
               <li class="d-inline-block icon-box"><img class="modal-image" 
-                src="{{ skill.icon }}" alt="{{ skill.name }}" title="{{ skill.description }}"></li>
+                src="{{ skills.icon }}" alt="{{ skills.name }}" title="{{ skills.description }}"></li>
               {% endif %}
               {% endfor %}
             </ul>

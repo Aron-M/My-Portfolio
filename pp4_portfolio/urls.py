@@ -24,8 +24,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.display_all, name='all'),
     path('dashboard/', views.dashboard_view, name='dashboard'),
-    path('dashboard/edit-personal-details/', views.display_edit_personal_details, name='edit-personal-details'),
-    path('dashboard/edit-headings/', views.display_edit_headings, name='edit-headings'),
+    path('edit-personal-details/', views.display_edit_personal_details, name='edit-personal-details'),
+    path('edit-headings/', views.display_edit_headings, name='edit-headings'),
+    path('edit-skills/<int:skill_id>/', views.display_edit_skills, name='edit-skills'),
     path('home/', views.display_all, name='home')
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

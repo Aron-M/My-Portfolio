@@ -1,29 +1,32 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import PersonalDetails, Headings, Project, Skill, SkillCategory
-from .forms import PersonalDetailsForm, HeadingsForm
+from .models import PersonalDetails, Headings, Project, Skills, SkillCategory
+from .forms import PersonalDetailsForm, HeadingsForm, SkillsForm
+from django.contrib import messages
 
 def display_skills_page(request):
     return render(request, 'pages/skills.html')
 
 def display_all(request):
     data = PersonalDetails.objects.all()
-    skill = Skill.objects.all()
+    skills = Skills.objects.all()
     category = SkillCategory.objects.all()
     project = Project.objects.all()
     headings = Headings.objects.all()
     context = {
-        'data': data, 'headings': headings, 'project': project, 'skill': skill, 'category': category
+        'data': data, 'headings': headings, 'project': project, 'skills': skills, 'category': category
         }
     if request.path == "home/":
         return render(request, 'pages/home-page.html', context )
     else: 
         return render(request, 'pages/home-page.html', context )
 
+
 def dashboard_view(request):
-    return render(request, 'pages/dashboard.html')
-
-
-
+    skill = get_object_or_404(Skills, id=7)
+    context = {
+        'skill': skill,
+    }
+    return render(request, 'pages/dashboard.html', context)
 
 def display_edit_personal_details(request):
     data = PersonalDetails.objects.all()
@@ -62,4 +65,33 @@ def display_edit_headings(request):
         return render(request, 'pages/edit-headings.html', context)
     else: 
         return render(request, 'pages/edit-headings.html', context)
+
+
+
+def display_edit_skills(request, skill_id):
+    skill = get_object_or_404(Skills, id=skill_id)
+    skills_form = SkillsForm(instance=skill)
+    skills = Skills.objects.all()
+    category = SkillCategory.objects.all()
+    
+    if request.method == 'POST':
+        skills_form = SkillsForm(request.POST, instance=skill)
+        if skills_form.is_valid():
+            skills_form.save()
+            messages.success(request, 'Skills updated successfully.')
+            return redirect('edit-skills', skill_id=skill.id)
+        else:
+            messages.error(request, 'Error updating skills.')
+    
+    context = {
+        'skill': skill,
+        'skills_form': skills_form,
+        'category': category,
+        'skills': skills
+    }
+    return render(request, 'pages/edit-skills.html', context)
+
+
+
+
 

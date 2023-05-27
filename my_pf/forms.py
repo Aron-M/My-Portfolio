@@ -1,5 +1,5 @@
 from django import forms
-from .models import PersonalDetails, Headings
+from .models import PersonalDetails, Headings, Skills
 
 
 class PersonalDetailsForm(forms.ModelForm):
@@ -19,3 +19,8 @@ class HeadingsForm(forms.ModelForm):
             'par3': forms.Textarea(attrs={'rows': 4, 'cols': 40}),
             'par4': forms.Textarea(attrs={'rows': 4, 'cols': 40}),
         }
+
+class SkillsForm(forms.ModelForm):
+    class Meta:
+        model = Skills
+        fields = '__all__'
