@@ -16,15 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from my_pf.views import display_all, dashboard_view, display_edit_top
+from my_pf import views
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', display_all, name='all'),
-    path('dashboard/', dashboard_view, name='dashboard'),
-    path('dashboard/edit-top/', display_edit_top, name='edit-top'),
-    path('home/', display_all, name='home')
+    path('', views.display_all, name='all'),
+    path('dashboard/', views.dashboard_view, name='dashboard'),
+    path('dashboard/edit-personal-details/', views.display_edit_personal_details, name='edit-personal-details'),
+    path('dashboard/edit-headings/', views.display_edit_headings, name='edit-headings'),
+    path('home/', views.display_all, name='home')
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

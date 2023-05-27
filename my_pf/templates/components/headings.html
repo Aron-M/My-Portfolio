@@ -1,0 +1,27 @@
+<section id="about" class="py-5">
+    <header class="bg-primary text-white text-center py-5">
+      <div class="container">
+        {% for heading in headings %}
+        <h1 class="display-4 big-header">{{ heading.big_header }}</h1>
+        <p class="lead sub-header">{{ heading.sub_header }}</p>
+      </div>
+    </header>
+    
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 about-me-par">
+          <p>{{ heading.par1 }}</p>
+          <p>{{ heading.par2 }}</p>
+          <p>{{ heading.par3 }}</p>
+        </div>
+        <div class="col-md-2 profile-pic">
+          <img src="{{ heading.profile_image.url }}" alt="Profile Picture" class="img-fluid square prof-pic">
+        </div>
+        <div class="col-md-5">
+          {% include 'components/personal-details.html' %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    </section>

@@ -5,34 +5,8 @@
 
 
 <!-- Headings Section -->
-<section id="about" class="py-5">
-<header class="bg-primary text-white text-center py-5">
-  <div class="container">
-    {% for headings in headings %}
-    <h1 class="display-4 big-header">{{ headings.big_header }}</h1>
-    <p class="lead sub-header">{{ headings.sub_header }}</p>
-  </div>
-</header>
-
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-5 about-me-par">
-      <p>{{ headings.par1 }}</p>
-      <p>{{ headings.par2 }}</p>
-      <p>{{ headings.par3 }}</p>
-    </div>
-
-    <div class="col-md-2 profile-pic">
-      <img src="{{ headings.profile_image.url }}" alt="Profile Picture" class="img-fluid square prof-pic">
-    </div>
-    {% endfor %}
-    <!-- Personal Details Model -->
-    <div class="col-md-5">
-      {% include 'components/personal-details.html' %}
-    </div>
-  </div>
-</div>
+<section>
+  {% include 'components/headings.html' %}
 </section>
 
 
