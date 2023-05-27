@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from my_pf.views import display_all, dashboard_view, edit_personal_details
+from my_pf.views import display_all, dashboard_view, display_edit_top
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -24,7 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', display_all, name='all'),
     path('dashboard/', dashboard_view, name='dashboard'),
-    path('dashboard/edit-top/', edit_personal_details, name='edit-top'),
+    path('dashboard/edit-top/', display_edit_top, name='edit-top'),
     path('home/', display_all, name='home')
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

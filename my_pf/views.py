@@ -31,7 +31,7 @@ def dashboard(request):
         details_form = DetailsForm(request.POST)
         if details_form.is_valid():
             details_form.save()
-            return redirect('dashboard')
+            return redirect('dashboard/edit-top')
 
     context = {
         'details': details,
@@ -40,17 +40,21 @@ def dashboard(request):
     return render(request, 'pages/dashboard.html', context)
 
 
-def edit_personal_details(request):
+
+def display_edit_top(request):
+    data = PersonalDetails.objects.all()
+    personal_details_form = PersonalDetailsForm()
     detail = get_object_or_404(PersonalDetails)
     if request.method == 'POST':
         personal_details_form = PersonalDetailsForm(request.POST, instance=detail)
         if personal_details_form.is_valid():
             personal_details_form.save()
-            return redirect('home')
+            return redirect('edit-top')
     personal_details_form = PersonalDetailsForm(instance=detail)
     context = {
-        'personal_details_form': personal_details_form
-    }
-
-    return render(request, 'pages/edit-top.html', context)
-
+        'data': data, 'personal_details_form': personal_details_form
+        }
+    if request.path == "edit-top/":
+        return render(request, 'pages/edit-top.html', context )
+    else: 
+                return render(request, 'pages/edit-top.html', context )

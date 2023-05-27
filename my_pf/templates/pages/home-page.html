@@ -4,105 +4,113 @@
 
 
 
-  <!-- Headings Section -->
-  <header class="bg-primary text-white text-center py-5">
-    <div class="container">
-      {% for headings in headings %}
-      <h1 class="display-4 big-header">{{ headings.big_header }}</h1>
-      <p class="lead sub-header">{{ headings.sub_header }}</p>
+<!-- Headings Section -->
+<section id="about" class="py-5"></section>
+<header class="bg-primary text-white text-center py-5">
+  <div class="container">
+    {% for headings in headings %}
+    <h1 class="display-4 big-header">{{ headings.big_header }}</h1>
+    <p class="lead sub-header">{{ headings.sub_header }}</p>
+  </div>
+</header>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 about-me-par">
+      <p>{{ headings.par1 }}</p>
+      <p>{{ headings.par2 }}</p>
+      <p>{{ headings.par3 }}</p>
     </div>
-  </header>
 
-  <section id="about" class="py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-5 about-me-par">
-          <p>{{ headings.par1 }}</p>
-          <p>{{ headings.par2 }}</p>
-          <p>{{ headings.par3 }}</p>
-        </div>
-        
-        <div class="col-md-2 profile-pic">
-          <img src="{{ headings.profile_image.url }}" alt="Profile Picture" class="img-fluid square prof-pic">
-        </div>
-        {% endfor %}
-
-       <!-- Personal Details Section -->
-{% include 'components/personal-details.html' %}
+    <div class="col-md-2 profile-pic">
+      <img src="{{ headings.profile_image.url }}" alt="Profile Picture" class="img-fluid square prof-pic">
+    </div>
+    {% endfor %}
+    <!-- Personal Details Model -->
+    <div class="col-md-5">
+      {% include 'components/personal-details.html' %}
+    </div>
+  </div>
+</div>
+</section>
 
 
-  
-{% include 'components/skills/skills.html' %}
+<!-- Skills Section -->
+<section>
+  {% include 'components/skills/skills.html' %}
+</section>
 
 
-  <!-- Projects Section -->
-  <section id="projects" class="bg-light py-5">
-    <div class="container projects-section">
-      <h1 class="text-center" id="projects-header">Projects</h1>
-      <div class="row">
-        {% for project in project %}
-        <div class="col-md-3">
-          <div class="card mb-3">
-            <img src="{{ project.image.url }}" alt="{{ project.name }}" class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title">{{ project.name }}</h5>
-              <p class="card-text">{{ project.description }}</p>
-              <a href="{{ project.github_url }}" class="btn btn-primary" target="_blank">Learn More</a>
-            </div>
+
+<!-- Projects Section -->
+<section id="projects" class="bg-light py-5">
+  <div class="container projects-section">
+    <h1 class="text-center" id="projects-header">Projects</h1>
+    <div class="row">
+      {% for project in project %}
+      <div class="col-md-3">
+        <div class="card mb-3">
+          <img src="{{ project.image.url }}" alt="{{ project.name }}" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">{{ project.name }}</h5>
+            <p class="card-text">{{ project.description }}</p>
+            <a href="{{ project.github_url }}" class="btn btn-primary" target="_blank">Learn More</a>
           </div>
         </div>
-        {% endfor %}
       </div>
+      {% endfor %}
     </div>
-  </section>
+  </div>
+</section>
 
-  <!--Contact Section-->
-  <section id="contact" class="py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <h1>Contact Me</h1>
+<!--Contact Section-->
+<section id="contact" class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1>Contact Me</h1>
+        <form>
           <form>
-            <form>
-              <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" required>
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" required>
-              </div>
-              <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="8" required></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="8" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
           </form>
-        </div>
-        <div class="col-md-6">
-          <h1>Where am I?</h1>
-          <div id="location-map">
-            <iframe width="100%" height="380" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2845511.1018018126!2d-8.80145866936307!3d54.14996831559382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485ee9b5677caee9%3A0xa00c7a997317380!2sSligo%2C%20Ireland!5e0!3m2!1sen!2sus!4v1684179425631!5m2!1sen!2sus"
-              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </iframe>
-          </div>
+
+        </form>
+      </div>
+      <div class="col-md-6">
+        <h1>Where am I?</h1>
+        <div id="location-map">
+          <iframe width="100%" height="380" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2845511.1018018126!2d-8.80145866936307!3d54.14996831559382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485ee9b5677caee9%3A0xa00c7a997317380!2sSligo%2C%20Ireland!5e0!3m2!1sen!2sus!4v1684179425631!5m2!1sen!2sus"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </iframe>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!--CV Download Section-->
-  <section id="cv" class="bg-light py-5">
-    <div class="container text-center">
-      <h1 class="cv-text">Download CV</h1>
-      <p class="cv-text">Click the button below to download my CV in PDF format.</p>
-      <a href="media/cv-pdf/Aron Moelich Resume CV.pdf" class="btn btn-primary" download>Download CV</a>
-    </div>
-  </section>
+<!--CV Download Section-->
+<section id="cv" class="bg-light py-5">
+  <div class="container text-center">
+    <h1 class="cv-text">Download CV</h1>
+    <p class="cv-text">Click the button below to download my CV in PDF format.</p>
+    <a href="media/cv-pdf/Aron Moelich Resume CV.pdf" class="btn btn-primary" download>Download CV</a>
+  </div>
+</section>
 
-  <!--Footer Section-->
+<!--Footer Section-->
 {% endblock %}
