@@ -16,28 +16,14 @@
 </section>
 
 
-
+<div style="margin-bottom:5rem;"></div>
 <!-- Projects Section -->
-<section id="projects" class="py-5">
-  <div class="container projects-section">
-    <h1 class="text-center" id="projects-header">PROJECTS</h1>
-    <div class="row">
-      {% for project in project %}
-      <div class="col-md-3">
-        <div class="card mb-3">
-          <img src="{{ project.image.url }}" alt="{{ project.name }}" class="card-img-top">
-          <div class="card-body">
-            <h5 class="card-title">{{ project.name }}</h5>
-            <p class="card-text">{{ project.description }}</p>
-            <a href="{{ project.github_url }}" class="btn btn-primary" target="_blank">Learn More</a>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
+<section>
+  {% include 'components/projects.html' %}
 </section>
 
+
+<div style="margin-bottom:5rem;"></div>
 <!--Contact Section-->
 <section id="contact" class="py-5">
   <div class="container">
@@ -77,6 +63,7 @@
   </div>
 </section>
 
+<div style="margin-bottom:5rem;"></div>
 <!--CV Download Section-->
 <section id="cv" class="bg-light py-5">
   <div class="container text-center">
