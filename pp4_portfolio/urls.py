@@ -23,13 +23,13 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.display_all, name='all'),
-    path('dashboard/', views.dashboard_view, name='dashboard'),
     path('edit-personal-details/', views.display_edit_personal_details, name='edit-personal-details'),
     path('edit-headings/', views.display_edit_headings, name='edit-headings'),
-    path('edit-skills/<int:skill_id>/', views.display_edit_skills, name='edit-skills'),
-    path('edit-projects/<int:project_id>/', views.display_edit_projects, name='edit-projects'),
+    # path('edit-skills/<int:skill_id>/', views.display_edit_skills, name='edit-skills'),
+    # path('edit-projects/<int:project_id>/', views.display_edit_projects, name='edit-projects'),
     path('add-skill/', views.add_skill, name='add-skill'),
     path('add-project/', views.add_project, name='add-project'),
+    path('dashboard/', views.dashboard_view, name='dashboard'),
     path('home/', views.display_all, name='home')
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

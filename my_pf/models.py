@@ -20,7 +20,7 @@ class PersonalDetails(models.Model):
 class Headings(models.Model):
     big_header = models.CharField(max_length=100)
     sub_header = models.CharField(max_length=100)
-    profile_image = models.ImageField(upload_to='images/', null=True, blank=True)
+    profile_image = models.ImageField(upload_to='..media/images/', null=True, blank=True)
     par1 = models.CharField(max_length=300)
     par2 = models.CharField(max_length=300)
     par3 = models.CharField(max_length=300)
@@ -31,7 +31,7 @@ class Headings(models.Model):
 
 class Project(models.Model):
     name = models.CharField(max_length=200)
-    image = models.ImageField(upload_to='media/project_images/', null=True, blank=True)
+    image = models.ImageField(upload_to='..media/project_images/', null=True, blank=True)
     description = models.CharField(max_length=200)
     github_url = models.URLField()
 
