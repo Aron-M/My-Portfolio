@@ -29,6 +29,7 @@ urlpatterns = [
     path('edit-skills/<int:skill_id>/', views.display_edit_skills, name='edit-skills'),
     path('edit-projects/<int:project_id>/', views.display_edit_projects, name='edit-projects'),
     path('add-skill/', views.add_skill, name='add-skill'),
+    path('add-project/', views.add_project, name='add-project'),
     path('home/', views.display_all, name='home')
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

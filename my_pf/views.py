@@ -133,5 +133,22 @@ def add_skill(request):
         return render(request, 'pages/add-skill.html', context)
 
 
+def add_project(request):
+    if request.method == 'POST':
+        project_form = ProjectForm(request.POST)
+        if project_form.is_valid():
+            project = project_form.save()
+            return redirect('add-project')
+    else:
+        project_form = ProjectForm()
+
+    projects = Project.objects.all()
+    context = {
+        'projects': projects,
+        'project_form': project_form
+    }
+    return render(request, 'pages/add-project.html', context)
+
+
 
 

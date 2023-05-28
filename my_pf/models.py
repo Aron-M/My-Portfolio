@@ -3,8 +3,6 @@ from django.contrib import admin
 from django.contrib.postgres.fields import ArrayField
 from django.core.validators import FileExtensionValidator
 
-# Create your models here.
-
 
 class PersonalDetails(models.Model):
     full_name = models.CharField(max_length=200, unique=False)
@@ -33,7 +31,7 @@ class Headings(models.Model):
 
 class Project(models.Model):
     name = models.CharField(max_length=200)
-    image = models.ImageField(upload_to='project_images/')
+    image = models.ImageField(upload_to='media/project_images/', null=True, blank=True)
     description = models.CharField(max_length=200)
     github_url = models.URLField()
 

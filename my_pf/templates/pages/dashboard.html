@@ -70,7 +70,10 @@
                 <img src="../media/dashboard-images/projects-section.png" alt="Projects Image" class="img-fluid">
               </div>
               <div class="text-center mt-auto">
-                <a href="{% url 'edit-projects' project.id %}" class="nav-link btn btn-primary">Edit</a>
+                <div class="d-flex justify-content-between">
+                  <a href="{% url 'edit-projects' project.id %}" class="nav-link btn btn-primary">Edit</a>
+                  <div style="margin-left: 0.5rem;"></div>
+                  <a href="{% url 'add-project' %}" class="nav-link btn btn-success">Add Project</a>
               </div>
             </div>
           </div>
