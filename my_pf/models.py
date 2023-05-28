@@ -10,8 +10,8 @@ class PersonalDetails(models.Model):
     residency = models.CharField(max_length=200, unique=False)
     languages = models.CharField(max_length=200, unique=False)
     studying = models.CharField(max_length=200, unique=False)
-    flag_nationality = models.ImageField(upload_to='flags/', null=True, blank=True)
-    flag_residency = models.ImageField(upload_to='flags/', null=True, blank=True)
+    flag_nationality = models.ImageField(upload_to='..media/flags/', null=True, blank=True)
+    flag_residency = models.ImageField(upload_to='..media/flags/', null=True, blank=True)
     study_icon = models.ImageField(null=True, blank=True)
 
     def __str__(self):
