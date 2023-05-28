@@ -49,12 +49,16 @@
             <div class="card-header text-center">Skills</div>
             <div class="card-body d-flex flex-column justify-content-center align-items-center">
               <div class="image-container">
-                <img src="../media/dashboard-images/skills-section.png" alt="Skills Image" class="img-fluid">
+                  <img src="../media/dashboard-images/skills-section.png" alt="Skills Image" class="img-fluid">
               </div>
               <div class="text-center mt-auto">
-                <a href="{% url 'edit-skills' skill.id %}" class="nav-link btn btn-primary">Edit</a>
+                  <div class="d-flex justify-content-between">
+                      <a href="{% url 'edit-skills' skill.id %}" class="nav-link btn btn-primary">Edit</a>
+                      <div style="margin-left: 0.5rem;"></div>
+                      <a href="{% url 'add-skill' %}" class="nav-link btn btn-success">Add Skill</a>
+                  </div>
               </div>
-            </div>
+          </div>
           </div>
         </div>
 

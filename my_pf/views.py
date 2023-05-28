@@ -115,6 +115,22 @@ def display_edit_projects(request, project_id):
     return render(request, 'pages/edit-projects.html', context)
 
 
+def add_skill(request):
+    skills = Skills.objects.all()
+    skills_form = SkillsForm()
+    category = SkillCategory.objects.all()
+    if request.method == 'POST':
+        skills_form = SkillsForm(request.POST)
+        if skills_form.is_valid():
+            skills_form.save()
+            return redirect('add-skill')
+    else:
+        context = {
+            'skills': skills,
+            'skills_form': skills_form,
+            'category': category
+        }
+        return render(request, 'pages/add-skill.html', context)
 
 
 
