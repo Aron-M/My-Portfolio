@@ -30,7 +30,7 @@ var icons = document.querySelectorAll(".modal-image");
 icons.forEach(function (icon) {
   icon.addEventListener("click", function () {
     let imageSrc = icon.src;
-    let textContent = "This text needs to display unique information about each individual skill displayed within this modal"; // Replace with your desired text content
+    let textContent = icon.title
     let titleContent = icon.alt;
     openModal(imageSrc, textContent, titleContent);
   });

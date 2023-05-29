@@ -22,11 +22,12 @@ def display_all(request):
 
 
 def dashboard_view(request):
-    # skill = get_object_or_404(Skills, id=7)
-    # project = get_object_or_404(Project, id=23)
-    # context = {
-    #     'skill': skill, 'project': project
-    # }
+    skills = Skills.objects.all()
+    skill = get_object_or_404(Skills, id=11)
+    project = get_object_or_404(Project, id=23)
+    context = {
+        'skill': skill, 'project': project, 'skills': skills
+    }
     return render(request, 'pages/dashboard.html')
 
 def display_edit_personal_details(request):
@@ -69,50 +70,50 @@ def display_edit_headings(request):
 
 
 
-# def display_edit_skills(request, skill_id):
-#     skill = get_object_or_404(Skills, id=skill_id)
-#     skills_form = SkillsForm(instance=skill)
-#     skills = Skills.objects.all()
-#     category = SkillCategory.objects.all()
+def display_edit_skills(request, skill_id):
+    skill = get_object_or_404(Skills, id=skill_id)
+    skills_form = SkillsForm(instance=skill)
+    skills = Skills.objects.all()
+    category = SkillCategory.objects.all()
     
-#     if request.method == 'POST':
-#         skills_form = SkillsForm(request.POST, instance=skill)
-#         if skills_form.is_valid():
-#             skills_form.save()
-#             messages.success(request, 'Skills updated successfully.')
-#             return redirect('edit-skills', skill_id=skill.id)
-#         else:
-#             messages.error(request, 'Error updating skills.')
+    if request.method == 'POST':
+        skills_form = SkillsForm(request.POST, instance=skill)
+        if skills_form.is_valid():
+            skills_form.save()
+            messages.success(request, 'Skills updated successfully.')
+            return redirect('edit-skills', skill_id=skill.id)
+        else:
+            messages.error(request, 'Error updating skills.')
     
-#     context = {
-#         'skill': skill,
-#         'skills_form': skills_form,
-#         'category': category,
-#         'skills': skills
-#     }
-#     return render(request, 'pages/edit-skills.html', context)
+    context = {
+        'skill': skill,
+        'skills_form': skills_form,
+        'category': category,
+        'skills': skills
+    }
+    return render(request, 'pages/edit-skills.html', context)
 
 
 
-# def display_edit_projects(request, project_id):
-#     project = get_object_or_404(Project, id=project_id)
-#     project_form = ProjectForm(instance=project)
-#     projects = Project.objects.all()
+def display_edit_projects(request, project_id):
+    project = get_object_or_404(Project, id=project_id)
+    project_form = ProjectForm(instance=project)
+    projects = Project.objects.all()
 
-#     if request.method == 'POST':
-#         project_form = ProjectForm(request.POST, instance=project)
-#         if project_form.is_valid():
-#             project_form.save()
-#             return redirect('edit-projects', project_id=project.id)
-#         else:
-#             messages.error(request, 'Error updating skills.')
+    if request.method == 'POST':
+        project_form = ProjectForm(request.POST, instance=project)
+        if project_form.is_valid():
+            project_form.save()
+            return redirect('edit-projects', project_id=project.id)
+        else:
+            messages.error(request, 'Error updating skills.')
 
-#     context = {
-#         'projects': projects,
-#         'project_form': project_form,
-#         'project': project
-#     }
-#     return render(request, 'pages/edit-projects.html', context)
+    context = {
+        'projects': projects,
+        'project_form': project_form,
+        'project': project
+    }
+    return render(request, 'pages/edit-projects.html', context)
 
 
 def add_skill(request):

@@ -19,6 +19,10 @@ a,
   color: #f7f6f6;
 }
 
+.header-container-blue {
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+}
 
 /* Nav-Bar */
 
@@ -179,9 +183,9 @@ a,
   padding-left: 1rem;
 }
 
-#modal-box {
+/* #modal-box {
   display: none;
-}
+} */
 
 #modal-title {
   font-size: 3.5rem;
