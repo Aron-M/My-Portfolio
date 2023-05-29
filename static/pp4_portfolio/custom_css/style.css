@@ -36,6 +36,15 @@ a,
   background-color: #292c31;
 }
 
+.btn-purple {
+  background-color:#0d6efd;
+  color: white;
+  padding:0;
+}
+
+.admin-button {
+  margin-top: 0.5rem;
+}
 
 /*Header Section*/
 
@@ -80,7 +89,7 @@ a,
 }
 
 .ci-icon {
-  width: 6rem;
+  width: 7rem;
   height: 2.5rem;
   border-radius: 10px;
   margin-top: 0.5rem;
@@ -183,9 +192,9 @@ a,
   padding-left: 1rem;
 }
 
-/* #modal-box {
+#modal-box {
   display: none;
-} */
+}
 
 #modal-title {
   font-size: 3.5rem;

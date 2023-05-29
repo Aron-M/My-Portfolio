@@ -17,7 +17,7 @@
 
 setTimeout(function () {
     modal.classList.remove("fade-in");
-  }, 1000); // Adjust the delay duration as needed
+  }, 1000)
 }
 
 // Function to close the modal
