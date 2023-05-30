@@ -2,7 +2,7 @@
 
 Welcome to to Aron's Personal Portfolio Webpage! 
 
-**placeholder**
+# Please note that this project is incomplete and failure is expected
 
 ## Table of content:
 
