@@ -4,6 +4,13 @@ Welcome to to Aron's Personal Portfolio Webpage!
 
 # Please note that this project is incomplete and failure is expected
 
+
+## if you want to view my website, you will have to go into my terminal and type: python3 manage.py runserver
+### I dont know why Heroku doesnt want to display my app even though its connected. it runs fine from within my terminal
+
+
+
+
 ## Table of content:
 
 - [Motivation](#motivation)
