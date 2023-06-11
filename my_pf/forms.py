@@ -12,12 +12,12 @@ class HeadingsForm(forms.ModelForm):
         model = Headings
         fields = '__all__'
         widgets = {
-            'big_header': forms.Textarea(attrs={'rows':4, 'cols': 40}),
-            'sub_header': forms.Textarea(attrs={'rows':4, 'cols': 40}),
-            'par1': forms.Textarea(attrs={'rows': 4, 'cols': 40}),
-            'par2': forms.Textarea(attrs={'rows': 4, 'cols': 40}),
-            'par3': forms.Textarea(attrs={'rows': 4, 'cols': 40}),
-            'par4': forms.Textarea(attrs={'rows': 4, 'cols': 40}),
+            'big_header': forms.Textarea(attrs={'rows':3, 'cols': 70}),
+            'sub_header': forms.Textarea(attrs={'rows':3, 'cols': 70}),
+            'par1': forms.Textarea(attrs={'rows': 3, 'cols': 70}),
+            'par2': forms.Textarea(attrs={'rows': 3, 'cols': 70}),
+            'par3': forms.Textarea(attrs={'rows': 3, 'cols': 70}),
+            'par4': forms.Textarea(attrs={'rows': 3, 'cols': 70}),
         }
 
 class SkillsForm(forms.ModelForm):

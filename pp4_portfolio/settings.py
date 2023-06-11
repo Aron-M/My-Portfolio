@@ -34,7 +34,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["aron-portfolio.herokuapp.com", "localhost", '8000-aronm-project4portfoli-e3zn0a2avrd.ws-eu97.gitpod.io']
+ALLOWED_HOSTS = ["aron-portfolio.herokuapp.com", "localhost", '8000-aronm-project4portfoli-w899pig2hdb.ws-eu99.gitpod.io']
 
 
 # Application definition
@@ -91,7 +91,7 @@ WSGI_APPLICATION = 'pp4_portfolio.wsgi.application'
 # }
 
 DATABASES = {
-     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+     'default': dj_database_url.parse(os.environ.get("DATABASE_URL", "postgres://mqjpxcbf:ZuDKq4Xf1Iv2w_ABrF2ynJbi48Xt2wcB@horton.db.elephantsql.com/mqjpxcbf"))
  }
 
 # Password validation
