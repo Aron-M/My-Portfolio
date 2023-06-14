@@ -176,6 +176,7 @@ a,
 
 #modal-text {
   color: black;
+  padding: 2rem;
 }
 
 .modal-image-inside {
@@ -190,12 +191,8 @@ a,
 }
 
 #modal-title {
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-top: 2rem;
-}
-
-#modal-text {
-  padding: 2rem;
 }
 
 .fade-in {
@@ -260,8 +257,8 @@ a,
 
 .modal-content .row:last-child {
   flex-shrink: 0;
-  height: 29vh; /* Set a fixed height for the text section */
-  overflow-y: auto; /* Add vertical scrollbar if content exceeds the fixed height */
+  height: 29vh; 
+  overflow-y: auto;
 }
 
 .modal-image {

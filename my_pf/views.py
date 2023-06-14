@@ -37,6 +37,7 @@ def display_edit_personal_details(request):
     if request.method == 'POST':
         personal_details_form = PersonalDetailsForm(request.POST, instance=detail)
         if personal_details_form.is_valid():
+            PersonalDetails.image = request.FILES['image']
             personal_details_form.save()
             return redirect('edit-personal-details')
     personal_details_form = PersonalDetailsForm(instance=detail)
@@ -49,24 +50,33 @@ def display_edit_personal_details(request):
                 return render(request, 'pages/edit-personal-details.html', context )
 
 
+from django.core.files.storage import default_storage
+from django.core.files.base import ContentFile
+
 def display_edit_headings(request):
     all_headings = Headings.objects.all()
-    headings_form = HeadingsForm()
     heading = get_object_or_404(Headings)
+
     if request.method == 'POST':
-        headings_form = HeadingsForm(request.POST, instance=heading)
+        headings_form = HeadingsForm(request.POST, request.FILES, instance=heading)
         if headings_form.is_valid():
+            if 'profile_image' in request.FILES:
+                old_image = heading.profile_image
+                if old_image:
+                    default_storage.delete(old_image.path)
+                heading.profile_image = request.FILES['profile_image']
             headings_form.save()
             return redirect('edit-headings')
-    headings_form = HeadingsForm(instance=heading)
+    else:
+        headings_form = HeadingsForm(instance=heading)
+
     context = {
         'headings': all_headings,
         'headings_form': headings_form
     }
-    if request.path == "edit-headings/":
-        return render(request, 'pages/edit-headings.html', context)
-    else: 
-        return render(request, 'pages/edit-headings.html', context)
+
+    return render(request, 'pages/edit-headings.html', context)
+
 
 
 
@@ -79,6 +89,7 @@ def display_edit_skills(request, skill_id):
     if request.method == 'POST':
         skills_form = SkillsForm(request.POST, instance=skill)
         if skills_form.is_valid():
+            Skills.image = request.FILES['image']
             skills_form.save()
             messages.success(request, 'Skills updated successfully.')
             return redirect('edit-skills', skill_id=skill.id)
@@ -103,6 +114,7 @@ def display_edit_projects(request, project_id):
     if request.method == 'POST':
         project_form = ProjectForm(request.POST, instance=project)
         if project_form.is_valid():
+            project.image = request.FILES['image']
             project_form.save()
             return redirect('edit-projects', project_id=project.id)
         else:
