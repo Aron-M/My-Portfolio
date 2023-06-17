@@ -10,7 +10,7 @@ class PersonalDetailsForm(forms.ModelForm):
 class HeadingsForm(forms.ModelForm):
     class Meta:
         model = Headings
-        fields = '__all__'
+        exclude = []  # Exclude all fields by default
         widgets = {
             'big_header': forms.Textarea(attrs={'rows':3, 'cols': 70}),
             'sub_header': forms.Textarea(attrs={'rows':3, 'cols': 70}),
@@ -19,6 +19,10 @@ class HeadingsForm(forms.ModelForm):
             'par3': forms.Textarea(attrs={'rows': 3, 'cols': 70}),
             'par4': forms.Textarea(attrs={'rows': 3, 'cols': 70}),
         }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['profile_image'].required = False  # Set the profile_image field as not required
 
 class SkillsForm(forms.ModelForm):
     class Meta:

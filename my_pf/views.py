@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import PersonalDetails, Headings, Project, Skills, SkillCategory
 from .forms import PersonalDetailsForm, HeadingsForm, SkillsForm, ProjectForm
 from django.contrib import messages
+from django.core.files.storage import default_storage
 
 def display_skills_page(request):
     return render(request, 'pages/skills.html')
@@ -37,7 +38,7 @@ def display_edit_personal_details(request):
     if request.method == 'POST':
         personal_details_form = PersonalDetailsForm(request.POST, instance=detail)
         if personal_details_form.is_valid():
-            PersonalDetails.image = request.FILES['image']
+            data.image = request.FILES['image']
             personal_details_form.save()
             return redirect('edit-personal-details')
     personal_details_form = PersonalDetailsForm(instance=detail)
@@ -76,7 +77,6 @@ def display_edit_headings(request):
     }
 
     return render(request, 'pages/edit-headings.html', context)
-
 
 
 
