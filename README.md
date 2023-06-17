@@ -2,14 +2,6 @@
 
 Welcome to to Aron's Personal Portfolio Webpage! 
 
-# Please note that this project is incomplete and failure is expected
-
-
-## if you want to view my website, you will have to go into my terminal and type: python3 manage.py runserver
-### I dont know why Heroku doesnt want to display my app even though its connected. it runs fine from within my terminal
-
-
-
 
 ## Table of content:
 
@@ -83,6 +75,55 @@ This webpage aims to serve as an informational web application to showcase perso
 - I expect to showcase my projects and skills.
 - I expect my website to be editable on the front-end via logging in to an admin account.
 
+# Technology, Frameworks and Libraries used.
+
+## Languages used:
+
+- [HTML](https://en.wikipedia.org/wiki/HTML5) 
+
+- [CSS](https://en.wikipedia.org/wiki/CSS)
+
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+
+## Frameworks, Databases and Libraries used:
+
+- [Django](https://www.djangoproject.com/) Python-based web framework that follows the model–template–views architectural pattern.
+
+- [Heroku](https://www.heroku.com) Deployment of website.
+
+- [ElephantSQL](https://www.elephantsql.com/) Database storing all schemas and data.
+
+- [Cloudinary](https://cloudinary.com/) Image storage.
+
+- [Gunicorn](https://en.wikipedia.org/wiki/Gunicorn) HTTP server interface.
+
+- [Bootstrap](https://getbootstrap.com/) Bootstrap 5 was used in this project.
+
+
+
+## Other Technologies Used:
+
+- [Balsamiq](https://balsamiq.com/) Wireframes.
+
+- [Favicon](https://favicon.io/favicon-generator/) Favicon generator.
+
+- [Psycopg](https://wiki.postgresql.org/wiki/Psycopg) Postgres database adaptor.
+
+- [Devicon](https://www.devicon.dev/) All icons used in 'Skills' section.
+
+
+# Features
+
+- Responsive on all devices.
+- Interactive buttons.
+- Updatable information displayed in each relevant section
+- Google Map and Email Form for location and contact
+- Downloadable CV
+- Custom front-end admin panel.
+- Cloudinary picture storage.
+
 
 # Data Structure
 
@@ -139,51 +180,42 @@ This webpage aims to serve as an informational web application to showcase perso
     | category | ForeignKey (SkillsCategory) |
 
 
-# Technology, Frameworks and Libraries used.
+# Workflow
 
-## Languages used:
+## Wireframes
 
-- [HTML](https://en.wikipedia.org/wiki/HTML5) 
+- Home page.
+    <details><summary>Picture</summary>
+    <img src="media/readme-images/about-me-wireframe.png" alt="home page"/>
+    </details>
+    <br>
 
-- [CSS](https://en.wikipedia.org/wiki/CSS)
+- About Me Section.
+    <details><summary>Picture</summary>
+    <img src="media/readme-images/about-me-wireframe.png" alt="about me page"/>
+    </details>
+    <br>
 
-- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
-
-- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
-
-## Frameworks, Databases and Libraries used:
-
-- [Django](https://www.djangoproject.com/) Python-based web framework that follows the model–template–views architectural pattern.
-
-- [Heroku](https://www.heroku.com) Deployment of website.
-
-- [ElephantSQL](https://www.elephantsql.com/) Database storing all schemas and data.
-
-- [Cloudinary](https://cloudinary.com/) Image storage.
-
-- [Gunicorn](https://en.wikipedia.org/wiki/Gunicorn) HTTP server interface.
-
-- [Bootstrap](https://getbootstrap.com/) Bootstrap 5 was used in this project.
+- Projects Section.
+    <details><summary>Picture</summary>
+    <img src="media/readme-images/about-me-wireframe.png" alt="projects page"/>
+    </details>
+    <br>
 
 
+- Admin-Dashboard page.
+    <details><summary>Picture</summary>
+    <img src="docs/front-panel-details.png" alt="front panel details section"/>
+    </details>
+    <br>
+    <details><summary>Picture</summary>
+    <img src="docs/front-panel-skills.png" alt="front panel skills section"/>
+    </details>
+    <br>
+    <details><summary>Picture</summary>
+    <img src="docs/front-panel-projects.png" alt="front panel projects section"/>
+    </details>
+    <br>
 
-## Other Technologies Used:
-
-- [Balsamiq](https://balsamiq.com/) Wireframes.
-
-- [Favicon](https://favicon.io/favicon-generator/) Favicon generator.
-
-- [Psycopg](https://wiki.postgresql.org/wiki/Psycopg) Postgres database adaptor.
-
-- [Devicon](https://www.devicon.dev/) All icons used in 'Skills' section.
 
 
-# Features
-
-- Responsive on all devices.
-- Interactive buttons.
-- Updatable information displayed in each relevant section
-- Map and Email Form for location and contact
-- Downloadable CV
-- Custom front-end admin panel.
-- Cloudinary picture storage.
