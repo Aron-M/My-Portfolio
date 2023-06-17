@@ -184,7 +184,7 @@ This webpage aims to serve as an informational web application to showcase perso
 
 ## Wireframes
 
-- Home page.
+- Home page Top.
     <details><summary>Picture</summary>
     <img src="media/readme-images/about-me-wireframe.png" alt="home page"/>
     </details>
@@ -217,5 +217,10 @@ This webpage aims to serve as an informational web application to showcase perso
     </details>
     <br>
 
+## Home Page Workflow
 
+<img src="media/readme-images/homepage-workflow.png">
 
+<br>
+
+<img src="media/readme-images/portfolio-flowchart.png">
