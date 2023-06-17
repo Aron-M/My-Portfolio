@@ -65,7 +65,7 @@ def display_edit_headings(request):
                 old_image = heading.profile_image
                 if old_image:
                     default_storage.delete(old_image.path)
-                heading.profile_image = request.FILES['profile_image']
+                all_headings.profile_image = request.FILES['profile_image']
             headings_form.save()
             return redirect('edit-headings')
     else:
@@ -77,6 +77,7 @@ def display_edit_headings(request):
     }
 
     return render(request, 'pages/edit-headings.html', context)
+
 
 
 

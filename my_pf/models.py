@@ -18,16 +18,15 @@ class PersonalDetails(models.Model):
         return self.full_name
 
 class Headings(models.Model):
-    big_header = models.CharField(max_length=100)
-    sub_header = models.CharField(max_length=100)
+    big_header = models.CharField(max_length=100, null=True, blank=True)
+    sub_header = models.CharField(max_length=100, null=True, blank=True)
     profile_image = models.ImageField(upload_to='..media/images/', null=True, blank=True)
     par1 = models.CharField(max_length=300, null=True, blank=True)
     par2 = models.CharField(max_length=300, null=True, blank=True)
-    par3 = models.CharField(max_length=300, null=True, blank=True)
-    par4 = models.CharField(max_length=300, null=True, blank=True)
     
     def __str__(self):
         return self.big_header
+
 
 class Project(models.Model):
     name = models.CharField(max_length=200)
