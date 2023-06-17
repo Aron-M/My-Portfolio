@@ -22,7 +22,7 @@ class HeadingsForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['profile_image'].required = False  # Set the profile_image field as not required
+        self.fields['profile_image'].required = False
 
 class SkillsForm(forms.ModelForm):
     class Meta:

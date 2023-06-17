@@ -25,7 +25,7 @@ def display_all(request):
 def dashboard_view(request):
     skills = Skills.objects.all()
     skill = get_object_or_404(Skills, id=11)
-    project = get_object_or_404(Project, id=23)
+    project = get_object_or_404(Project, id=44)
     context = {
         'skill': skill, 'project': project, 'skills': skills
     }
@@ -55,17 +55,14 @@ from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
 
 def display_edit_headings(request):
+    print("display_edit_firing")
     all_headings = Headings.objects.all()
     heading = get_object_or_404(Headings)
 
     if request.method == 'POST':
         headings_form = HeadingsForm(request.POST, request.FILES, instance=heading)
         if headings_form.is_valid():
-            if 'profile_image' in request.FILES:
-                old_image = heading.profile_image
-                if old_image:
-                    default_storage.delete(old_image.path)
-                all_headings.profile_image = request.FILES['profile_image']
+            print("Valid Form")
             headings_form.save()
             return redirect('edit-headings')
     else:
@@ -88,7 +85,7 @@ def display_edit_skills(request, skill_id):
     category = SkillCategory.objects.all()
     
     if request.method == 'POST':
-        skills_form = SkillsForm(request.POST, instance=skill)
+        skills_form = SkillsForm(request.POST, request.FILES, instance=skill)
         if skills_form.is_valid():
             Skills.image = request.FILES['image']
             skills_form.save()
@@ -113,7 +110,7 @@ def display_edit_projects(request, project_id):
     projects = Project.objects.all()
 
     if request.method == 'POST':
-        project_form = ProjectForm(request.POST, instance=project)
+        project_form = ProjectForm(request.POST, request.FILES, instance=project)
         if project_form.is_valid():
             project.image = request.FILES['image']
             project_form.save()
