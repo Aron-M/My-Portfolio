@@ -43,29 +43,35 @@ The motivation behind creating this webpage is to introduce and showcase myself 
 # User Experience (UX)
 
 ## User Stories
-- User Story
+- User Stories:
     - As a user, I want to be able to access a user-friendly main page showcasing an overview of the developer.
-    - As a user, I want to be able to navigate to the About page.
-    - As a user, I want to be able to navigate to the Skills page.
-    - As a user, I want to be able to navigate to the Projects page.
+    - As a user, I want to be able to navigate to the About section.
+    - As a user, I want to be able to navigate to the Skills section.
+    - As a user, I want to be able to navigate to the Projects section.
     - As a user, I want to access the developer's past projects via provided links.
     - As a user, I want to be able to have access to relevant Social Media and GitHub account.
     - As a user, I want to be able to download the developer's CV.
     - As a user, I want to be able to contact the developer via a form.
 
+- Admin Stories:
+    - As an admin, I want to be able to access an 'admin-dashboard' panel/page.
+    - As an admin, I want to be able to select various sections of the webpage to create, update and/or delete information
+    - As an admin, I want to be able to securely log in to the admin dashboard pages.
+    - As an admin, I want to be sure that no-ne of the general public will be allowed to access any of the admin pages.
+    - As an admin, I want all the changes I make to display on the webpage accordingly for the public to view.
 
 ## Website Goals
 
-This webpage aims to serve as an informational web application to showcase personal information, Software Development Skills & Languages as well as a list of prior projects done to the user (such as prospective employers) interested in finding out about me and my coding history. It will also give the user the ability to connect with the site owner (myself) via a form, get access to relevant Social Media and GitHub accounts as well as the ability to download a .PDF CV on request. Finally, the site will aim to provide the administrative front-en access to create, update and/or delete data within certain fields. 
+This webpage aims to serve as an informational web application to showcase personal information, Software Development Skills & Languages as well as a list of prior projects done to the user (such as prospective employers) interested in finding out about me and my coding history. It will also give the user the ability to connect with the site owner (myself) via a form, get access to relevant Social Media and GitHub accounts as well as the ability to download a .PDF CV on request. Finally, the site will aim to provide the administrative front-en access to create, update and/or delete data within certain fields for the site administrator(s) securely access.
 
 
 ## Requirements
 
 - Landing Page.
-- About Page.
-- Skills Page
-- Projects showcase page.
-- Contact Page
+- About Section.
+- Skills Section
+- Projects showcase Sectio.
+- Contact Section
 - Download CV.
 - Links to Social Media and GitHub
 - Login Access for Admin in where to change/modify/update/delete data in certain fields.
@@ -131,3 +137,4 @@ This webpage aims to serve as an informational web application to showcase perso
     | icon | URLField |
     | progress | ImageField |
     | category | ForeignKey (SkillsCategory) |
+    
