@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib import admin
 from django.contrib.postgres.fields import ArrayField
 from django.core.validators import FileExtensionValidator
+from cloudinary_storage.models import CloudinaryField
 
 
 class PersonalDetails(models.Model):
@@ -20,7 +21,7 @@ class PersonalDetails(models.Model):
 class Headings(models.Model):
     big_header = models.CharField(max_length=100, null=True, blank=True)
     sub_header = models.CharField(max_length=100, null=True, blank=True)
-    profile_image = models.ImageField(upload_to='media', null=True, blank=True)
+    profile_image = models.CloudinaryField(upload_to='media', null=True, blank=True)
     par1 = models.CharField(max_length=300, null=True, blank=True)
     par2 = models.CharField(max_length=300, null=True, blank=True)
     
