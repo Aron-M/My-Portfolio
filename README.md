@@ -78,3 +78,31 @@ This webpage aims to serve as an informational web application to showcase perso
 - I expect my website to be editable on the front-end via logging in to an admin account.
 
 
+# Data Structure
+
+## Database 
+
+- Personal Details:
+
+    | Object | Field |
+    |---|---|
+    | ID | is automatically generated |
+    | full_name | CharField |
+    | nationality | CharBigInteger |
+    | residency | Charfield |
+    | flag_nationality | ImageField |
+    | flag_residency | ImageField |
+    | languages | Charfield |
+    | studying | CharField |
+    | study_icon | ImageField |
+
+- Headings:
+
+    | Object | Field |
+    |---|---|
+    |  ID | is automatically generated |
+    | big_heading | CharField |
+    | sub_heading | CharField |
+    | profile_image | ImageField |
+    | par_1 | CharField |
+    | par_2 | CharField |
