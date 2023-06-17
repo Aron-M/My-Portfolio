@@ -106,3 +106,13 @@ This webpage aims to serve as an informational web application to showcase perso
     | profile_image | ImageField |
     | par_1 | CharField |
     | par_2 | CharField |
+
+- Project:
+
+    | Object | Field |
+    |---|---|
+    |  ID | is automatically generated |
+    | name | CharField |
+    | desription | CharField |
+    | image | ImageField |
+    | github_url | URLField |
