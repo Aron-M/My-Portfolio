@@ -116,3 +116,18 @@ This webpage aims to serve as an informational web application to showcase perso
     | desription | CharField |
     | image | ImageField |
     | github_url | URLField |
+
+- SkillsCategory:
+    | Object | Field |
+    |---|---|
+    | name | CharField|
+
+- Skills:
+
+    | Object | Field |
+    |---|---|
+    |  ID | is automatically generated |
+    | name | CharField |
+    | icon | URLField |
+    | progress | ImageField |
+    | category | ForeignKey (SkillsCategory) |
