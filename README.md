@@ -137,4 +137,48 @@ This webpage aims to serve as an informational web application to showcase perso
     | icon | URLField |
     | progress | ImageField |
     | category | ForeignKey (SkillsCategory) |
-    
+
+
+# Technology, Frameworks and Libraries used.
+
+## Languages used:
+
+- [HTML](https://en.wikipedia.org/wiki/HTML5) 
+
+- [CSS](https://en.wikipedia.org/wiki/CSS)
+
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+
+## Frameworks and Libraries used:
+
+- [Django](https://www.djangoproject.com/) Python-based web framework that follows the model–template–views architectural pattern.
+
+- [Heroku](https://www.heroku.com) Deployment of website.
+
+- [ElephantSQL](https://www.elephantsql.com/) Database storing all schemas and data.
+
+- [Cloudinary](https://cloudinary.com/) Image storage.
+
+- [Gunicorn](https://en.wikipedia.org/wiki/Gunicorn) HTTP server interface.
+
+- [Psycopg](https://wiki.postgresql.org/wiki/Psycopg) Postgres database adaptor.
+
+- [Devicon](https://www.devicon.dev/) All icons used in 'Skills' section.
+
+- [Bootstrap](https://getbootstrap.com/) Bootstrap 5 was used in this project.
+
+- [Balsamiq](https://balsamiq.com/) Wireframes.
+
+- [Favicon](https://favicon.io/favicon-generator/) Favicon generator.
+
+# Features
+
+- Responsive on all devices.
+- Interactive buttons.
+- Updatable information displayed in each relevant section
+- Map and Email Form for location and contact
+- Downloadable CV
+- Custom frontend admin panel.
+- Cloudinary picture storage.
