@@ -10,8 +10,8 @@ class PersonalDetails(models.Model):
     residency = models.CharField(max_length=200, unique=False)
     languages = models.CharField(max_length=200, unique=False)
     studying = models.CharField(max_length=200, unique=False)
-    flag_nationality = models.ImageField(upload_to='..media/flags/', null=True, blank=True)
-    flag_residency = models.ImageField(upload_to='..media/flags/', null=True, blank=True)
+    flag_nationality = models.ImageField(upload_to='media', null=True, blank=True)
+    flag_residency = models.ImageField(upload_to='media', null=True, blank=True)
     study_icon = models.ImageField(null=True, blank=True)
 
     def __str__(self):
@@ -20,7 +20,7 @@ class PersonalDetails(models.Model):
 class Headings(models.Model):
     big_header = models.CharField(max_length=100, null=True, blank=True)
     sub_header = models.CharField(max_length=100, null=True, blank=True)
-    profile_image = models.ImageField(upload_to='..media/images/', null=True, blank=True)
+    profile_image = models.ImageField(upload_to='media', null=True, blank=True)
     par1 = models.CharField(max_length=300, null=True, blank=True)
     par2 = models.CharField(max_length=300, null=True, blank=True)
     
@@ -30,7 +30,7 @@ class Headings(models.Model):
 
 class Project(models.Model):
     name = models.CharField(max_length=200)
-    image = models.ImageField(upload_to='..media/project_images/', null=True, blank=True)
+    image = models.ImageField(upload_to='media', null=True, blank=True)
     description = models.CharField(max_length=200)
     github_url = models.URLField()
 
