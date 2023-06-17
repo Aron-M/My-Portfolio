@@ -151,7 +151,7 @@ This webpage aims to serve as an informational web application to showcase perso
 
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
-## Frameworks and Libraries used:
+## Frameworks, Databases and Libraries used:
 
 - [Django](https://www.djangoproject.com/) Python-based web framework that follows the model–template–views architectural pattern.
 
@@ -163,15 +163,20 @@ This webpage aims to serve as an informational web application to showcase perso
 
 - [Gunicorn](https://en.wikipedia.org/wiki/Gunicorn) HTTP server interface.
 
-- [Psycopg](https://wiki.postgresql.org/wiki/Psycopg) Postgres database adaptor.
-
-- [Devicon](https://www.devicon.dev/) All icons used in 'Skills' section.
-
 - [Bootstrap](https://getbootstrap.com/) Bootstrap 5 was used in this project.
+
+
+
+## Other Technologies Used:
 
 - [Balsamiq](https://balsamiq.com/) Wireframes.
 
 - [Favicon](https://favicon.io/favicon-generator/) Favicon generator.
+
+- [Psycopg](https://wiki.postgresql.org/wiki/Psycopg) Postgres database adaptor.
+
+- [Devicon](https://www.devicon.dev/) All icons used in 'Skills' section.
+
 
 # Features
 
@@ -180,5 +185,5 @@ This webpage aims to serve as an informational web application to showcase perso
 - Updatable information displayed in each relevant section
 - Map and Email Form for location and contact
 - Downloadable CV
-- Custom frontend admin panel.
+- Custom front-end admin panel.
 - Cloudinary picture storage.
