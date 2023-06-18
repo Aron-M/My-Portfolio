@@ -24,7 +24,7 @@ from allauth.account import views as allauth_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.display_all, name='all'),
-    path('edit-personal-details/', views.display_edit_personal_details, name='edit-personal-details'),
+    path('me-irl/', views.display_me_irl, name='me-irl'),
     path('edit-headings/', views.display_edit_headings, name='edit-headings'),
     path('edit-skills/', views.add_skill, name='edit-skills'),
     path('edit-skills/<skill_id>/', views.display_edit_skills, name='edit-skills'),

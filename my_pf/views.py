@@ -14,6 +14,9 @@ def redirect_if_not_admin(fn):
     return wrapper
 
 
+def display_me_irl(request):
+    return render(request, 'pages/me-irl.html')
+
 def display_skills_page(request):
     return render(request, 'pages/skills.html')
 
@@ -31,10 +34,10 @@ def display_all(request):
     else: 
         return render(request, 'pages/home-page.html', context )
 
-@redirect_if_not_admin
+# @redirect_if_not_admin
 def dashboard_view(request):
     skills = Skills.objects.all()
-    skill = get_object_or_404(Skills, id=11)
+    skill = get_object_or_404(Skills, id=12)
     project = get_object_or_404(Project, id=44)
     context = {
         'skill': skill, 'project': project, 'skills': skills

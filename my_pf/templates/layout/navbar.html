@@ -23,6 +23,9 @@
           <li class="nav-item">
             <a class="nav-link pe-4" href="#cv">CV</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link pe-4" href="{% url 'me-irl' %}">Me IRL</a>
+          </li>
           {% if request.user.is_superuser %}
           <li class="nav-item">
             <a class="nav-link btn btn-purple" href="{% url 'dashboard' %}">Admin Dashboard</a>
