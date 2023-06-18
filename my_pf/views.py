@@ -34,7 +34,7 @@ def display_all(request):
     else: 
         return render(request, 'pages/home-page.html', context )
 
-# @redirect_if_not_admin
+@redirect_if_not_admin
 def dashboard_view(request):
     skills = Skills.objects.all()
     skill = get_object_or_404(Skills, id=12)
