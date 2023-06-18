@@ -38,12 +38,12 @@ a,
 
 .btn-purple {
   background-color:#0d6efd;
-  color: white;
-  padding:0;
 }
 
 .admin-button {
   margin-top: 0.5rem;
+  color: white;
+  padding:0;
 }
 
 /*Header Section*/

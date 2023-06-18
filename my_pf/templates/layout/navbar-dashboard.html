@@ -9,25 +9,18 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
+            <a class="nav-link" href="{% url 'account_login' %}">Log In</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#skills">Skills</a>
+            <a class="nav-link" href="{% url 'account_logout' %}">Log Out</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#cv" style="margin-right:2rem">CV</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link btn btn-purple" href="{% url 'dashboard' %}">Admin Dashboard</a>
+            <a class="nav-link btn btn-warning" href="{% url 'home' %}">Back to Home</a>
           </li>
         </ul>
       </div>
     </div>
-  </nav
-
+</nav>
