@@ -3,6 +3,16 @@ from .models import PersonalDetails, Headings, Project, Skills, SkillCategory
 from .forms import PersonalDetailsForm, HeadingsForm, SkillsForm, ProjectForm
 from django.contrib import messages
 from django.core.files.storage import default_storage
+from django.http import HttpResponseRedirect
+
+def redirect_if_not_admin(fn):
+    def wrapper(request):
+        if request.user.is_superuser:
+            return fn(request)
+        else:
+            return HttpResponseRedirect('/')
+    return wrapper
+
 
 def display_skills_page(request):
     return render(request, 'pages/skills.html')
@@ -21,7 +31,7 @@ def display_all(request):
     else: 
         return render(request, 'pages/home-page.html', context )
 
-
+@redirect_if_not_admin
 def dashboard_view(request):
     skills = Skills.objects.all()
     skill = get_object_or_404(Skills, id=11)
@@ -87,7 +97,6 @@ def display_edit_skills(request, skill_id):
     if request.method == 'POST':
         skills_form = SkillsForm(request.POST, request.FILES, instance=skill)
         if skills_form.is_valid():
-            Skills.image = request.FILES['image']
             skills_form.save()
             messages.success(request, 'Skills updated successfully.')
             return redirect('edit-skills', skill_id=skill.id)

@@ -66,6 +66,7 @@ a,
 }
 
 
+
 /* Personal Details Model & Section */
 
 .personal-details {
@@ -296,7 +297,7 @@ a,
 
 .card-img-top {
   height: 200px;
-  object-fit:fill;
+  object-fit:cover;
 }
 
 
@@ -366,7 +367,7 @@ a,
 }
 
 .mt-auto {
-  margin-top: 10px; /* Add space above the edit buttons */
+  margin-top: 10px;
 }
 
 .card-header {
