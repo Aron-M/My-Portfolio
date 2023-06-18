@@ -224,3 +224,8 @@ This webpage aims to serve as an informational web application to showcase perso
 <br>
 
 <img src="media/readme-images/portfolio-flowchart.png">
+
+
+# Navigation
+
+- Home/Landing Page:

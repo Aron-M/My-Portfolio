@@ -22,7 +22,11 @@
                 <img src="../media/dashboard-images/header-edit.png" alt="Headings Image" class="img-fluid">
               </div>
               <div class="text-center mt-auto">
-                <a href="{% url 'edit-headings' %}" class="btn btn-primary edit-button">Edit</a>
+                {% if user.is_authenticated %}
+                  <a href="{% url 'edit-headings' %}" class="btn btn-primary edit-button">Edit</a>
+                {% else %}
+                  <a href="{% url 'account_login' %}?next={% url 'edit-headings' %}" class="btn btn-primary edit-button">Edit</a>
+                {% endif %}
               </div>
             </div>
           </div>
@@ -36,7 +40,11 @@
                 <img src="../media/dashboard-images/personal-details.png" alt="Personal Details Image" class="img-fluid personal-details-img">
               </div>
               <div class="text-center mt-auto">
-                <a href="{% url 'edit-personal-details' %}" class="btn btn-primary edit-button">Edit</a>
+                {% if user.is_authenticated %}
+                  <a href="{% url 'edit-personal-details' %}" class="btn btn-primary edit-button">Edit</a>
+                {% else %}
+                  <a href="{% url 'account_login' %}?next={% url 'edit-personal-details' %}" class="btn btn-primary edit-button">Edit</a>
+                {% endif %}
               </div>
             </div>
           </div>
@@ -49,18 +57,22 @@
             <div class="card-header text-center">Skills</div>
             <div class="card-body d-flex flex-column justify-content-center align-items-center">
               <div class="image-container">
-                  <img src="../media/dashboard-images/skills-section.png" alt="Skills Image" class="img-fluid">
+                <img src="../media/dashboard-images/skills-section.png" alt="Skills Image" class="img-fluid">
               </div>
               <div class="text-center mt-auto">
+                {% if user.is_authenticated %}
                   <div class="d-flex justify-content-between">
-                      <a href="{% url 'edit-skills' 11 %}" class="nav-link btn btn-primary">Edit</a>
-                      <div style="margin-left: 0.5rem;"></div>
-                      <a href="{% url 'add-skill' %}" class="nav-link btn btn-success">Add Skill</a>
-                      <div style="margin-left: 0.5rem;"></div>
-                      <a href="{% url 'add-skill' %}" class="nav-link btn btn-danger">Delete Skill</a>
+                    <a href="{% url 'edit-skills' 11 %}" class="nav-link btn btn-primary">Edit</a>
+                    <div style="margin-left: 0.5rem;"></div>
+                    <a href="{% url 'add-skill' %}" class="nav-link btn btn-success">Add Skill</a>
+                    <div style="margin-left: 0.5rem;"></div>
+                    <a href="{% url 'add-skill' %}" class="nav-link btn btn-danger">Delete Skill</a>
                   </div>
+                {% else %}
+                  <a href="{% url 'account_login' %}?next={% url 'edit-skills' 11 %}" class="btn btn-primary edit-button">Edit</a>
+                {% endif %}
               </div>
-          </div>
+            </div>
           </div>
         </div>
 
@@ -72,12 +84,17 @@
                 <img src="../media/dashboard-images/projects-section.png" alt="Projects Image" class="img-fluid">
               </div>
               <div class="text-center mt-auto">
-                <div class="d-flex justify-content-between">
-                  <a href="{% url 'edit-projects' 44 %}" class="nav-link btn btn-primary">Edit</a>
-                  <div style="margin-left: 0.5rem;"></div>
-                  <a href="{% url 'add-project' %}" class="nav-link btn btn-success">Add Project</a>
-                  <div style="margin-left: 0.5rem;"></div>
-                  <a href="{% url 'add-project' %}" class="nav-link btn btn-danger">Delete Project</a>
+                {% if user.is_authenticated %}
+                  <div class="d-flex justify-content-between">
+                    <a href="{% url 'edit-projects' 44 %}" class="nav-link btn btn-primary">Edit</a>
+                    <div style="margin-left: 0.5rem;"></div>
+                    <a href="{% url 'add-project' %}" class="nav-link btn btn-success">Add Project</a>
+                    <div style="margin-left: 0.5rem;"></div>
+                    <a href="{% url 'add-project' %}" class="nav-link btn btn-danger">Delete Project</a>
+                  </div>
+                {% else %}
+                  <a href="{% url 'account_login' %}?next={% url 'edit-projects' 44 %}" class="btn btn-primary edit-button">Edit</a>
+                {% endif %}
               </div>
             </div>
           </div>
@@ -86,5 +103,6 @@
     </div>
   </div>
 </body>
+
 
 {% endblock %}

@@ -19,6 +19,7 @@ from django.urls import path, include
 from my_pf import views
 from django.conf import settings
 from django.conf.urls.static import static
+from allauth.account import views as allauth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,6 +31,8 @@ urlpatterns = [
     path('add-skill/', views.add_skill, name='add-skill'),
     path('add-project/', views.add_project, name='add-project'),
     path('dashboard/', views.dashboard_view, name='dashboard'),
+    path('accounts/', include('allauth.urls')),
     path('home/', views.display_all, name='home')
+    
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
