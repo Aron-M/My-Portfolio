@@ -3,13 +3,13 @@
     <h1 class="text-center" id="projects-header">PROJECTS</h1>
     <div class="row">
       {% for projects in projects %}
-      <div class="col-md-2">
+      <div class="col-md-3">
         <div class="card mb-4">
           <img src="{{ projects.image.url }}" alt="{{ projects.name }}" class="card-img-top">
           <div class="card-body">
             <h5 class="card-title">{{ projects.name }}</h5>
-            <p class="card-text">{{ projects.description }}</p>
-            <a href="{{ projects.github_url }}" class="btn btn-primary" target="_blank">View Project</a>
+            <p class="card-text text-center">{{ projects.description }}</p>
+            <a href="{{ projects.github_url }}" class="btn btn-primary d-flex justify-content-center" target="_blank">View Project</a>
           </div>
         </div>
       </div>

@@ -33,6 +33,12 @@
                   {{ skills_form.category.label_tag }}
                   {{ skills_form.category }}
                 </div>
+                <div class="text-center">
+                  <a type="submit" class="btn btn-primary">Edit</a>
+                </div>
+                <div class="text-center mt-3">
+                  <a href="{% url 'dashboard' %}" class="btn btn-warning">Back</a>
+                </div>      
               </div>
             </div>
             <div class="col-md-8 mb-4">
@@ -40,13 +46,6 @@
                 {% include 'components/skills/skills.html' %}
               </div>
             </div>
-          </div>
-          <div class="text-center">
-            <a type="submit" class="btn btn-primary">Edit</a>
-          </div>
-          <div class="text-center mt-3">
-            <a href="{% url 'home' %}" class="btn btn-warning">Back to Home</a>
-          </div>           
           </div>
         </form>
       </div>

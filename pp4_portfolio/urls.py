@@ -29,6 +29,7 @@ urlpatterns = [
     path('edit-skills/<skill_id>/', views.display_edit_skills, name='edit-skills'),
     path('edit-projects/<project_id>/', views.display_edit_projects, name='edit-projects'),
     path('add-skill/', views.add_skill, name='add-skill'),
+    path('delete-skill', views.delete_skill, name='delete-skill'),
     path('add-project/', views.add_project, name='add-project'),
     path('dashboard/', views.dashboard_view, name='dashboard'),
     path('accounts/', include('allauth.urls')),

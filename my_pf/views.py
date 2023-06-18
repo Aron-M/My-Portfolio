@@ -163,6 +163,22 @@ def add_project(request):
     return render(request, 'pages/add-project.html', context)
 
 
+def delete_skill(request):
+    skills = Skills.objects.all()
+    skills_form = SkillsForm()
+    category = SkillCategory.objects.all()
+    if request.method == 'POST':
+        skills_form = SkillsForm(request.POST)
+        if skills_form.is_valid():
+            skills_form.save()
+            return redirect('delete-skill')
+    else:
+        context = {
+            'skills': skills,
+            'skills_form': skills_form,
+            'category': category
+        }
+        return render(request, 'pages/delete-skill.html', context)
 
 
 
