@@ -10,17 +10,14 @@
     
     <div class="container">
       <div class="row">
-        <div class="col-md-5 about-me-par">
-          <p>{{ heading.par1 }}</p>
-          <p>{{ heading.par2 }}</p>
-          <p>{{ heading.par3 }}</p>
-          <p>{{ heading.par4 }}</p>
-        </div>
-        <div class="col-md-2 profile-pic">
+        <div class="col-md-3 profile-pic">
           <img src="{{ heading.profile_image.url }}" alt="Profile Picture" class="img-fluid square prof-pic">
         </div>
-        <div class="col-md-5">
-          {% include 'components/personal-details.html' %}
+        <div class="col-md-9 about-me-par">
+          <p class="mt-4">{{ heading.par1 }}</p>
+          <p class="mt-4">{{ heading.par2 }}</p>
+          <p>{{ heading.par3 }}</p>
+          <p>{{ heading.par4 }}</p>
         </div>
         {% endfor %}
       </div>

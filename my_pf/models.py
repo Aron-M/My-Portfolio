@@ -6,6 +6,8 @@ from cloudinary.models import CloudinaryField
 
 
 class PersonalDetails(models.Model):
+    profile_image = CloudinaryField('image', null=True, blank=True)
+    paragraph = models.CharField(max_length=300, null=True, blank=True)
     full_name = models.CharField(max_length=200, unique=False)
     nationality = models.CharField(max_length=200, unique=False)
     residency = models.CharField(max_length=200, unique=False)
