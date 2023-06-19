@@ -65,7 +65,21 @@ a,
   margin-bottom: 4rem;
 }
 
+.prof-pic {
+  display:flex;
+  align-items: center;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  width:max-content;
+  height: auto;
+}
 
+.intro-par {
+  display: flex;
+  justify-content: center;
+  padding-top: 10vh;
+  text-align:center;
+}
 
 /* Personal Details Model & Section */
 
