@@ -15,7 +15,9 @@ def redirect_if_not_admin(fn):
 
 
 def display_me_irl(request):
-    return render(request, 'pages/me-irl.html')
+    data = PersonalDetails.objects.all()
+    context = {'data': data}
+    return render(request, 'pages/me-irl.html', context)
 
 def display_skills_page(request):
     return render(request, 'pages/skills.html')
