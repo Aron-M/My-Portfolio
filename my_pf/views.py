@@ -160,6 +160,23 @@ def display_edit_projects(request, project_id):
     return render(request, 'pages/edit-projects.html', context)
 
 
+def delete_project(request, project_id):
+    project = get_object_or_404(Project, id=project_id)
+    project_form = ProjectForm(instance=project)
+    projects = Project.objects.all()
+
+    if request.method == 'POST':
+        project.delete()
+        return redirect('home')
+
+    context = {
+        'project': project,
+        'projects': projects,
+        'project_form': project_form,
+    }
+    return render(request, 'pages/delete-project.html', context)
+
+
 def add_skill(request):
     skills = Skills.objects.all()
     skills_form = SkillsForm()
