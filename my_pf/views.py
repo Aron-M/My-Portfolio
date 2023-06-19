@@ -3,6 +3,7 @@ from .models import PersonalDetails, Headings, Project, Skills, SkillCategory
 from .forms import PersonalDetailsForm, HeadingsForm, SkillsForm, ProjectForm
 from django.contrib import messages
 from django.core.files.storage import default_storage
+from django.core.files.base import ContentFile
 from django.http import HttpResponseRedirect
 
 def redirect_if_not_admin(fn):
@@ -36,10 +37,11 @@ def display_all(request):
     else: 
         return render(request, 'pages/home-page.html', context )
 
+
 @redirect_if_not_admin
 def dashboard_view(request):
     skills = Skills.objects.all()
-    skill = get_object_or_404(Skills, id=12)
+    skill = get_object_or_404(Skills, id=5)
     project = get_object_or_404(Project, id=44)
     context = {
         'skill': skill, 'project': project, 'skills': skills
@@ -65,9 +67,6 @@ def display_edit_personal_details(request):
     else: 
                 return render(request, 'pages/edit-personal-details.html', context )
 
-
-from django.core.files.storage import default_storage
-from django.core.files.base import ContentFile
 
 def display_edit_headings(request):
     print("display_edit_firing")
@@ -100,6 +99,7 @@ def display_edit_skills(request, skill_id):
     category = SkillCategory.objects.all()
     
     if request.method == 'POST':
+        skills = Skills.objects.all()
         skills_form = SkillsForm(request.POST, request.FILES, instance=skill)
         if skills_form.is_valid():
             skills_form.save()
@@ -115,6 +115,26 @@ def display_edit_skills(request, skill_id):
         'skills': skills
     }
     return render(request, 'pages/edit-skills.html', context)
+
+
+def delete_skill(request, skill_id):
+    skill = get_object_or_404(Skills, id=skill_id)
+    skills_form = SkillsForm(instance=skill)
+    skills = Skills.objects.all()
+    category = SkillCategory.objects.all()
+
+    if request.method == 'POST':
+        skill.delete()
+        return redirect('home')
+
+    context = {
+        'skill': skill,
+        'skills_form': skills_form,
+        'category': category,
+        'skills': skills
+    }
+    return render(request, 'pages/delete-skill.html', context)
+
 
 
 
@@ -176,23 +196,6 @@ def add_project(request):
     }
     return render(request, 'pages/add-project.html', context)
 
-
-def delete_skill(request):
-    skills = Skills.objects.all()
-    skills_form = SkillsForm()
-    category = SkillCategory.objects.all()
-    if request.method == 'POST':
-        skills_form = SkillsForm(request.POST)
-        if skills_form.is_valid():
-            skills_form.save()
-            return redirect('delete-skill')
-    else:
-        context = {
-            'skills': skills,
-            'skills_form': skills_form,
-            'category': category
-        }
-        return render(request, 'pages/delete-skill.html', context)
 
 
 
