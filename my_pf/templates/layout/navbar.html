@@ -9,22 +9,19 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#skills">Skills</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#projects">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#skills">Skills</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="#contact">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link pe-4" href="#cv">CV</a>
+            <a class="nav-link" href="#cv">CV</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link pe-4" href="{% url 'me-irl' %}">Me IRL</a>
+            <a class="nav-link pe-4" href="{% url 'me-irl' %}">About Me</a>
           </li>
           {% if request.user.is_superuser %}
           <li class="nav-item">

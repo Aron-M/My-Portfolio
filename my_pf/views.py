@@ -149,7 +149,6 @@ def display_edit_projects(request, project_id):
     if request.method == 'POST':
         project_form = ProjectForm(request.POST, request.FILES, instance=project)
         if project_form.is_valid():
-            project.image = request.FILES['image']
             project_form.save()
             return redirect('edit-projects', project_id=project.id)
         else:
