@@ -93,8 +93,6 @@ def display_edit_headings(request):
     return render(request, 'pages/edit-headings.html', context)
 
 
-
-
 def display_edit_skills(request, skill_id):
     skill = get_object_or_404(Skills, id=skill_id)
     skills_form = SkillsForm(instance=skill)

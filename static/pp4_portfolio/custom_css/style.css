@@ -206,12 +206,21 @@ a,
   padding-left: 1rem;
 }
 
-#modal-box {
-  display: none;
+.avatar {
+  width: 10rem;
+  height: auto;
 }
 
+#avatar {
+  padding: 0;
+}
+
+/* #modal-box {
+  display: none;
+} */
+
 #modal-title {
-  font-size: 3rem;
+  font-size: 5rem;
   margin-top: 2rem;
 }
 
@@ -231,9 +240,10 @@ a,
 
 #modal-div {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+  align-items: end;
+  justify-content: end;
+  width:fit-content;
+  height:max-content;
 }
 
 

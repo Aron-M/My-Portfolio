@@ -1,22 +1,15 @@
-
-To achieve the desired effect of having the background image appear behind the modal when it is opened, you can modify the structure of your HTML and CSS. Here's an updated version of your code:
-
-HTML:
-
-html
-Copy code
 <section id="skills" class="container skills-container py-5">
   <div class="skills-container">
     <h1 id="skills-id">SKILLS</h1>
     <h5 id="skills-id" class="skills-subheader">Click icons to view details</h5>
     <div class="row">
-      <div class="model-container col-lg-6">
+      <div class="col-lg-6">
         {% for category in category %}
         <div class="row">
-          <div class="model-item col-md-2">
+          <div class="col-md-2">
             <h6 class="category-names">{{ category.name }}</h6>
           </div>
-          <div class="model-item col-md-10">
+          <div class="col-md-10">
             <ul class="lang_img">
               {% for skills in skills %}
               {% if skills.category == category %}
@@ -29,9 +22,10 @@ Copy code
         </div>
         {% endfor %}
       </div>
+      <div class="col-lg-6">
+        <!--Skills Modal-->
+        {% include 'components/skills/modal.html' %}
+      </div>
     </div>
   </div>
-  <!--Skills Modal-->
-  <div id="modal-bg"></div>
-  {% include 'components/skills/modal.html' %}
 </section>

@@ -16,6 +16,7 @@ function openModal(imageSrc, textContent, titleContent) {
   modalImage.classList.add("fade-in");
   modalText.innerText = textContent;
   modalTitle.innerText = titleContent;
+  console.log(titleContent)
 }
 
 // Function to close the modal
@@ -43,5 +44,5 @@ window.addEventListener("click", function (event) {
   }
 });
 
-// Call the closeModal function on page load
-closeModal();
+// // Call the closeModal function on page load
+// closeModal();
