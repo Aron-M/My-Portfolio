@@ -74,6 +74,11 @@ a,
   height: auto;
 }
 
+.prof-pic-irl {
+  width:max-content;
+  height: auto;
+}
+
 .intro-par {
   display: flex;
   justify-content: center;
@@ -245,12 +250,6 @@ a,
   overflow: auto;
 }
 
-#modal-div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .modal-box {
   display: flex;
   flex-direction: column;
@@ -282,6 +281,9 @@ a,
   object-fit: contain;
 }
 
+#modal-box {
+  display: none; 
+}
 /* Contact Section */
 
 #contact label {

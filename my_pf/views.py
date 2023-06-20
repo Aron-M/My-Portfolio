@@ -49,23 +49,26 @@ def dashboard_view(request):
     return render(request, 'pages/dashboard.html')
 
 def display_edit_personal_details(request):
-    data = PersonalDetails.objects.all()
-    personal_details_form = PersonalDetailsForm()
     detail = get_object_or_404(PersonalDetails)
+    data = PersonalDetails.objects.all()
+
     if request.method == 'POST':
-        personal_details_form = PersonalDetailsForm(request.POST, instance=detail)
+        personal_details_form = PersonalDetailsForm(request.POST, request.FILES, instance=detail)
         if personal_details_form.is_valid():
-            data.image = request.FILES['image']
+            if 'image' in request.FILES:
+                detail.image = request.FILES['image']
             personal_details_form.save()
             return redirect('edit-personal-details')
-    personal_details_form = PersonalDetailsForm(instance=detail)
+    else:
+        personal_details_form = PersonalDetailsForm(instance=detail)
+
     context = {
-        'data': data, 'personal_details_form': personal_details_form
-        }
-    if request.path == "edit-personal-details/":
-        return render(request, 'pages/edit-personal-details.html', context )
-    else: 
-                return render(request, 'pages/edit-personal-details.html', context )
+        'data': data,
+        'personal_details_form': personal_details_form
+    }
+
+    return render(request, 'pages/edit-personal-details.html', context)
+
 
 
 def display_edit_headings(request):

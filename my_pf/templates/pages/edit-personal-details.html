@@ -10,8 +10,12 @@
           <h1 class="justify-content-center" style="margin-bottom: 4rem;">Edit Personal Details</h1>
         </div>
         <div class="row">
-          <div class="col-md-4 mb-4">
+          <div class="col-md-5 mb-4">
             <div style="background-color: rgb(185, 185, 184); padding: 20px;">
+              <div class="form-group" style="margin-bottom: 1rem;">
+                {{ personal_details_form.profile_image.label_tag }}
+                {{ personal_details_form.profile_image }}
+              </div>
               <div class="form-group" style="margin-bottom: 1rem;">
                 {{ personal_details_form.full_name.label_tag }}
                 {{ personal_details_form.full_name }}
@@ -40,32 +44,35 @@
                 {{ personal_details_form.studying.label_tag }}
                 {{ personal_details_form.studying }}
               </div>
-              <div class="form-group" style="margin-bottom: 1rem;">
+              <div class="form-group" style="margin-bottom: 4rem;">
                 {{ personal_details_form.study_icon.label_tag }}
                 {{ personal_details_form.study_icon }}
               </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">Edit</button>
+                <a href="{% url 'dashboard' %}" class="btn btn-warning">Go Back</a>
+              </div>
             </div>
           </div>
-          <div class="col-md-8 mb-4">
-            <h2 class="text-center">Preview:</h2>
-            <div class="bg-dark">
-              {% include 'components/personal-details.html' %}
-            </div>
-            <div style="margin-bottom: 3rem;">
-
-            </div>
-            <div class="text-center">
-              <button type="submit" class="btn btn-primary">Edit</button>
-            </div>
-            <div class="text-center mt-3">
-              <a href="{% url 'dashboard' %}" class="btn btn-warning">Back</a>
+          <div class="col-md-7">
+            <div class="row">
+              <div class="row-md-4 d-flex justify-content-center">
+                {% for detail in data %}
+                <img src="{{ detail.profile_image.url }}" alt="Profile Picture" class="img-fluid prof-pic">
+                {% endfor %}
+              </div>
+              <div class="row-md-8 justify-content-center">
+                {% include 'components/personal-details.html' %}
+              </div>
             </div>
           </div>
         </div>
-     
-      </form>
     </div>
   </div>
+
+  </form>
+</div>
+</div>
 </div>
 
 

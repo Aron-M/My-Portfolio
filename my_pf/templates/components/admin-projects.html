@@ -5,7 +5,7 @@
       {% for projects in projects %}
       <div class="col-md-3">
         <div class="card mb-4">
-          <img src="{{ projects.image.url }}" alt="{{ projects.name }}" class="card-img-top">
+          <a href="{% url 'edit-projects' projects.id %}"><img src="{{ projects.image.url }}" alt="{{ projects.name }}" class="card-img-top"></a>
           <div class="card-body">
             <h5 class="card-title">{{ projects.name }}</h5>
             <p class="card-text text-center">{{ projects.description }}</p>
