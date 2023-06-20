@@ -236,54 +236,7 @@ a,
   height: 100%;
 }
 
-#modal-box {
-  max-height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.modal-content {
-  max-height: 100%;
-  width: 100%;
-  overflow: auto;
-}
-
-.modal-box {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-
-.modal-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-  overflow-x: hidden;
-}
-
-.modal-content .row {
-  flex-grow: 1;
-}
-
-.modal-content .row:last-child {
-  flex-shrink: 0;
-  height: 29vh; 
-  overflow-y: auto;
-}
-
-.modal-image {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-#modal-box {
-  display: none; 
-}
 /* Contact Section */
 
 #contact label {
