@@ -64,3 +64,39 @@ function showStaticModal() {
 
 // Call the showStaticModal function on page load
 showStaticModal();
+
+
+
+// Store the paragraphs and their content
+let introPar1 = document.getElementById("intro-par1");
+let introPar2 = document.getElementById("intro-par2");
+let content1 = introPar1.innerText;
+let content2 = introPar2.innerText;
+
+// Clear the initial content
+introPar1.innerText = "";
+introPar2.innerText = "";
+
+// Function to animate typing effect
+function typeWriter(element, content, index, delay, callback) {
+  if (index < content.length) {
+    element.innerText += content.charAt(index);
+    index++;
+    setTimeout(function () {
+      typeWriter(element, content, index, delay, callback);
+    }, delay);
+  } else {
+    callback();
+  }
+}
+
+// Call the typeWriter function to animate the paragraphs
+setTimeout(function () {
+  typeWriter(introPar1, content1, 0, 100, function () {
+    setTimeout(function () {
+      typeWriter(introPar2, content2, 0, 100, function () {
+        // Animation complete
+      });
+    }, 1000);
+  });
+}, 1000);

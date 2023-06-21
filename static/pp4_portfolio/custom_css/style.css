@@ -370,3 +370,30 @@ a,
 .left-div {
   background-color:lightgray;
 }
+
+
+
+.intro-par {
+  display: inline-block;
+  overflow: hidden;
+  animation: typing 2s steps(40), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
