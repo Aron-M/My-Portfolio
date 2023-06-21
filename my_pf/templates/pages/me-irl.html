@@ -1,27 +1,32 @@
 {% extends "navbar-base.html" %}
 
 {% block content %}
-{% for detail in data %}
-<div class="container">
-  <div class="text-center mb-4">
-    <h1 class="justify-content-center" style="margin-bottom: 4rem">About Me:</h1>
-  </div>
-  <div class="row">
-    <div class="col-md-3 d-flex justify-content-center">
-      <img src="{{ detail.profile_image.url }}" alt="Profile Picture" class="img-fluid prof-pic-irl">
+  {% for detail in data %}
+    <div class="container">
+      <div class="text-center mb-4">
+        <h1 class="justify-content-center" style="margin-bottom: 4rem">About Me:</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-3 d-flex justify-content-center">
+          <img src="{{ detail.profile_image.url }}" alt="Profile Picture" class="img-fluid prof-pic-irl">
+        </div>
+        <div class="col-md-9">
+          {% include 'components/personal-details.html' %}
+        </div>
+      </div>
     </div>
-    <div class="col-md-9">
-      {% include 'components/personal-details.html' %}
+    {% endfor %}
+    <div class="container mb-5" style="margin-top: 5rem;">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="..media/skills-images/front-end-roadmap.png">
+        </div>
+        <div class="col-md-6">
+          <img src="..media/skills-images/front-end-roadmap.png">
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-<div class="container mb-5" style="margin-top: 5rem;">
-  <div class="row">
-    <p>
-    {{ detail.paragraph }}
-  </p>
-  </div>
-</div>
-{% endfor %}
+
 {% endblock %}
+
 

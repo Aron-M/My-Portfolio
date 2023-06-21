@@ -10,13 +10,19 @@ let modalTitle = document.querySelector("#modal-box h2");
 // Function to open the modal and display the content with fade-in effect
 function openModal(imageSrc, textContent, titleContent) {
   modalDiv.style.display = "block";
-  modalDiv.classList.remove("fade-in"); // Remove the fade-in class
-  void modalDiv.offsetWidth; // Trigger reflow to restart the animation
   modalDiv.classList.add("fade-in"); // Add the fade-in class again
   modalImage.src = imageSrc;
-  modalImage.classList.add("fade-in");
+  modalImage.classList.remove("fade-in"); // Remove the fade-in class
+  void modalImage.offsetWidth; // Trigger reflow to restart the animation
+  modalImage.classList.add("fade-in"); // Add the fade-in class again
   modalText.innerText = textContent;
+  modalText.classList.remove("fade-in"); // Remove the fade-in class
+  void modalText.offsetWidth; // Trigger reflow to restart the animation
+  modalText.classList.add("fade-in"); // Add the fade-in class again
   modalTitle.innerText = titleContent;
+  modalTitle.classList.remove("fade-in"); // Remove the fade-in class
+  void modalTitle.offsetWidth; // Trigger reflow to restart the animation
+  modalTitle.classList.add("fade-in"); // Add the fade-in class again
   modalImage.style.display = "block";
   avatarImage.style.opacity = "1"; // Keep the avatar image visible
   document.getElementById("static-modal-content").style.display = "none";
@@ -55,7 +61,7 @@ icons.forEach(function (icon) {
 });
 
 function showStaticModal() {
-  modalText.innerText = "Click any of the icons on the left!";
+  modalText.innerText = "Click on the icons for more info!";
   modalTitle.innerText = ""; // Clear the title content
   modalText.style.textAlign = "center";
   modalImage.style.display = "none";
@@ -64,41 +70,3 @@ function showStaticModal() {
 
 // Call the showStaticModal function on page load
 showStaticModal();
-
-
-
-const introPar1 = document.getElementById("intro-par1");
-const introPar2 = document.getElementById("intro-par2");
-
-const typingSpeed = 22; // Speed of typing (in milliseconds)
-const typingDelay = 1000; // Delay before starting the typing animation (in milliseconds)
-
-const texts = [
-  introPar1.textContent.trim(),
-  introPar2.textContent.trim()
-];
-
-function typeText(element, text, index) {
-  if (index < text.length) {
-    element.textContent += text.charAt(index);
-    setTimeout(() => {
-      typeText(element, text, index + 1);
-    }, typingSpeed);
-  }
-}
-
-function startTypingAnimation() {
-  texts.forEach((text, index) => {
-    setTimeout(() => {
-      typeText(index === 0 ? introPar1 : introPar2, text, 0);
-    }, typingDelay + index * typingSpeed * text.length);
-  });
-}
-
-// Show the paragraphs before starting the typing animation
-introPar1.classList.remove("hidden");
-introPar2.classList.remove("hidden");
-
-// Start the typing animation after the delay
-setTimeout(startTypingAnimation, typingDelay);
-
