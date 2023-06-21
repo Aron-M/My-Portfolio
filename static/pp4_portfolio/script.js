@@ -1,5 +1,6 @@
 // Get the modal element
 let modalDiv = document.getElementById("modal-div");
+let avatarImage = document.getElementById("avatar-img"); // Get the avatar image element
 
 // Get the image and text elements inside the modal
 let modalImage = document.getElementById("modal-image");
@@ -16,13 +17,32 @@ function openModal(imageSrc, textContent, titleContent) {
   modalImage.classList.add("fade-in");
   modalText.innerText = textContent;
   modalTitle.innerText = titleContent;
-  console.log(titleContent)
+  modalImage.style.display = "block";
+  avatarImage.style.opacity = "1"; // Keep the avatar image visible
+  document.getElementById("static-modal-content").style.display = "none";
 }
 
 // Function to close the modal
 function closeModal() {
   modalDiv.style.display = "none";
+  showStaticModal(); // Show the static modal
 }
+
+// Close the modal when clicking outside of it
+document.addEventListener("click", function (event) {
+  const targetElement = event.target;
+  if (
+    !modalDiv.contains(targetElement) &&
+    !targetElement.classList.contains("modal-image")
+  ) {
+    closeModal();
+  }
+});
+
+let closeButton = document.querySelector(".modal-close-button");
+closeButton.addEventListener("click", function () {
+  closeModal();
+});
 
 let icons = document.querySelectorAll(".modal-image");
 icons.forEach(function (icon) {
@@ -34,15 +54,13 @@ icons.forEach(function (icon) {
   });
 });
 
-let closeButton = document.querySelector(".modal-close-button");
-closeButton.addEventListener("click", closeModal);
+function showStaticModal() {
+  modalText.innerText = "Click any of the icons on the left!";
+  modalTitle.innerText = ""; // Clear the title content
+  modalText.style.textAlign = "center";
+  modalImage.style.display = "none";
+  document.getElementById("static-modal-content").style.display = "block";
+}
 
-// Close the modal when clicking outside of it
-window.addEventListener("click", function (event) {
-  if (event.target === modalDiv) {
-    closeModal();
-  }
-});
-
-// // Call the closeModal function on page load
-// closeModal();
+// Call the showStaticModal function on page load
+showStaticModal();

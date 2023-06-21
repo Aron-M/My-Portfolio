@@ -113,6 +113,10 @@ a,
 }
 /* Skills Section & Model with Modal */
 
+.skills-container {
+  padding-bottom: 0 !important;
+}
+
 .model-title {
   max-width: 1rem;
   min-width: 1rem;
@@ -182,7 +186,7 @@ a,
 
 .modal-content {
   position: relative;
-  height:max-content;
+  height:fit-content;
 }
 
 .modal-close-button {
@@ -196,11 +200,11 @@ a,
 
 #modal-text {
   color: black;
-  padding: 2rem;
+  padding: 0.5rem;
 }
 
 .modal-image-inside {
-  width: 10rem;
+  width: 6rem;
   height: auto;
   padding-top: 1rem;
   padding-left: 1rem;
@@ -220,7 +224,7 @@ a,
 } */
 
 #modal-title {
-  font-size: 5rem;
+  font-size: 3rem;
   margin-top: 2rem;
 }
 
@@ -243,7 +247,7 @@ a,
   align-items: end;
   justify-content: end;
   width:fit-content;
-  height:max-content;
+  height:fit-content;
 }
 
 
