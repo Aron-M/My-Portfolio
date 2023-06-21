@@ -67,36 +67,38 @@ showStaticModal();
 
 
 
-// Store the paragraphs and their content
-let introPar1 = document.getElementById("intro-par1");
-let introPar2 = document.getElementById("intro-par2");
-let content1 = introPar1.innerText;
-let content2 = introPar2.innerText;
+const introPar1 = document.getElementById("intro-par1");
+const introPar2 = document.getElementById("intro-par2");
 
-// Clear the initial content
-introPar1.innerText = "";
-introPar2.innerText = "";
+const typingSpeed = 22; // Speed of typing (in milliseconds)
+const typingDelay = 1000; // Delay before starting the typing animation (in milliseconds)
 
-// Function to animate typing effect
-function typeWriter(element, content, index, delay, callback) {
-  if (index < content.length) {
-    element.innerText += content.charAt(index);
-    index++;
-    setTimeout(function () {
-      typeWriter(element, content, index, delay, callback);
-    }, delay);
-  } else {
-    callback();
+const texts = [
+  introPar1.textContent.trim(),
+  introPar2.textContent.trim()
+];
+
+function typeText(element, text, index) {
+  if (index < text.length) {
+    element.textContent += text.charAt(index);
+    setTimeout(() => {
+      typeText(element, text, index + 1);
+    }, typingSpeed);
   }
 }
 
-// Call the typeWriter function to animate the paragraphs
-setTimeout(function () {
-  typeWriter(introPar1, content1, 0, 100, function () {
-    setTimeout(function () {
-      typeWriter(introPar2, content2, 0, 100, function () {
-        // Animation complete
-      });
-    }, 1000);
+function startTypingAnimation() {
+  texts.forEach((text, index) => {
+    setTimeout(() => {
+      typeText(index === 0 ? introPar1 : introPar2, text, 0);
+    }, typingDelay + index * typingSpeed * text.length);
   });
-}, 1000);
+}
+
+// Show the paragraphs before starting the typing animation
+introPar1.classList.remove("hidden");
+introPar2.classList.remove("hidden");
+
+// Start the typing animation after the delay
+setTimeout(startTypingAnimation, typingDelay);
+

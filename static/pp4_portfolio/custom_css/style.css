@@ -397,3 +397,7 @@ a,
     border-color: orange;
   }
 }
+
+.hidden {
+  display: none;
+}
