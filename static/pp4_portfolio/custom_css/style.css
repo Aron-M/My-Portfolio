@@ -375,3 +375,11 @@ a,
 
 
 
+.img-roadmap {
+  width: 60%;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  justify-self: center !important;
+  justify-items: center !important;
+}

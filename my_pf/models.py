@@ -7,7 +7,11 @@ from cloudinary.models import CloudinaryField
 
 class PersonalDetails(models.Model):
     profile_image = CloudinaryField('image', null=True, blank=True)
-    paragraph = models.CharField(max_length=300, null=True, blank=True)
+    paragraph_1 = models.CharField(max_length=800, null=True, blank=True)
+    paragraph_2 = models.CharField(max_length=800, null=True, blank=True)
+    paragraph_3 = models.CharField(max_length=800, null=True, blank=True)
+    paragraph_4 = models.CharField(max_length=800, null=True, blank=True)
+    paragraph_5 = models.CharField(max_length=800, null=True, blank=True)
     full_name = models.CharField(max_length=200, unique=False)
     nationality = models.CharField(max_length=200, unique=False)
     residency = models.CharField(max_length=200, unique=False)
@@ -51,7 +55,7 @@ class SkillCategory(models.Model):
 class Skills(models.Model):
     name = models.CharField(max_length=100, blank=True, null=True)
     icon = models.URLField(max_length=100, blank=True)
-    description = models.CharField(max_length=300, blank=True, null=True)
+    description = models.CharField(max_length=450, blank=True, null=True)
     progress = CloudinaryField('image', null=True, blank=True)
     category = models.ForeignKey(SkillCategory, on_delete=models.CASCADE)
 
