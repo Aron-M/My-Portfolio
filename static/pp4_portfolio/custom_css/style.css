@@ -79,11 +79,7 @@ a,
 }
 
 .intro-par {
-  display: flex;
-  justify-content: center;
-  padding-top: 5vh;
-  text-align:center;
-  max-width: 35vw;
+  padding-top: 7vh;
 }
 
 /* Personal Details Model & Section */
