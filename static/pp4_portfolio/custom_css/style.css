@@ -201,6 +201,7 @@ a,
 #modal-text {
   color: black;
   padding: 0.5rem;
+  margin-bottom: 0 !important;
 }
 
 .modal-image-inside {
@@ -217,11 +218,16 @@ a,
 
 #avatar {
   padding: 0;
+  width: 2vw;
 }
 
-/* #modal-box {
-  display: none;
-} */
+#modal-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    padding: 0.8rem;
+}
 
 #modal-title {
   font-size: 3rem;
@@ -247,7 +253,7 @@ a,
   align-items: end;
   justify-content: end;
   width:fit-content;
-  height:fit-content;
+  height:auto;
   padding-left: 0.4rem;
   padding-right: 0.4rem;
 }

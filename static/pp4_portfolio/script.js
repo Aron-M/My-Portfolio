@@ -24,6 +24,7 @@ function openModal(imageSrc, textContent, titleContent) {
   void modalTitle.offsetWidth; // Trigger reflow to restart the animation
   modalTitle.classList.add("fade-in"); // Add the fade-in class again
   modalImage.style.display = "block";
+  modalTitle.style.display = "block";
   avatarImage.style.opacity = "1"; // Keep the avatar image visible
   document.getElementById("static-modal-content").style.display = "none";
 }
@@ -62,11 +63,42 @@ icons.forEach(function (icon) {
 
 function showStaticModal() {
   modalText.innerText = "Click on the icons for more info!";
-  modalTitle.innerText = ""; // Clear the title content
   modalText.style.textAlign = "center";
   modalImage.style.display = "none";
+  modalTitle.style.display = "none"; // Hide the title
+  closeButton.style.display = "none"; // Hide the close button
   document.getElementById("static-modal-content").style.display = "block";
 }
 
 // Call the showStaticModal function on page load
 showStaticModal();
+
+const loremText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, velit eu pellentesque lobortis, mauris lectus euismod ipsum, id auctor elit felis vitae nisl. Phasellus feugiat, ante in tincidunt aliquam, nibh turpis semper turpis, in volutpat est metus eu massa.";
+const loremParagraph = document.getElementById("lorem-text");
+let typingTimer;
+
+function typeLoremText() {
+  let index = 0;
+  loremParagraph.textContent = "";
+  clearInterval(typingTimer);
+
+  typingTimer = setInterval(() => {
+    if (index < loremText.length) {
+      loremParagraph.textContent += loremText.charAt(index);
+      index++;
+    } else {
+      clearInterval(typingTimer);
+    }
+  }, 30);
+}
+
+const projectImages = document.querySelectorAll(".card-img-top");
+projectImages.forEach((image) => {
+  image.addEventListener("mouseenter", typeLoremText);
+});
+
+loremParagraph.addEventListener("mouseleave", () => {
+  clearInterval(typingTimer);
+  loremParagraph.textContent = "";
+});
+
