@@ -3,7 +3,7 @@
     <h1 class="text-center" id="projects-header">PROJECTS</h1>
     <div class="row">
       <div class="col-md-12 text-start" style="height:5rem;">
-        <p id="lorem-text" class="lorem-text">{{ project.extra_info }}</p>
+        <p id="lorem-text" class="lorem-text" style="display: none;"></p>
       </div>
     </div>
     <div class="row">
@@ -15,6 +15,7 @@
             <h5 class="card-title">{{ project.name }}</h5>
             <p class="card-text text-center">{{ project.description }}</p>
             <a href="{{ project.github_url }}" class="btn btn-primary d-flex justify-content-center" target="_blank">View Project</a>
+            <p class="lorem-text" data-extra-info="{{ project.extra_info }}"></p>
           </div>
         </div>
       </div>

@@ -74,19 +74,24 @@ function showStaticModal() {
 // Call the showStaticModal function on page load
 showStaticModal();
 
-// animated text
-const loremText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, velit eu pellentesque lobortis, mauris lectus euismod ipsum, id auctor elit felis vitae nisl. Phasellus feugiat, ante in tincidunt aliquam, nibh turpis semper turpis, in volutpat est metus eu massa.";
-const loremParagraph = document.getElementById("lorem-text");
+
+
+
+// animated text in 'Projects' Section
+
+const projectImages = document.querySelectorAll(".card-img-top");
+const loremParagraph = document.querySelector(".lorem-text");
+
 let typingTimer;
 
-function typeLoremText() {
+function typeLoremText(text) {
   let index = 0;
   loremParagraph.textContent = "";
   clearInterval(typingTimer);
 
   typingTimer = setInterval(() => {
-    if (index < loremText.length) {
-      loremParagraph.textContent += loremText.charAt(index);
+    if (index < text.length) {
+      loremParagraph.textContent += text.charAt(index);
       index++;
     } else {
       clearInterval(typingTimer);
@@ -94,20 +99,20 @@ function typeLoremText() {
   }, 30);
 }
 
-function resetLoremText() {
+function resetLoremText(text) {
   clearInterval(typingTimer);
-  typeLoremText();
+  typeLoremText(text);
 }
 
-const projectImages = document.querySelectorAll(".card-img-top");
-
 projectImages.forEach((image) => {
+  const projectExtraInfo = image.parentElement.querySelector(".lorem-text").dataset.extraInfo;
+
   image.addEventListener("mouseenter", () => {
-    resetLoremText();
+    resetLoremText(projectExtraInfo);
   });
 
   image.addEventListener("mouseleave", () => {
-    resetLoremText();
+    resetLoremText(projectExtraInfo);
   });
 });
 
@@ -115,13 +120,16 @@ loremParagraph.style.display = "none"; // Hide the text initially
 
 document.addEventListener("DOMContentLoaded", () => {
   projectImages.forEach((image) => {
+    const projectExtraInfo = image.parentElement.querySelector(".lorem-text").dataset.extraInfo;
+
     image.addEventListener("mouseenter", () => {
       loremParagraph.style.display = "block"; // Show the text when hovering over an image
+      resetLoremText(projectExtraInfo);
     });
 
     image.addEventListener("mouseleave", () => {
       loremParagraph.style.display = "none"; // Hide the text when the mouse leaves the image
-      resetLoremText(); // Reset the text animation
+      resetLoremText(projectExtraInfo); // Reset the text animation
     });
   });
 });
