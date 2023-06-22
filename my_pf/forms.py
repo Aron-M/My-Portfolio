@@ -33,4 +33,4 @@ class SkillsForm(forms.ModelForm):
 class ProjectForm(forms.ModelForm):
     class Meta:
         model = Project
-        fields = ['name', 'image', 'description', 'github_url']
+        fields = ['name', 'image', 'description', 'extra_info', 'github_url']

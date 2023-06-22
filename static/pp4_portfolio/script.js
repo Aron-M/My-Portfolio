@@ -70,9 +70,11 @@ function showStaticModal() {
   document.getElementById("static-modal-content").style.display = "block";
 }
 
+
 // Call the showStaticModal function on page load
 showStaticModal();
 
+// animated text
 const loremText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, velit eu pellentesque lobortis, mauris lectus euismod ipsum, id auctor elit felis vitae nisl. Phasellus feugiat, ante in tincidunt aliquam, nibh turpis semper turpis, in volutpat est metus eu massa.";
 const loremParagraph = document.getElementById("lorem-text");
 let typingTimer;
@@ -92,13 +94,34 @@ function typeLoremText() {
   }, 30);
 }
 
-const projectImages = document.querySelectorAll(".card-img-top");
-projectImages.forEach((image) => {
-  image.addEventListener("mouseenter", typeLoremText);
-});
-
-loremParagraph.addEventListener("mouseleave", () => {
+function resetLoremText() {
   clearInterval(typingTimer);
-  loremParagraph.textContent = "";
+  typeLoremText();
+}
+
+const projectImages = document.querySelectorAll(".card-img-top");
+
+projectImages.forEach((image) => {
+  image.addEventListener("mouseenter", () => {
+    resetLoremText();
+  });
+
+  image.addEventListener("mouseleave", () => {
+    resetLoremText();
+  });
 });
 
+loremParagraph.style.display = "none"; // Hide the text initially
+
+document.addEventListener("DOMContentLoaded", () => {
+  projectImages.forEach((image) => {
+    image.addEventListener("mouseenter", () => {
+      loremParagraph.style.display = "block"; // Show the text when hovering over an image
+    });
+
+    image.addEventListener("mouseleave", () => {
+      loremParagraph.style.display = "none"; // Hide the text when the mouse leaves the image
+      resetLoremText(); // Reset the text animation
+    });
+  });
+});
