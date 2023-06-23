@@ -80,6 +80,8 @@ a,
 
 .intro-par {
   padding-top: 7vh;
+  display: flex;
+  text-align: center;
 }
 
 /* Personal Details Model & Section */
@@ -275,6 +277,10 @@ a,
 
 
 /* Projects Section */
+
+#projects {
+  width: 80%;
+}
 
 #projects-header {
   color: rgb(251, 250, 250);
