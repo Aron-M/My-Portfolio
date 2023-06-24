@@ -82,6 +82,10 @@ a,
   height: auto;
 }
 
+.status-container {
+  padding-left: 3rem;
+}
+
 .intro-par-1 {
   
   display: inline-block;
@@ -95,17 +99,31 @@ a,
   text-align: left;
 }
 
+.col-md-12 {
+  margin: 0 !important;
+  padding: 0 !important;
+}
 
 .status-images {
   width: 4rem;
   height:auto;
-  margin-left: 2rem;
 }
 
 .status-images-2 {
   width: 4rem;
   height:auto;
-  margin-left: 2.3rem;
+}
+
+.status-text {
+  font-size: 0.7rem;
+  padding-right: 0;
+ text-align: center;
+}
+
+.status-box {
+  padding: 0;
+ margin-bottom: 1rem;
+ margin-top: 2rem !important;
 }
 
 /* Personal Details Model & Section */

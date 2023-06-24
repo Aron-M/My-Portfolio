@@ -145,9 +145,18 @@ const renderText = (paragraph, text) => {
 
     const renderNextCharacter = () => {
       if (currentIndex < text.length) {
-        paragraph.textContent += text.charAt(currentIndex);
-        currentIndex++;
-        setTimeout(renderNextCharacter, 15);
+        if (text[currentIndex] === "." || text[currentIndex] === "!") {
+          // Add a longer pause after periods and exclamation marks
+          paragraph.textContent += text.charAt(currentIndex);
+          currentIndex++;
+          setTimeout(() => {
+            renderNextCharacter();
+          }, 1000); // Adjust the pause interval (in milliseconds) after periods and exclamation marks
+        } else {
+          paragraph.textContent += text.charAt(currentIndex);
+          currentIndex++;
+          setTimeout(renderNextCharacter, 15); // Adjust the interval (in milliseconds) between characters
+        }
       } else {
         resolve();
       }
@@ -156,6 +165,7 @@ const renderText = (paragraph, text) => {
     renderNextCharacter();
   });
 };
+
 
 const animateParagraphsSequentially = async (paragraphs) => {
   for (let i = 0; i < paragraphs.length; i++) {
@@ -167,7 +177,7 @@ const animateParagraphsSequentially = async (paragraphs) => {
 
 const introPar1 = document.querySelector(".intro-par-1");
 const introPar2 = document.querySelector(".intro-par-2");
-const statusImages = document.querySelectorAll(".status-images");
+const statusImages = document.querySelectorAll(".status-images , .status-text, .study-image");
 
 // Hide intro-par-2 and status-images initially
 introPar2.style.opacity = "0";
@@ -186,10 +196,9 @@ animateParagraphsSequentially([introPar1]).then(() => {
         statusImages.forEach((image, index) => {
           setTimeout(() => {
             image.style.opacity = "1";
-          }, (index + 1) * 500); // Adjust the delay time (in milliseconds) between fading in each image
+          }, (index + 1) * 1000); // Adjust the delay time (in milliseconds) between fading in each image
         });
-      }, 500); // Adjust the delay interval (in milliseconds) as needed
+      }, 10); // Adjust the delay interval (in milliseconds) as needed
     });
-  }, 1000); // Adjust the delay interval (in milliseconds) as needed
+  }, 200); // Adjust the delay interval (in milliseconds) as needed
 });
-
