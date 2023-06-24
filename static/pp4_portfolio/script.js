@@ -138,15 +138,44 @@ document.addEventListener("DOMContentLoaded", () => {
 // Animation for 'intro-paragraphs' in 'headings' section
 const introParagraphs = document.querySelectorAll(".intro-par-1, .intro-par-2");
 
-introParagraphs.forEach((paragraph) => {
-  const text = paragraph.textContent;
-  let index = 0;
-  paragraph.textContent = "";
+const renderText = (paragraph, text) => {
+  return new Promise((resolve) => {
+    let currentIndex = 0;
+    paragraph.textContent = "";
 
-  setInterval(() => {
-    if (index < text.length) {
-      paragraph.textContent += text.charAt(index);
-      index++;
-    }
-  }, 30);
+    const renderNextCharacter = () => {
+      if (currentIndex < text.length) {
+        paragraph.textContent += text.charAt(currentIndex);
+        currentIndex++;
+        setTimeout(renderNextCharacter, 15);
+      } else {
+        resolve();
+      }
+    };
+
+    renderNextCharacter();
+  });
+};
+
+const animateParagraphsSequentially = async (paragraphs) => {
+  for (let i = 0; i < paragraphs.length; i++) {
+    const paragraph = paragraphs[i];
+    const text = paragraph.textContent;
+    await renderText(paragraph, text);
+  }
+};
+
+const introPar1 = document.querySelector(".intro-par-1");
+const introPar2 = document.querySelector(".intro-par-2");
+
+// Hide intro-par-2 initially
+introPar2.style.display = "none";
+
+// Start animating intro-par-1
+animateParagraphsSequentially([introPar1]).then(() => {
+  // Delay before animating intro-par-2
+  setTimeout(() => {
+    introPar2.style.display = "block";
+    animateParagraphsSequentially([introPar2]);
+  }, 1000); // Adjust the delay interval (in milliseconds) as needed
 });

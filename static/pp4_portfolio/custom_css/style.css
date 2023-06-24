@@ -84,15 +84,15 @@ a,
 
 .intro-par-1 {
   
-  display: flex;
-  text-align: center;
+  display: inline-block;
+  text-align: left;
   margin-top: 10vh !important;
 }
 
 .intro-par-2 {
   margin-top: 8vh !important;
-  display: flex;
-  text-align: center;
+  display: inline-block;
+  text-align: left;
 }
 
 
