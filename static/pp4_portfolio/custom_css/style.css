@@ -68,9 +68,13 @@ a,
 .prof-pic {
   display:flex;
   align-content: center;
-  margin-top: 1rem;
   width:20rem;
   height: auto;
+  padding-right:0.5rem;
+}
+
+.profile-row {
+  padding: 0 !important;
 }
 
 .prof-pic-irl {
@@ -78,10 +82,22 @@ a,
   height: auto;
 }
 
-.intro-par {
-  padding-top: 7vh;
+.intro-par-1 {
+  
   display: flex;
   text-align: center;
+  margin-top: 10vh !important;
+}
+
+.intro-par-2 {
+  margin-top: 8vh !important;
+  display: flex;
+  text-align: center;
+}
+
+.status-images {
+  width: 4rem;
+  height:auto;
 }
 
 /* Personal Details Model & Section */
@@ -292,8 +308,6 @@ a,
   height: 200px;
   object-fit:cover;
 }
-
-
 
 .projects-section .card-title,
 .projects-section .card-text,

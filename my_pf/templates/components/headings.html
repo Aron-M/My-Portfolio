@@ -8,15 +8,25 @@
   </header>
   <div class="container">
     <div class="row">
-      <div class="col-md-3 profile-pic">
-        <img src="{{ heading.profile_image.url }}" alt="Profile Picture" class="img-fluid prof-pic">
+      <div class="col-md-3 profile-row">
+        <img src="{{ heading.profile_image.url }}" alt="Profile Picture" class="prof-pic">
       </div>
       <div class="col-md-6 about-me-par">
-        <p class="mt-3 intro-par">{{ heading.par1 }}</p>
-        <p class="mt-3 intro-par">{{ heading.par2 }}</p>
+        <p class="intro-par-1">{{ heading.par1 }}</p>
+        <p class="mt-3 intro-par-2">{{ heading.par2 }}</p>
       </div>
-      <div class="col-md-3">
-
+      <div class="col-md-3 d-flex align-items-center">
+        <div class="row">
+        <div class="mb-5">
+          <img src="../media/skills-images/student.png" class="status-images">
+        </div>
+        <div class="mb-5">
+          <img src="../media/skills-images/enrolled.png" class="status-images">
+        </div>
+        <div class="mb-5">
+          <img src="../media/skills-images/accept.png" class="status-images">
+        </div>
+      </div>
       </div>
       {% endfor %}
     </div>
