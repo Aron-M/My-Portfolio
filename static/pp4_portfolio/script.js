@@ -167,15 +167,29 @@ const animateParagraphsSequentially = async (paragraphs) => {
 
 const introPar1 = document.querySelector(".intro-par-1");
 const introPar2 = document.querySelector(".intro-par-2");
+const statusImages = document.querySelectorAll(".status-images");
 
-// Hide intro-par-2 initially
-introPar2.style.display = "none";
+// Hide intro-par-2 and status-images initially
+introPar2.style.opacity = "0";
+statusImages.forEach((image) => {
+  image.style.opacity = "0";
+});
 
 // Start animating intro-par-1
 animateParagraphsSequentially([introPar1]).then(() => {
   // Delay before animating intro-par-2
   setTimeout(() => {
-    introPar2.style.display = "block";
-    animateParagraphsSequentially([introPar2]);
+    introPar2.style.opacity = "1";
+    animateParagraphsSequentially([introPar2]).then(() => {
+      // Delay before fading in status-images
+      setTimeout(() => {
+        statusImages.forEach((image, index) => {
+          setTimeout(() => {
+            image.style.opacity = "1";
+          }, (index + 1) * 500); // Adjust the delay time (in milliseconds) between fading in each image
+        });
+      }, 500); // Adjust the delay interval (in milliseconds) as needed
+    });
   }, 1000); // Adjust the delay interval (in milliseconds) as needed
 });
+
