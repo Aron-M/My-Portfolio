@@ -68,7 +68,7 @@ a,
 .prof-pic {
   display:flex;
   align-content: center;
-  width:20rem;
+  width:20vw;
   height: auto;
   padding-right:0.5rem;
 }
@@ -82,18 +82,16 @@ a,
   height: auto;
 }
 
-.status-container {
-  padding-left: 3rem;
-}
 
 .intro-par-1 {
-  
+  font-size: 0.9rem;
   display: inline-block;
   text-align: left;
   margin-top: 10vh !important;
 }
 
 .intro-par-2 {
+  font-size: 0.9rem;
   margin-top: 8vh !important;
   display: inline-block;
   text-align: left;
@@ -105,26 +103,43 @@ a,
 }
 
 .status-images {
-  width: 4rem;
-  height:auto;
-}
-
-.status-images-2 {
-  width: 4rem;
+  width: 3.5rem;
   height:auto;
 }
 
 .status-text {
   font-size: 0.7rem;
-  padding-right: 0;
  text-align: center;
 }
 
 .status-box {
-  padding: 0;
+ padding: 0;
  margin-bottom: 1rem;
  margin-top: 2rem !important;
 }
+
+.status-container {
+  padding-top: 2vh;
+  padding-bottom:2vh;
+  transform: scale(0.9);
+}
+
+.fade-in-1 {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in-1.fade-in-active {
+  opacity: 1;
+}
+
+
+.status-box {
+  display: flex;
+  align-items: center;
+}
+
+
 
 /* Personal Details Model & Section */
 

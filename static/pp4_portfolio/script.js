@@ -145,7 +145,7 @@ const renderText = (paragraph, text) => {
 
     const renderNextCharacter = () => {
       if (currentIndex < text.length) {
-        if (text[currentIndex] === "." || text[currentIndex] === "!") {
+        if (text[currentIndex] === "!") {
           // Add a longer pause after periods and exclamation marks
           paragraph.textContent += text.charAt(currentIndex);
           currentIndex++;
@@ -155,7 +155,7 @@ const renderText = (paragraph, text) => {
         } else {
           paragraph.textContent += text.charAt(currentIndex);
           currentIndex++;
-          setTimeout(renderNextCharacter, 15); // Adjust the interval (in milliseconds) between characters
+          setTimeout(renderNextCharacter, 10); // Adjust the interval (in milliseconds) between characters
         }
       } else {
         resolve();
@@ -172,6 +172,13 @@ const animateParagraphsSequentially = async (paragraphs) => {
     const paragraph = paragraphs[i];
     const text = paragraph.textContent;
     await renderText(paragraph, text);
+
+    // Add a longer pause after the second intro-paragraph
+    if (i === 1) {
+      await new Promise((resolve) => {
+        setTimeout(resolve, 2000); // Adjust the pause duration (in milliseconds) as needed
+      });
+    }
   }
 };
 
