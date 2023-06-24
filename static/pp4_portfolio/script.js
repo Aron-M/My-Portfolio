@@ -133,3 +133,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+// Animation for 'intro-paragraphs' in 'headings' section
+const introParagraphs = document.querySelectorAll(".intro-par-1, .intro-par-2");
+
+introParagraphs.forEach((paragraph) => {
+  const text = paragraph.textContent;
+  let index = 0;
+  paragraph.textContent = "";
+
+  setInterval(() => {
+    if (index < text.length) {
+      paragraph.textContent += text.charAt(index);
+      index++;
+    }
+  }, 30);
+});

@@ -95,9 +95,17 @@ a,
   text-align: center;
 }
 
+
 .status-images {
   width: 4rem;
   height:auto;
+  margin-left: 2rem;
+}
+
+.status-images-2 {
+  width: 4rem;
+  height:auto;
+  margin-left: 2.3rem;
 }
 
 /* Personal Details Model & Section */
