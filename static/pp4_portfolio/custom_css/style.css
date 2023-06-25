@@ -22,6 +22,7 @@ a,
 .header-container-blue {
   padding-top: 5rem !important;
   padding-bottom: 5rem !important;
+  margin-bottom: 0 !important;
 }
 
 /* Nav-Bar */
@@ -61,9 +62,6 @@ a,
   color: #f7f6f6;
 }
 
-#about {
-  margin-bottom: 4rem;
-}
 
 .prof-pic {
   display:flex;
@@ -126,7 +124,7 @@ a,
 
 .enroll-image
 .your-logo-here {
-  padding-left: 0.7rem;
+  padding-left: 1rem;
 }
 
 .fade-in-1 {
@@ -171,6 +169,7 @@ a,
   border-radius: 10px;
   margin-top: 0.5rem;
 }
+
 /* Skills Section & Model with Modal */
 
 .skills-container {
@@ -340,9 +339,9 @@ a,
 
 /* Projects Section */
 
-#projects {
+/* #projects {
   width: 80%;
-}
+} */
 
 #projects-header {
   color: rgb(251, 250, 250);
@@ -351,7 +350,7 @@ a,
 }
 
 .card-img-top {
-  height: 200px;
+  height: 15rem;
   object-fit:cover;
 }
 
