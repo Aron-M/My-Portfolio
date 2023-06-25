@@ -8,10 +8,10 @@
   </header>
   <div class="container">
     <div class="row profile-container">
-      <div class="col-md-3 profile-row d-flex align-items-center">
+      <div class="col-md-3 profile-row d-flex align-items-center justify-content-center">
         <img src="{{ heading.profile_image.url }}" alt="Profile Picture" class="prof-pic">
       </div>
-      <div class="col-md-6 mt-3 about-me-par">
+      <div class="col-md-6 about-me-par d-flex flex-column align-items-start justify-content-center">
         {% if heading.par1 %}
         <!-- Dynamic paragraph 1 -->
         <p class="intro-par-1">{{ heading.par1 }}</p>
@@ -26,7 +26,7 @@
           <div class="col-md-12">
             <div class="status-box mt-5">
               <div class="row justify-content-center mt-3">
-                <div class="col-md-3 align-items-center">
+                <div class="col-md-3 align-items-center justify-content-center">
                   <a href="https://codeinstitute.net/ie/full-stack-software-development-diploma/e-commerce/" target="_blank" class="status-link">
                     <img src="../media/skills-images/student.png" class="status-images fade-in-1">
                   </a>
@@ -47,7 +47,7 @@
           <div class="col-md-12">
             <div class="status-box">
               <div class="row">
-                <div class="col-md-3 d-flex align-items-center">
+                <div class="col-md-3 align-items-center justify-content-center">
                   <a href="URL_HERE" target="_blank" class="status-link">
                     <img src="../media/skills-images/enroll-form.png" class="status-images enroll-image fade-in-1">
                   </a>
@@ -68,16 +68,14 @@
           <div class="col-md-12">
             <div class="status-box">
               <div class="row">
-                <div class="col-md-3 align-items-center mt-1">
-                  <img src="../media/skills-images/accept.png" class="status-images fade-in-1" 
-                  style="max-width: 4rem;">
+                <div class="col-md-3 align-items-center justify-content-center">
+                  <img src="../media/skills-images/accept.png" class="status-images fade-in-1" style="max-width: 5rem;">
                 </div>
                 <div class="col-md-5 mt-3">
                   <p class="status-text fade-in-1">Available for employment  @</p>
                 </div>
                 <div class="col-md-4 mt-1" style="padding-left:1rem">
-                  <img src="../media/skills-images/your-logo-here.png" style="max-width: 4rem;" 
-                  class="study-image your-logo-here fade-in-1 mb-1">
+                  <img src="../media/skills-images/your-logo-here.png" style="max-width: 5rem;" class="study-image your-logo-here fade-in-1 mt-1">
                 </div>
               </div>
             </div>
