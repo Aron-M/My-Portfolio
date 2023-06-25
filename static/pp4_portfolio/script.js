@@ -6,11 +6,12 @@ let avatarImage = document.getElementById("avatar-img"); // Get the avatar image
 let modalImage = document.getElementById("modal-image");
 let modalText = document.getElementById("modal-text");
 let modalTitle = document.querySelector("#modal-box h2");
+let modalBox = document.getElementById("modal-box")
 
 // Function to open the modal and display the content with fade-in effect
 function openModal(imageSrc, textContent, titleContent) {
   modalDiv.style.display = "block";
-  modalDiv.classList.add("fade-in"); // Add the fade-in class again
+  modalBox.classList.add("fade-in"); // Add the fade-in class again
   modalImage.src = imageSrc;
   modalImage.classList.remove("fade-in"); // Remove the fade-in class
   void modalImage.offsetWidth; // Trigger reflow to restart the animation
