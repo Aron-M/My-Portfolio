@@ -30,6 +30,9 @@ class SkillsForm(forms.ModelForm):
         fields = '__all__'
 
 
+class SkillIconForm(forms.Form):
+    skills_icon = forms.URLField(max_length=100, required=False)
+
 class ProjectForm(forms.ModelForm):
     class Meta:
         model = Project

@@ -142,6 +142,10 @@ a,
   align-items: center;
 }
 
+.status-link {
+  cursor: pointer;
+}
+
 
 
 /* Personal Details Model & Section */
@@ -359,6 +363,7 @@ a,
 .projects-section .btn-primary {
   color: black;
 }
+
 
 
 /* Footer */

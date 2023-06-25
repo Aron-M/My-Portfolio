@@ -48,6 +48,18 @@
                 {{ personal_details_form.study_icon.label_tag }}
                 {{ personal_details_form.study_icon }}
               </div>
+              <div class="form-group" style="margin-bottom: 4rem;">
+                {{ personal_details_form.paragraph_1.label_tag }}
+                {{ personal_details_form.paragraph_1 }}
+              </div>
+              <div class="form-group" style="margin-bottom: 4rem;">
+                {{ personal_details_form.paragraph_2.label_tag }}
+                {{ personal_details_form.paragraph_2 }}
+              </div>
+              <div class="form-group" style="margin-bottom: 4rem;">
+                {{ personal_details_form.paragraph_3.label_tag }}
+                {{ personal_details_form.paragraph_3 }}
+              </div>
               <div class="text-center">
                 <button type="submit" class="btn btn-primary">Edit</button>
                 <a href="{% url 'dashboard' %}" class="btn btn-warning">Go Back</a>

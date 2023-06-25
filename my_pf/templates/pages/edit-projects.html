@@ -33,12 +33,21 @@
                 {{ project_form.extra_info.label_tag }}
                 {{ project_form.extra_info }}
               </div>
+              <div class="form-group" style="margin-bottom: 1rem;">
+                {{ project_form.skills_icon.label_tag }}
+                {{ project_form.skills_icon }}
+                <ul class="list-unstyled">
+                  {% for form in skill_icon_formset %}
+                  <li><img class="project-skills img-fluid" src="{{ form.skills_icon.value }}" style="width: 1.5rem; height: 1.5rem;"></li>
+                  {% endfor %}
+                </ul>
+              </div>
               <div class="text-center">
                 <button type="submit" class="btn btn-primary">Edit</button>
               </div>
               <div class="text-center mt-3">
                 <a href="{% url 'dashboard' %}" class="btn btn-warning">Back</a>
-              </div>           
+              </div>
             </div>
           </div>
           <div class="col-md-8 mb-4">
@@ -51,6 +60,5 @@
     </div>
   </div>
 </div>
-
 
 {% endblock %}
