@@ -25,6 +25,11 @@ a,
   margin-bottom: 0 !important;
 }
 
+.section-break {
+  margin-bottom:5rem;
+}
+
+
 /* Nav-Bar */
 
 .sticky-top {
@@ -93,10 +98,6 @@ a,
   text-align: left;
 }
 
-/* .col-md-12 {
-  margin: 0 !important;
-  padding: 0 !important;
-} */
 
 .status-images {
   max-width: 4rem;
@@ -136,7 +137,6 @@ a,
   opacity: 1;
 }
 
-
 .status-box {
   display: flex;
   align-items: center;
@@ -149,6 +149,7 @@ a,
 
 
 /* Personal Details Model & Section */
+
 
 .personal-details {
   margin-left: 3rem;
@@ -178,6 +179,7 @@ a,
 
 .skills-container {
   padding-bottom: 0 !important;
+  padding-top: 0 !important;
 }
 
 .model-title {
@@ -343,9 +345,6 @@ a,
 
 /* Projects Section */
 
-/* #projects {
-  width: 80%;
-} */
 
 #projects-header {
   color: rgb(251, 250, 250);
@@ -363,7 +362,6 @@ a,
 .projects-section .btn-primary {
   color: black;
 }
-
 
 
 /* Footer */

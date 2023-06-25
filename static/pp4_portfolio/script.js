@@ -1,3 +1,6 @@
+
+// MODAL
+
 // Get the modal element
 let modalDiv = document.getElementById("modal-div");
 let avatarImage = document.getElementById("avatar-img"); // Get the avatar image element
@@ -11,29 +14,29 @@ let modalBox = document.getElementById("modal-box")
 // Function to open the modal and display the content with fade-in effect
 function openModal(imageSrc, textContent, titleContent) {
   modalDiv.style.display = "block";
-  modalBox.classList.add("fade-in"); // Add the fade-in class again
+  modalBox.classList.add("fade-in");
   modalImage.src = imageSrc;
-  modalImage.classList.remove("fade-in"); // Remove the fade-in class
-  void modalImage.offsetWidth; // Trigger reflow to restart the animation
-  modalImage.classList.add("fade-in"); // Add the fade-in class again
+  modalImage.classList.remove("fade-in"); 
+  void modalImage.offsetWidth; 
+  modalImage.classList.add("fade-in");
   modalText.innerText = textContent;
-  modalText.classList.remove("fade-in"); // Remove the fade-in class
-  void modalText.offsetWidth; // Trigger reflow to restart the animation
-  modalText.classList.add("fade-in"); // Add the fade-in class again
+  modalText.classList.remove("fade-in");
+  void modalText.offsetWidth;
+  modalText.classList.add("fade-in");
   modalTitle.innerText = titleContent;
-  modalTitle.classList.remove("fade-in"); // Remove the fade-in class
-  void modalTitle.offsetWidth; // Trigger reflow to restart the animation
-  modalTitle.classList.add("fade-in"); // Add the fade-in class again
+  modalTitle.classList.remove("fade-in");
+  void modalTitle.offsetWidth;
+  modalTitle.classList.add("fade-in");
   modalImage.style.display = "block";
   modalTitle.style.display = "block";
-  avatarImage.style.opacity = "1"; // Keep the avatar image visible
+  avatarImage.style.opacity = "1";
   document.getElementById("static-modal-content").style.display = "none";
 }
 
 // Function to close the modal
 function closeModal() {
   modalDiv.style.display = "none";
-  showStaticModal(); // Show the static modal
+  showStaticModal();
 }
 
 // Close the modal when clicking outside of it
@@ -66,8 +69,8 @@ function showStaticModal() {
   modalText.innerText = "Click on the icons for more info!";
   modalText.style.textAlign = "center";
   modalImage.style.display = "none";
-  modalTitle.style.display = "none"; // Hide the title
-  closeButton.style.display = "none"; // Hide the close button
+  modalTitle.style.display = "none";
+  closeButton.style.display = "none";
   document.getElementById("static-modal-content").style.display = "block";
 }
 
@@ -77,8 +80,7 @@ showStaticModal();
 
 
 
-
-// animated text in 'Projects' Section
+// ANIMATED TEXT IN'PROJECTS' SECTION
 
 const projectImages = document.querySelectorAll(".project-card");
 const loremParagraph = document.querySelector(".lorem-text");
@@ -117,20 +119,20 @@ projectImages.forEach((image) => {
   });
 });
 
-loremParagraph.style.display = "none"; // Hide the text initially
+loremParagraph.style.display = "none";
 
 document.addEventListener("DOMContentLoaded", () => {
   projectImages.forEach((image) => {
     const projectExtraInfo = image.parentElement.querySelector(".lorem-text").dataset.extraInfo;
 
     image.addEventListener("mouseenter", () => {
-      loremParagraph.style.display = "block"; // Show the text when hovering over an image
+      loremParagraph.style.display = "block";
       resetLoremText(projectExtraInfo);
     });
 
     image.addEventListener("mouseleave", () => {
-      loremParagraph.style.display = "none"; // Hide the text when the mouse leaves the image
-      resetLoremText(projectExtraInfo); // Reset the text animation
+      loremParagraph.style.display = "none";
+      resetLoremText(projectExtraInfo);
     });
   });
 });
@@ -152,11 +154,11 @@ const renderText = (paragraph, text) => {
           currentIndex++;
           setTimeout(() => {
             renderNextCharacter();
-          }, 1000); // Adjust the pause interval (in milliseconds) after periods and exclamation marks
+          }, 1000);
         } else {
           paragraph.textContent += text.charAt(currentIndex);
           currentIndex++;
-          setTimeout(renderNextCharacter, 10); // Adjust the interval (in milliseconds) between characters
+          setTimeout(renderNextCharacter, 10);
         }
       } else {
         resolve();
@@ -177,7 +179,7 @@ const animateParagraphsSequentially = async (paragraphs) => {
     // Add a longer pause after the second intro-paragraph
     if (i === 1) {
       await new Promise((resolve) => {
-        setTimeout(resolve, 2000); // Adjust the pause duration (in milliseconds) as needed
+        setTimeout(resolve, 2000);
       });
     }
   }
@@ -204,9 +206,9 @@ animateParagraphsSequentially([introPar1]).then(() => {
         statusImages.forEach((image, index) => {
           setTimeout(() => {
             image.style.opacity = "1";
-          }, (index + 1) * 1000); // Adjust the delay time (in milliseconds) between fading in each image
+          }, (index + 1) * 1000);
         });
-      }, 10); // Adjust the delay interval (in milliseconds) as needed
+      }, 10);
     });
-  }, 200); // Adjust the delay interval (in milliseconds) as needed
+  }, 200);
 });
