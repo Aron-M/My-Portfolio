@@ -8,8 +8,8 @@
     </div>
     <div class="row d-flex align-items-center">
       {% for project in projects %}
-      <div class="col-md-2 m-3 d-flex align-items-center">
-        <div class="card project-card mb-4">
+      <div class="project-card col-md-2 m-3 d-flex align-items-center">
+        <div class="card mb-4">
           <img src="{{ project.image.url }}" alt="{{ project.name }}" class="card-img-top">
           <div class="card-body">
             <h5 class="card-title">{{ project.name }}</h5>

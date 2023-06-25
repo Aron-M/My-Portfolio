@@ -187,7 +187,7 @@ const animateParagraphsSequentially = async (paragraphs) => {
 
 const introPar1 = document.querySelector(".intro-par-1");
 const introPar2 = document.querySelector(".intro-par-2");
-const statusImages = document.querySelectorAll(".status-images , .status-text, .study-image");
+const statusImages = document.querySelectorAll(".status-images , .status-text, .study-images");
 
 // Hide intro-par-2 and status-images initially
 introPar2.style.opacity = "0";

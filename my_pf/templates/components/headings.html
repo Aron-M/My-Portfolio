@@ -7,8 +7,8 @@
     </div>
   </header>
   <div class="container">
-    <div class="row profile-container">
-      <div class="col-md-3 profile-row d-flex align-items-center justify-content-center">
+    <div class="row">
+      <div class="col-md-3 profile-row d-flex align-items-center justify-content-center profile-container">
         <img src="{{ heading.profile_image.url }}" alt="Profile Picture" class="prof-pic">
       </div>
       <div class="col-md-6 about-me-par d-flex flex-column align-items-start justify-content-center">
@@ -23,64 +23,56 @@
       </div>
       <div class="col-md-3 status-container mt-3">
         <div class="row">
-          <div class="col-md-12">
-            <div class="status-box mt-5">
-              <div class="row justify-content-center mt-3">
-                <div class="col-md-3 align-items-center justify-content-center">
-                  <a href="https://codeinstitute.net/ie/full-stack-software-development-diploma/e-commerce/" target="_blank" class="status-link">
-                    <img src="../media/skills-images/student.png" class="status-images fade-in-1">
-                  </a>
-                </div>
-                <div class="col-md-5 mt-3">
-                  <p class="status-text fade-in-1">Studying Full-Stack Software Development @</p>
-                </div>
-                <div class="col-md-4 mt-3">
-                  <a href="https://codeinstitute.net/ie/full-stack-software-development-diploma/e-commerce/" target="_blank" class="status-link">
-                    <img src="../media/skills-images/ci.png" style="max-width: 6rem;" class="study-image fade-in-1">
-                  </a>
-                </div>
+          <div class="col-md-12 status-box mt-5">
+            <div class="row mt-3 status-row">
+              <div class="col-md-3 mb-3 d-flex justify-content-center status-col">
+                <img src="../media/skills-images/student.png" class="status-images fade-in-1">
+              </div>
+              <div class="col-md-5 mt-3 d-flex justify-content-center status-col">
+                <p class="status-text fade-in-1">Studying Full-Stack Software Development @</p>
+              </div>
+              <div class="col-md-4 mt-3 d-flex justify-content-center status-col">
+                <a href="https://codeinstitute.net/ie/full-stack-software-development-diploma/e-commerce/"
+                  target="_blank">
+                  <img src="../media/skills-images/ci.png" class="study-images status-link fade-in-1">
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12">
-            <div class="status-box">
-              <div class="row">
-                <div class="col-md-3 align-items-center justify-content-center">
-                  <a href="URL_HERE" target="_blank" class="status-link">
-                    <img src="../media/skills-images/enroll-form.png" class="status-images enroll-image fade-in-1">
-                  </a>
-                </div>
-                <div class="col-md-5 mt-3">
-                  <p class="status-text fade-in-1">Enrolled: H-Dip(Level 8) in Science in Computing @</p>
-                </div>
-                <div class="col-md-4 mt-3">
-                  <a href="https://www.itsligo.ie/courses/higher-diploma-in-science-in-computing/" target="_blank" class="status-link">
-                    <img src="../media/skills-images/atu-logo.png" style="max-width: 6rem;" class="study-image fade-in-1">
-                  </a>
-                </div>
+          <div class="col-md-12 status-box">
+            <div class="row status-row">
+              <div class="col-md-3 mb-3 mt-2 d-flex justify-content-center status-col">
+                <img src="../media/skills-images/enroll-form.png" class="status-images enroll-image fade-in-1">
+              </div>
+              <div class="col-md-5 mt-3 d-flex justify-content-center status-col">
+                <p class="status-text fade-in-1">Enrolled: H-Dip(Level 8) in Science in Computing @</p>
+              </div>
+              <div class="col-md-4 mt-3 d-flex justify-content-center status-col">
+                <a href="https://www.itsligo.ie/courses/higher-diploma-in-science-in-computing/" target="_blank">
+                  <img src="../media/skills-images/atu-logo.png" class="study-images status-link fade-in-1">
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12">
-            <div class="status-box">
-              <div class="row">
-                <div class="col-md-3 align-items-center justify-content-center">
-                  <img src="../media/skills-images/accept.png" class="status-images fade-in-1" style="max-width: 5rem;">
+          <div class="col-md-12 status-box">
+            <div class="row status-row">
+              <div class="col-md-3 mb-3 d-flex justify-content-center status-col">
+                <img src="../media/skills-images/accept.png" class="status-images fade-in-1"">
                 </div>
-                <div class="col-md-5 mt-3">
-                  <p class="status-text fade-in-1">Available for employment  @</p>
-                </div>
-                <div class="col-md-4 mt-1" style="padding-left:1rem">
-                  <img src="../media/skills-images/your-logo-here.png" style="max-width: 5rem;" class="study-image your-logo-here fade-in-1 mt-1">
-                </div>
+                <div class=" col-md-5 mt-2 d-flex justify-content-center status-col">
+                <p class="status-text fade-in-1">Eligible to work and be employed in</p>
+              </div>
+              <div class="col-md-4 d-flex justify-content-center status-col">
+                <img src="../media/skills-images/ireland.png" class="study-images status-link fade-in-1s">
               </div>
             </div>
           </div>
         </div>
+      </div>
     </div>
   </div>
   {% endfor %}

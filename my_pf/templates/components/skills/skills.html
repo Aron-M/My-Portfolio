@@ -1,9 +1,9 @@
-<section id="skills" class="container skills-container py-5">
+<section id="skills" class="container skills-container">
   <div class="skills-container">
     <h1 id="skills-id">SKILLS</h1>
     <h5 id="skills-id" class="skills-subheader">Click icons to view details</h5>
     <div class="row">
-      <div class="col-lg-6">
+      <div class=" icon-section col-md-6">
         {% for category in category %}
         <div class="row">
           <div class="col-md-2">
@@ -22,7 +22,7 @@
         </div>
         {% endfor %}
       </div>
-      <div class="modal-section col-lg-6 d-flex flex-column align-items-end justify-content-end">
+      <div class="modal-section col-md-6 d-flex flex-column align-items-end justify-content-end">
         <!--Skills Modal-->
         {% include 'components/skills/modal.html' %}
       </div>

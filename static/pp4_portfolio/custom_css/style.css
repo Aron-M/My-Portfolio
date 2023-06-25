@@ -54,6 +54,10 @@ a,
 
 /*Header Section*/
 
+#headings {
+  margin-bottom: 3rem;
+}
+
 .heading {
   display: flex;
   justify-content: center;
@@ -115,9 +119,12 @@ a,
  max-width: 10rem;
  display: flex;
  justify-content: center;
-    align-items: center;
-    justify-items: center;
+ align-items: center;
+ justify-items: center;
 }
+
+
+
 
 .status-box {
  padding: 0;
@@ -128,18 +135,18 @@ a,
 .study-images {
   display: flex;
   justify-content: center;
-    align-items: center;
-    justify-items: center;
+  align-items: center;
+  justify-items: center;
+  max-width: 5rem;
 }
 
 .status-container {
   transform: scale(0.8);
-  align-items: end;
 }
 
 .enroll-image
 .your-logo-here {
-  padding-left: 1rem;
+  margin-left: 1rem;
 }
 
 .fade-in-1 {
@@ -149,12 +156,6 @@ a,
 
 .fade-in-1.fade-in-active {
   opacity: 1;
-}
-
-.status-box {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: end;
 }
 
 .status-link {
@@ -378,6 +379,18 @@ a,
   color: black;
 }
 
+.card-title {
+  font-size: 1.2vw;
+}
+
+.card-text {
+  font-size: 1vw;
+}
+
+.project-card {
+  display: flex;
+  align-content: center;
+}
 
 /* Footer */
 
@@ -470,51 +483,84 @@ a,
 }
 
 
-@media (min-width: 330px) and (max-width: 769px) {
+/* MEDIA QUERIES */
 
+/* Small */
+
+/* Custom CSS for mobile and tablet views */
+@media (max-width: 990px) {
   .status-container {
-    width: 100%;
-    margin: 10px 0;
-    display: flex;
-    flex-direction: row;
+    display:flex;
+    flex-direction: column;
   }
 
-  .status-box {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    margin: 10px 0;
+  .status-col {
+    width:fit-content !important;
   }
 
+  .profile-container {
+    margin-right: 4rem;
+  }
 
+  .status-row {
+    display: flex;
+    justify-content: space-between;
+    max-width: 25rem;
+  }
+
+  .project-card {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card-text {
+    font-size: medium;
+  }
+
+  .card-title {
+    font-size: larger;
+  }
 }
 
-@media (min-width: 769px) and (max-width: 990px) {
-  /* .status-container {
-    display:none;
-  } */
+/* Media query for screen sizes between 769px and 990px */
+@media (min-width: 768px) and (max-width: 990px) {
+  .status-images {
+    width: 4rem;
+    max-height: 4rem;
+    margin-top: 1rem;
+  }
 
-  .about-me-par {
-    margin-left: 6rem;
-    width: 20rem;
+  .study-images {
+    width: 4rem;
+    max-height: 5rem;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    margin-top: 1rem;
   }
 
   .status-container {
-    width: 100%;
-    margin: 10px 0;
     display: flex;
     flex-direction: column;
+    width: 60rem;
     justify-content: center;
     align-items: center;
-    justify-items: center;
   }
 
   .status-box {
-    width: 100%;
+    width: 60rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-items: center;
     justify-content: center;
-    margin: 10px 0;
   }
+
+  .status-row {
+    width: 25rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .status-col {
+    width:fit-content !important;
+  }
+}
