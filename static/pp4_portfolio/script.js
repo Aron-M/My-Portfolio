@@ -80,7 +80,7 @@ showStaticModal();
 
 // animated text in 'Projects' Section
 
-const projectImages = document.querySelectorAll(".card-img-top");
+const projectImages = document.querySelectorAll(".project-card");
 const loremParagraph = document.querySelector(".lorem-text");
 
 let typingTimer;
