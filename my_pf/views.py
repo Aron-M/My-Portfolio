@@ -42,7 +42,7 @@ def display_all(request):
 def dashboard_view(request):
     skills = Skills.objects.all()
     skill = get_object_or_404(Skills, id=5)
-    project = get_object_or_404(Project, id=44)
+    project = get_object_or_404(Project, id=52)
     context = {
         'skill': skill, 'project': project, 'skills': skills
     }

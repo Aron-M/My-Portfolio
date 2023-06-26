@@ -135,7 +135,7 @@ This webpage aims to serve as an informational web application to showcase perso
     |---|---|
     | ID | is automatically generated |
     | full_name | CharField |
-    | nationality | CharBigInteger |
+    | nationality | CharField |
     | residency | Charfield |
     | flag_nationality | ImageField |
     | flag_residency | ImageField |
@@ -305,16 +305,76 @@ ABOUT ME | PC | TABLET | PHONE
 
 </details>
 
+<br>
 
-## CRUD PAGES
+## CRUD FUNCTIONALITY (Create, Read, Update, Delete)
+<br>
+
+The pages below demonstrate how the user (if admin) can access the admin-dashboard on the fron-end make use of seperate pages included with forms to add, update/edit and/or delete information. This was done by making contructing various forms, views and models to handle full CRUD-capabilities on the front-end.
+
+<br>
+
+PLEASE NOTE: Below I will use one example for each section to demostrate CRUD capabilities. This is to prevent mass repetitiveness and to not flood the section with multiple images of each seperate page doing the exact same function. However, feel free to read the code files to explore more if you wish, specifically 'views.py' to see how each CRUD function is operating.
+
+<br>
+
+SUMMARY OF HOW EACH MODEL CAN BE AUGMENTED:
+<br>
+- Headings: Edit/Update
+- Skills: Add, Edit/Update, Delete
+- Projects: Add, Edit/Update, Delete
+- Personal Details: Edit/Update
+
+<br>
+
+### CREATE
+
 <br>
 
 <details>
-  <summary>Edit </summary>
+  <summary>ADD (SKILLS)</summary>
 
- PC | TABLET | PHONE
+ DESCRIPTION | ADD SKILL | NEW SKILL ADDED
   :---:|:---:|:--:
- ![](media/readme-images/admin-dashboard-pc.png) | ![](media/readme-images/admin-dashboard-tablet.png)| ![](media/readme-images/admin-dashboard-phone.png)
+A form is included in the page displaying all inout fields of the 'skills model'. Upon completion of the form, the user can then click to add a new skill| ![](media/readme-images/add-skill-pc.png)| ![](media/readme-images/add-skill-new.png)
 
 </details>
+
+<br>
+
+### READ
+<br>
+
+The 'Read' functionality is already performed and demostrated above by the user's ability to read/view all pages on multiple devices, and will therefore be omitted from this section. The READ capability is demonstrated in the 'Page Navigation' section above.
+
+<br>
+
+### EDIT/UPDATE
+
+<br>
+
+<details>
+  <summary>EDIT/UPDATE (HEADINGS)</summary>
+
+ DESCRIPTION | EDIT HEADING | UPDATED
+  :---:|:---:|:--:
+  A form is included in the page displaying all input fields of the 'headings model'. Upon updating the chosen information within the form, the user can then click to edit a part of the section| ![](media/readme-images/edit-headings.png)| ![](media/readme-images/edit-heading-edited.png)
+
+</details>
+
+<br>
+
+### DELETE 
+
+<br>
+
+<details>
+  <summary>DELETE (PROJECT)</summary>
+
+ DESCRIPTION | DELETE PROJECT | DELETED
+  :---:|:---:|:--:
+  A form is included in the page displaying all input fields of the 'projects model'. Upon completion of the form, the user can then click to add a new project| ![](media/readme-images/delete-project-pc.png)| ![](media/readme-images/delete-project-done.png)
+
+</details>
+
 
