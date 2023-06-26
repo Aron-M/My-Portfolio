@@ -15,6 +15,7 @@ let modalBox = document.getElementById("modal-box")
 function openModal(imageSrc, textContent, titleContent) {
   modalDiv.style.display = "block";
   modalBox.classList.add("fade-in");
+  closeButton.style.display = "block";
   modalImage.src = imageSrc;
   modalImage.classList.remove("fade-in"); 
   void modalImage.offsetWidth; 

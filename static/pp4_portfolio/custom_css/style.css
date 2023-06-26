@@ -271,7 +271,8 @@ a,
 }
 
 .modal-close-button {
-  position: absolute;
+  display: block;
+  position: absolute !important;
   top: 10px;
   right: 10px;
   cursor: pointer;
@@ -508,6 +509,28 @@ a,
     max-width: 25rem;
   }
 
+  .icon-section {
+    transform: scale(0.7);
+    position: relative;
+    left: 0;
+    transform-origin: top left;
+    overflow-x: visible;
+    white-space: nowrap;
+    width: min-content;
+  }
+
+  .modal-section {
+    transform: scale(0.6);
+    position: absolute;
+    right: 0;
+    transform-origin: center right;
+    overflow-x: visible;
+    box-sizing: content-box;
+    max-width: 20rem;
+  }
+  
+  
+
   .project-card {
     display: flex;
     justify-content: center;
@@ -563,4 +586,30 @@ a,
   .status-col {
     width:fit-content !important;
   }
+
+  .intro-par-1,
+  .intro-par-2 {
+    width: 30rem;
+  }
+
+  .icon-section {
+    transform: scale(0.8);
+    position: relative;
+    left: 0;
+    transform-origin: top left;
+    overflow-x: visible;
+    white-space: nowrap;
+    width: min-content;
+  }
+
+  .modal-section {
+    transform: scale(0.9);
+    position: absolute;
+    right: 0;
+    transform-origin: center right;
+    overflow-x: visible;
+    box-sizing: content-box;
+    max-width: 50rem;
+  }
+  
 }
