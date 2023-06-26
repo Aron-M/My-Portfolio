@@ -40,7 +40,7 @@ class Project(models.Model):
     image = CloudinaryField('image', null=True, blank=True)
     description = models.CharField(max_length=200)
     github_url = models.URLField()
-    extra_info = models.CharField(max_length=300)
+    extra_info = models.CharField(max_length=800)
     def __str__(self):
         return self.name
 
