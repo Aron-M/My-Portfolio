@@ -81,9 +81,9 @@ showStaticModal();
 
 
 
-// ANIMATED TEXT IN'PROJECTS' SECTION
+// animated text in 'Projects' Section
 
-const projectImages = document.querySelectorAll(".project-card");
+const projectImages = document.querySelectorAll(".card");
 const loremParagraph = document.querySelector(".lorem-text");
 
 let typingTimer;
@@ -92,7 +92,6 @@ function typeLoremText(text) {
   let index = 0;
   loremParagraph.textContent = "";
   clearInterval(typingTimer);
-
   typingTimer = setInterval(() => {
     if (index < text.length) {
       loremParagraph.textContent += text.charAt(index);
@@ -100,7 +99,7 @@ function typeLoremText(text) {
     } else {
       clearInterval(typingTimer);
     }
-  }, 30);
+  }, 15);
 }
 
 function resetLoremText(text) {
@@ -120,36 +119,35 @@ projectImages.forEach((image) => {
   });
 });
 
-loremParagraph.style.display = "none";
+loremParagraph.style.display = "none"; // Hide the text initially
 
 document.addEventListener("DOMContentLoaded", () => {
   projectImages.forEach((image) => {
     const projectExtraInfo = image.parentElement.querySelector(".lorem-text").dataset.extraInfo;
 
     image.addEventListener("mouseenter", () => {
-      loremParagraph.style.display = "block";
+      loremParagraph.style.display = "block"; // Show the text when hovering over an image
       resetLoremText(projectExtraInfo);
     });
 
     image.addEventListener("mouseleave", () => {
-      loremParagraph.style.display = "none";
-      resetLoremText(projectExtraInfo);
+      loremParagraph.style.display = "none"; // Hide the text when the mouse leaves the image
+      resetLoremText(projectExtraInfo); // Reset the text animation
     });
   });
 });
 
 
 // Animation for 'intro-paragraphs' in 'headings' section
-const introParagraphs = document.querySelectorAll(".intro-par-1, .intro-par-2");
 
-const renderText = (paragraph, text) => {
+let renderText = (paragraph, text) => {
   return new Promise((resolve) => {
     let currentIndex = 0;
     paragraph.textContent = "";
 
-    const renderNextCharacter = () => {
+    let renderNextCharacter = () => {
       if (currentIndex < text.length) {
-        if (text[currentIndex] === "!") {
+        if (text[currentIndex] === "!" || text[currentIndex] === ".") {
           // Add a longer pause after periods and exclamation marks
           paragraph.textContent += text.charAt(currentIndex);
           currentIndex++;
@@ -171,7 +169,7 @@ const renderText = (paragraph, text) => {
 };
 
 
-const animateParagraphsSequentially = async (paragraphs) => {
+let animateParagraphsSequentially = async (paragraphs) => {
   for (let i = 0; i < paragraphs.length; i++) {
     const paragraph = paragraphs[i];
     const text = paragraph.textContent;
@@ -186,9 +184,9 @@ const animateParagraphsSequentially = async (paragraphs) => {
   }
 };
 
-const introPar1 = document.querySelector(".intro-par-1");
-const introPar2 = document.querySelector(".intro-par-2");
-const statusImages = document.querySelectorAll(".status-images , .status-text, .study-images");
+let introPar1 = document.querySelector(".intro-par-1");
+let introPar2 = document.querySelector(".intro-par-2");
+let statusImages = document.querySelectorAll(".status-images , .status-text, .study-images");
 
 // Hide intro-par-2 and status-images initially
 introPar2.style.opacity = "0";
@@ -209,7 +207,7 @@ animateParagraphsSequentially([introPar1]).then(() => {
             image.style.opacity = "1";
           }, (index + 1) * 1000);
         });
-      }, 10);
+      }, 50);
     });
-  }, 200);
+  }, 150);
 });

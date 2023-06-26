@@ -90,7 +90,11 @@ a,
 
 .intro-par-1 {
   font-size: 0.9rem;
-  margin-top: 3rem !important;
+  margin-top: 5rem !important;
+}
+
+.available-to-work-text {
+  margin-top: 1.5rem !important;
 }
 
 .intro-par-2 {
@@ -341,6 +345,10 @@ a,
 
 #location-map {
   margin-top: 2.3rem;
+}
+
+.contact-header {
+  margin-top: 3rem;
 }
 
 .cv-text {
