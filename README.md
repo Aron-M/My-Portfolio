@@ -228,4 +228,13 @@ This webpage aims to serve as an informational web application to showcase perso
 
 # Navigation
 
-- Home/Landing Page:
+ <summary>Home Page</summary>
+
+  DESCRIPTION | PC | TABLET | PHONE
+  :---:|:---:|:--:|:--:
+  'Headings' Section which will be the first thing the user sees when opening the page | ![](media/readme-images/headings-home-page.png) | ![](media/readme-images/headings-home-page-tablet.png)| ![](media/readme-images/headings-home-page-phone.png)
+
+
+  DESCRIPTION | PC | TABLET | PHONE
+  :---:|:---:|:--:|:--:
+  'Skill' Section which displays current skills and an info-modal | ![](media/readme-images/skills-section-pc.png) | ![](media/readme-images/skills-section-tablet.png)| ![](media/readme-images/skills-section-phone.png)
