@@ -6,9 +6,9 @@
         <p id="lorem-text" class="lorem-text" style="display: none;"></p>
       </div>
     </div>
-    <div class="row d-flex align-items-center">
+    <div class="row d-flex align-items-center justify-content-center">
       {% for project in projects %}
-      <div class="project-card col-md-2 m-3 d-flex align-items-center">
+      <div class="project-card col-md-2 m-3 d-flex align-items-center justify-content-center">
         <div class="card mb-4">
           <img src="{{ project.image.url }}" alt="{{ project.name }}" class="card-img-top">
           <div class="card-body">
