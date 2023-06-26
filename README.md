@@ -93,7 +93,9 @@ This webpage aims to serve as an informational web application to showcase perso
 
 - [Heroku](https://www.heroku.com) Deployment of website.
 
-- [ElephantSQL](https://www.elephantsql.com/) Database storing all schemas and data.
+- [PostgreSQL](https://www.postgresql.org/) Database storing all schemas and data.
+
+- [ElephantSQL](https://www.elephantsql.com/) For hosting all PostgreSQL data on cloud.
 
 - [Cloudinary](https://cloudinary.com/) Image storage.
 
@@ -107,11 +109,17 @@ This webpage aims to serve as an informational web application to showcase perso
 
 - [Balsamiq](https://balsamiq.com/) Wireframes.
 
+- [Draw.io](https:/draw.io/) For creating flowcharts.
+
 - [Favicon](https://favicon.io/favicon-generator/) Favicon generator.
 
 - [Psycopg](https://wiki.postgresql.org/wiki/Psycopg) Postgres database adaptor.
 
+- [Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html) For administrator authentication.
+
 - [Devicon](https://www.devicon.dev/) All icons used in 'Skills' section.
+
+- [Flaticon](https://www.flaticon.com/) For icons used in website.
 
 
 # Features
@@ -120,10 +128,15 @@ This webpage aims to serve as an informational web application to showcase perso
 - Interactive buttons.
 - Updatable information displayed in each relevant section
 - Google Map and Email Form for location and contact
-- Downloadable CV
+- Downloadable CV.
 - Custom front-end admin panel.
 - Cloudinary picture storage.
 
+## Design
+
+This site was designed mainly by making use of bootstrap. I downloaded a specific template from [Bootswatch.com](https://bootswatch.com/) called 'Superhero.
+
+Colors schema for this site is blue, white and dark grey.
 
 # Data Structure
 
@@ -332,7 +345,7 @@ SUMMARY OF HOW EACH MODEL CAN BE AUGMENTED:
 <br>
 
 <details>
-  <summary>ADD (SKILLS)</summary>
+  <summary>Add (Skills)</summary>
 
  DESCRIPTION | ADD SKILL | NEW SKILL ADDED
   :---:|:---:|:--:
@@ -354,7 +367,7 @@ The 'Read' functionality is already performed and demostrated above by the user'
 <br>
 
 <details>
-  <summary>EDIT/UPDATE (HEADINGS)</summary>
+  <summary>Edit/Update (Headings)</summary>
 
  DESCRIPTION | EDIT HEADING | UPDATED
   :---:|:---:|:--:
@@ -369,14 +382,16 @@ The 'Read' functionality is already performed and demostrated above by the user'
 <br>
 
 <details>
-  <summary>DELETE (PROJECT)</summary>
+  <summary>Delete (Project)</summary>
 
  DESCRIPTION | DELETE PROJECT | DELETED
   :---:|:---:|:--:
   A form is included in the page displaying all input fields of the 'projects model'. Upon completion of the form, the user can then click to add a new project| ![](media/readme-images/delete-project-pc.png)| ![](media/readme-images/delete-project-done.png)
 
+
 </details>
 
+<br>
 
 # Deployment
 
