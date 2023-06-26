@@ -219,11 +219,11 @@ This webpage aims to serve as an informational web application to showcase perso
 
 ## Home Page Workflow
 
-<img src="media/readme-images/homepage-workflow.png">
+<img src="media/readme-images/homepage-workflow.png" style="max-width: 40rem;">
 
 <br>
 
-<img src="media/readme-images/portfolio-flowchart.png">
+<img src="media/readme-images/portfolio-flowchart.png" style="max-width: 40rem;">
 
 
 <br>
