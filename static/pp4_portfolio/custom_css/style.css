@@ -123,7 +123,6 @@ a,
 .status-box {
  padding: 0;
  margin-bottom: 1rem;
- margin-top: 1rem !important;
 }
 
 .study-images {
@@ -629,7 +628,7 @@ justify-self: center;
   }
 
   .status-text {
-    margin:0;
+    margin-top:1.5rem;
   }
 
   .ireland-flag {
@@ -668,7 +667,8 @@ justify-self: center;
   }
 
   .prof-pic{
-    margin-left:2rem;
+    margin-right:2rem;
+    display: block;
   }
 
   .intro-par-1,
@@ -678,6 +678,7 @@ justify-self: center;
 
   .about-me-par {
     margin-left: 2rem;
+    margin-top: 0 !important;
   }
 
   .project-card {
