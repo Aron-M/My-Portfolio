@@ -459,131 +459,102 @@ The 'Read' functionality is already performed and demostrated above by the user'
 
 4. Very good! Now you should have your own local repository with all the neccessary code templates to run the game. In the terminal you can type "python3 run.py" to test the game within your local terminal. Next up we have to deploy it on Heroku.
 
-## Deployment on Heroku
 
-5. Go to [Heroku](https://id.heroku.com/login) and login to your account.
+5. Download all libraries and frameworks to use in this project.
+```
+pip3 install -r requirements.txt
+```
 
-6. At the top right corner click the **New** button and then **Create new app**, next you will
-- Name your app whatever you like, then 
-- Pick server depending which region you are in: For me it was Europe 
-- Then click **Create app**
-    <details><summary>Picture</summary>
-    <img src="media/readme-images/heroku-1.png" alt="heroku"/>
-    <img src="images/deployment/heroku-2.png" alt="heroku"/>
-    </details>
-    <br>
-
-7. Go to **Settings** and press **Reveal Config Vars**. In the **KEY** block type in **PORT** and for **VALUE** type in **8000**.
-    <details><summary>Picture</summary>
-    <img src="images/deployment/heroku-3.png" alt="heroku"/>
-    </details>
-    <br>
-
-8. Now scroll down until you see **Buildpacks**, press **Add buildpack** and select **python** and **save changes**. Afterwards, again **Add buildpack** but this time pick **nodejs** and **save change**. heroku/python should be above nodejs. If its not, then drag it with the hamburger menu on the left of the image or remove with x and add again in the correct order.
-    <details><summary>Picture</summary>
-    <img src="images/deployment/heroku-4.png" alt="heroku"/>
-    </details>
-    <br>
-
-9. Go back to top of the page and click **Deploy**, and click on **GitHub** and connect to it. Next below type in name of your repo and press search, it should automaticaly find the repo. Then click **Connect**
-    <details><summary>Picture</summary>
-    <img src="images/deployment/heroku-5.png" alt="heroku"/>
-    <img src="images/deployment/heroku-6.png" alt="heroku"/>
-    </details>
-    <br>
-
-
-6. Create **env.py** in main folder and add cloudinary api key, elephantSQL and your own secret key. Should look like below. (IF you name the **env.py** file wrong your password will be leaked to your repo.)
+6. Create **env.py** in main folder and add cloudinary api key, elephantSQL and your own secret key. See image below. (DO NOT name the **env.py** file anything differen, or your password will be leaked to your repository.)
 ```
 os.environ['DATABASE_URL'] = " url from elephantsql"
 os.environ['SECRET_KEY'] = "secret_key"
 os.environ['CLOUDINARY_URL'] = "api key from, remove 'CLOUDINARY_URL=' FROM BEGINING"
 ```
-<details><summary>should look like this</summary>
-<img src="docs/deployment/13.png" alt="deployment github"/>
+<details><summary>env.py</summary>
+<img src="media/readme-images/env.png" alt="deployment github"/>
 </details>
 <br>
 
-7. After everything matches in previous step, we type in this command into terminal, this will migrate all models to database.
+7. Now type in this command into terminal, this will migrate all models to database.
 ```
 python3 manage.py migrate
 ```
-<details><summary>should look like this</summary>
-<img src="docs/deployment/14.png" alt="deployment github"/>
+<details><summary>Migrating files</summary>
+<img src="media/readme-images/env.png" alt="deployment github"/>
 </details>
 <br>
 
-8. Now when its done we type in, this command to make superuser for admin panel. It will ask us for user name, email which is not required and password.
-(i have error in red just because i made similar password to username, for your deployment dont do this)
+8. Now we have to create 'superuser' for django admin panel from within the terminal by typing command:
 
 ```
 python3 manage.py createsuperuser
 ```
-<details><summary>should look like this</summary>
-<img src="docs/deployment/15.png" alt="deployment github"/>
+<details><summary>Create Superuser in CLI</summary>
+<img src="media/readme-images/env.png" alt="deployment github"/>
 </details>
 <br>
 
-9. Go to adam_portfolio folder and open **settings.py** and add this code to **ALLOWED_HOST**
+9. Go to pp4_portfolio folder and open **settings.py** and add this code to **ALLOWED_HOST**
 ```
 .herokuapp.com, localhost
 ```
-<details><summary>should look like this</summary>
-<img src="docs/deployment/host.png" alt="deployment github"/>
-</details>
-<br>
 
 
-10. Now we push our code to GitHub, with:
+10. Now we push our code to GitHub by typing:
 ```
 git add .
 git commit -m "your own commit"
 git push
 ```
+11. Go to [Heroku](https://id.heroku.com/login) and login to your account.
 
-11. Now we go to [Heroku](https://www.heroku.com/) and login, then we create new app as follows on pictures. Pick your own name for it and server closer to you.
-<details><summary>should look like this</summary>
-<img src="docs/deployment/heroku-1.png" alt="deployment heroku"/>
-<img src="docs/deployment/heroku-2.png" alt="deployment heroku"/>
-</details>
-<br>
+12. At the top right corner click the **New** button and then **Create new app**, next you will
+- Name your app whatever you like, then 
+- Pick server depending which region you are in: For me it was Europe 
+- Then click **Create app**
+    <details><summary>Picture</summary>
+    <img src="media/readme-images/heroku-1.png" alt="heroku"/>
+    <img src="media/readme-images/heroku-2.png" alt="heroku"/>
+    </details>
+    <br>
 
-12. Then we add our variables into Heroku as follows.
+13. Go to **Settings** and press **Reveal Config Vars**. In the **KEY** block type in **PORT** and for **VALUE** type in **8000**.
+    <details><summary>Picture</summary>
+    <img src="media/readme-images/heroku-3.png" alt="heroku"/>
+    </details>
+    <br>
+
+Additonally, aslo add the following config variables
 ```
-DATABASE_URL - url as in envy.py
+DATABASE_URL - url as is in env.py
 SECRET_KEY - your secret key
-CLOUDINARY_URL - API key as in eny.py
+CLOUDINARY_URL - API key as is in env.py
 ```
-<details><summary>should look like this</summary>
-<img src="docs/deployment/heroku-3.png" alt="deployment heroku"/>
-</details>
-<br>
 
-13. Now we go to deploy tab, connect our Github repo to heroku and press Deploy button is going to be grey, we have it pressed already here.
-<details><summary>should look like this</summary>
-<img src="docs/deployment/heroku-4.png" alt="deployment heroku"/>
-<img src="docs/deployment/heroku-5.png" alt="deployment heroku"/>
-</details>
-<br>
+14. Now scroll down until you see **Buildpacks**, press **Add buildpack** and select **python** and **save changes**. Afterwards, again **Add buildpack** but this time pick **nodejs** and **save change**. heroku/python should be above nodejs. If its not, then drag it with the hamburger menu on the left of the image or remove with x and add again in the correct order.
+    <details><summary>Picture</summary>
+    <img src="media/readme-images/heroku-4.png" alt="heroku"/>
+    </details>
+    <br>
 
-14. When everything is deployed, press **View** button and website will open.
-<details><summary>should look like this</summary>
-<img src="docs/deployment/heroku-6.png" alt="deployment heroku"/>
-<img src="docs/deployment/heroku-7.jpg" alt="deployment heroku"/>
-</details>
-<br>
+15. Go back to top of the page and click **Deploy**, and click on **GitHub** and connect to it. Next below type in name of your repository and click search, it should automaticaly find the repo. Then click **Connect**
+    <details><summary>Picture</summary>
+    <img src="media/readme-images/heroku-5.png" alt="heroku"/>
+    <img src="media/readme-images/heroku-6.png" alt="heroku"/>
+    </details>
+    <br>
 
-15. Now in address bar type in after our website url **/accounts/login** and input your superuser password. If everything works you should see frontend admin panel.
+16. Now in address bar type in after our website url **/accounts/login** and input your superuser password. If everything works you should see frontend admin panel.
 ```
-https://pp4-deployment.herokuapp.com/accounts/login/
+https://........herokuapp.com/accounts/login/
 ```
-<details><summary>should look like this</summary>
-<img src="docs/deployment/live-1.png" alt="deployment heroku"/>
-<img src="docs/deployment/live-2.png" alt="deployment heroku"/>
+<details><summary>Django Admin Panel</summary>
+<img src="media/readme-images/django-admin.png" alt="deployment heroku"/>
 </details>
 <br>
 
-16. Now enjoy your new project, and fill it in with your data.
+16. Project is now ready to be used.
 
 # Credits:
 
