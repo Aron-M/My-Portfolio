@@ -226,15 +226,95 @@ This webpage aims to serve as an informational web application to showcase perso
 <img src="media/readme-images/portfolio-flowchart.png">
 
 
+<br>
+
 # Navigation
 
- <summary>Home Page</summary>
+<br>
 
-  DESCRIPTION | PC | TABLET | PHONE
+## HOME PAGE
+
+<details>
+  <summary>Headings</summary>
+
+  HEADINGS | PC | TABLET | PHONE
   :---:|:---:|:--:|:--:
   'Headings' Section which will be the first thing the user sees when opening the page | ![](media/readme-images/headings-home-page.png) | ![](media/readme-images/headings-home-page-tablet.png)| ![](media/readme-images/headings-home-page-phone.png)
 
+</details>
 
-  DESCRIPTION | PC | TABLET | PHONE
+<br>
+
+<details>
+
+  <summary>Skills</summary>
+
+  SKILLS | PC | TABLET | PHONE
   :---:|:---:|:--:|:--:
   'Skill' Section which displays current skills and an info-modal | ![](media/readme-images/skills-section-pc.png) | ![](media/readme-images/skills-section-tablet.png)| ![](media/readme-images/skills-section-phone.png)
+
+</details>
+
+<br>
+
+<details>
+  <summary>Projects</summary>
+
+  PROJECTS | PC | TABLET | PHONE
+  :---:|:---:|:--:|:--:
+  'Project' section displaying all my current projects | ![](media/readme-images/projects-section-pc.png) | ![](media/readme-images/projects-section-tablet.png)| ![](media/readme-images/projects-section-phone.png)
+
+</details>
+
+<br>
+
+<details>
+  <summary>Contact</summary>
+
+CONTACT | PC | TABLET | PHONE
+  :---:|:---:|:--:|:--:
+  'Contact' section where user can find and contact me | ![](media/readme-images/contact-section-pc.png) | ![](media/readme-images/contact-section-tablet.png)| ![](media/readme-images/contact-section-phone.png)
+
+</details>
+
+<br>
+
+## ABOUT ME PAGE
+<br>
+
+<details>
+  <summary>About Me</summary>
+
+ABOUT ME | PC | TABLET | PHONE
+  :---:|:---:|:--:|:--:
+  'About Me' page where user can get more personal info | ![](media/readme-images/about-section-pc.png) | ![](media/readme-images/about-section-tablet.png)| ![](media/readme-images/about-section-phone.png)
+
+</details>
+
+<br>
+
+## ADMIN DASHBOARD
+<br>
+
+<details>
+  <summary>Admin Dashboard</summary>
+
+ PC | TABLET | PHONE
+  :---:|:---:|:--:
+ ![](media/readme-images/admin-dashboard-pc.png) | ![](media/readme-images/admin-dashboard-tablet.png)| ![](media/readme-images/admin-dashboard-phone.png)
+
+</details>
+
+
+## CRUD PAGES
+<br>
+
+<details>
+  <summary>Edit </summary>
+
+ PC | TABLET | PHONE
+  :---:|:---:|:--:
+ ![](media/readme-images/admin-dashboard-pc.png) | ![](media/readme-images/admin-dashboard-tablet.png)| ![](media/readme-images/admin-dashboard-phone.png)
+
+</details>
+
