@@ -378,3 +378,212 @@ The 'Read' functionality is already performed and demostrated above by the user'
 </details>
 
 
+# Deployment
+
+## Programs needed:
+
+
+### Cloudinary
+
+1. Create an account [here](https://cloudinary.com/).
+2. Log in.
+<details><summary>Go to Dashboard for info</summary>
+<img src="media/readme-images/cloudinary-2.png" alt="cloudinary"/>
+
+</details>
+<br>
+
+
+### Heroku
+
+3. Create an account [here](https://www.heroku.com/)
+
+### GitHub
+
+4. Login to your [GitHub](https://github.com/)
+
+
+### ElephantSQL
+
+5. Create an account [here](https://www.elephantsql.com/).
+6. Log in and set up instance
+<details><summary>Start creating an instance</summary>
+<img src="media/readme-images/elephant-1.png" alt="create database"/>
+</details>
+<br>
+<details><summary>Select Plan</summary>
+<img src="media/readme-images/elephant-2.png" alt="create database"/>
+</details>
+<br>
+<details><summary>Choose Region</summary>
+<img src="media/readme-images/elephant-3.png" alt="create database"/>
+</details>
+<br>
+<details><summary>Crete Instance</summary>
+<img src="media/readme-images/elephant-4.png" alt="create database"/>
+</details>
+<br>
+<details><summary>Select new Instance</summary>
+<img src="media/readme-images/elephant-5.png" alt="create database"/>
+</details>
+<br>
+<details><summary>Copy instance URL</summary>
+<img src="media/readme-images/elephant-6.png" alt="create database"/>
+</details>
+<br>
+
+
+## Local Development
+
+7. Go to Github repo [here](https://github.com/Aron-M/Project-4-Portfolio) and click the **< CODE >** button, then click **COPY**.
+<details><summary>Picture</summary>
+<img src="docs/deployment/1.png" alt="deployment github"/>
+</details>
+<br>
+
+2. Go to your github repositories and create your own new repo. You can call it whatever you like. Press **Create Repository** and it will lead you to a new page. Press **Gitpod**  and it should open a new workspace for you. 
+ ***If you are using VSCODE, then just open a new workspace***
+    <details><summary>Steps to deploy new workspace</summary>
+    <img src="media/readme-images/deploy-repo-1.png" alt="github"/>
+    <img src="media/readme-images/deploy-repo-2.png" alt="github"/>
+    <img src="media/readme-images/deploy-repo-3.png" alt="github"/>
+    </details>
+    <br>
+
+3. When eitherGitpod or VSCODE is open, type in 'git bash' following "**git clone https://github.com/Aron-M/Project-4-Portfolio.git**" without using any quotation marks, and press enter. It will clone my repository.
+    <details><summary>Picture</summary>
+    <img src="media/readme-images/deploy-git-clone-1.png" alt="github"/>
+    <img src="media/readme-images/deploy-git-clone-2.png" alt="github"/>
+    </details>
+    <br>
+
+4. Very good! Now you should have your own local repository with all the neccessary code templates to run the game. In the terminal you can type "python3 run.py" to test the game within your local terminal. Next up we have to deploy it on Heroku.
+
+## Deployment on Heroku
+
+5. Go to [Heroku](https://id.heroku.com/login) and login to your account.
+
+6. At the top right corner click the **New** button and then **Create new app**, next you will
+- Name your app whatever you like, then 
+- Pick server depending which region you are in: For me it was Europe 
+- Then click **Create app**
+    <details><summary>Picture</summary>
+    <img src="media/readme-images/heroku-1.png" alt="heroku"/>
+    <img src="images/deployment/heroku-2.png" alt="heroku"/>
+    </details>
+    <br>
+
+7. Go to **Settings** and press **Reveal Config Vars**. In the **KEY** block type in **PORT** and for **VALUE** type in **8000**.
+    <details><summary>Picture</summary>
+    <img src="images/deployment/heroku-3.png" alt="heroku"/>
+    </details>
+    <br>
+
+8. Now scroll down until you see **Buildpacks**, press **Add buildpack** and select **python** and **save changes**. Afterwards, again **Add buildpack** but this time pick **nodejs** and **save change**. heroku/python should be above nodejs. If its not, then drag it with the hamburger menu on the left of the image or remove with x and add again in the correct order.
+    <details><summary>Picture</summary>
+    <img src="images/deployment/heroku-4.png" alt="heroku"/>
+    </details>
+    <br>
+
+9. Go back to top of the page and click **Deploy**, and click on **GitHub** and connect to it. Next below type in name of your repo and press search, it should automaticaly find the repo. Then click **Connect**
+    <details><summary>Picture</summary>
+    <img src="images/deployment/heroku-5.png" alt="heroku"/>
+    <img src="images/deployment/heroku-6.png" alt="heroku"/>
+    </details>
+    <br>
+
+
+6. Create **env.py** in main folder and add cloudinary api key, elephantSQL and your own secret key. Should look like below. (IF you name the **env.py** file wrong your password will be leaked to your repo.)
+```
+os.environ['DATABASE_URL'] = " url from elephantsql"
+os.environ['SECRET_KEY'] = "secret_key"
+os.environ['CLOUDINARY_URL'] = "api key from, remove 'CLOUDINARY_URL=' FROM BEGINING"
+```
+<details><summary>should look like this</summary>
+<img src="docs/deployment/13.png" alt="deployment github"/>
+</details>
+<br>
+
+7. After everything matches in previous step, we type in this command into terminal, this will migrate all models to database.
+```
+python3 manage.py migrate
+```
+<details><summary>should look like this</summary>
+<img src="docs/deployment/14.png" alt="deployment github"/>
+</details>
+<br>
+
+8. Now when its done we type in, this command to make superuser for admin panel. It will ask us for user name, email which is not required and password.
+(i have error in red just because i made similar password to username, for your deployment dont do this)
+
+```
+python3 manage.py createsuperuser
+```
+<details><summary>should look like this</summary>
+<img src="docs/deployment/15.png" alt="deployment github"/>
+</details>
+<br>
+
+9. Go to adam_portfolio folder and open **settings.py** and add this code to **ALLOWED_HOST**
+```
+.herokuapp.com, localhost
+```
+<details><summary>should look like this</summary>
+<img src="docs/deployment/host.png" alt="deployment github"/>
+</details>
+<br>
+
+
+10. Now we push our code to GitHub, with:
+```
+git add .
+git commit -m "your own commit"
+git push
+```
+
+11. Now we go to [Heroku](https://www.heroku.com/) and login, then we create new app as follows on pictures. Pick your own name for it and server closer to you.
+<details><summary>should look like this</summary>
+<img src="docs/deployment/heroku-1.png" alt="deployment heroku"/>
+<img src="docs/deployment/heroku-2.png" alt="deployment heroku"/>
+</details>
+<br>
+
+12. Then we add our variables into Heroku as follows.
+```
+DATABASE_URL - url as in envy.py
+SECRET_KEY - your secret key
+CLOUDINARY_URL - API key as in eny.py
+```
+<details><summary>should look like this</summary>
+<img src="docs/deployment/heroku-3.png" alt="deployment heroku"/>
+</details>
+<br>
+
+13. Now we go to deploy tab, connect our Github repo to heroku and press Deploy button is going to be grey, we have it pressed already here.
+<details><summary>should look like this</summary>
+<img src="docs/deployment/heroku-4.png" alt="deployment heroku"/>
+<img src="docs/deployment/heroku-5.png" alt="deployment heroku"/>
+</details>
+<br>
+
+14. When everything is deployed, press **View** button and website will open.
+<details><summary>should look like this</summary>
+<img src="docs/deployment/heroku-6.png" alt="deployment heroku"/>
+<img src="docs/deployment/heroku-7.jpg" alt="deployment heroku"/>
+</details>
+<br>
+
+15. Now in address bar type in after our website url **/accounts/login** and input your superuser password. If everything works you should see frontend admin panel.
+```
+https://pp4-deployment.herokuapp.com/accounts/login/
+```
+<details><summary>should look like this</summary>
+<img src="docs/deployment/live-1.png" alt="deployment heroku"/>
+<img src="docs/deployment/live-2.png" alt="deployment heroku"/>
+</details>
+<br>
+
+16. Now enjoy your new project, and fill it in with your data.
+
+# Credits:
+
