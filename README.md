@@ -1,6 +1,12 @@
 # Aron's Personal Potfolio Webpage
 
 Welcome to to Aron's Personal Portfolio Webpage! 
+<br>
+<img src="static/media/readme-images/headings-home-page.png">
+<br>
+
+Hello and welcome to my portfolio page. [Please click here](https://aron-portfolio.herokuapp.com/) to view the deployed page. **PLEASE NOTE Images and data might have been updated sice the writing of this README. You might see screenshots containing different images below, however the general structure of the page remains identical to the visuals that this README depicts.
+<br>
 
 
 ## Table of content:
@@ -14,16 +20,16 @@ Welcome to to Aron's Personal Portfolio Webpage!
     - [Expectations](#expectations)
     - [Design](#design)
     - [Wireframes](#wireframes)
-        - [Desktop](#desktop)
-        - [Tablet](#tablet)
-        - [Mobile](#mobile)
+    - [Workflow](#workflow)
 - [Website Structure](#website-structure)
 - [Technology, Frameworks and Programs used](#technology-frameworks-and-programs-used)
     - [Languages](#languages)
     - [Frameworks and programs used](#frameworks-and-programs-used)
 - [Features](#features)
-    - [Navigation bar](#navigation-bar)
 - [Testing](#testing)
+    - Manual Testing
+    - Bugs
+    - Automatic Testing
 - [Testing user stories](#testing-user-stories)
 - [Deployment](#deployment)
 - [Credits](#credits)
@@ -243,6 +249,11 @@ Colors schema for this site is blue, white and dark grey.
 
 <img src="static/media/readme-images/portfolio-flowchart.png" style="max-width: 40rem;">
 
+<br>
+
+### SKILLS Section Workflow
+
+<img src="static/media/readme-images/flowchart-skills.png" style="max-width: 40rem;">
 
 <br>
 
@@ -584,8 +595,9 @@ https://........herokuapp.com/accounts/login/
 Manual testing was done to make sure all features were performing as intended. Visuals/Proof of each working feature can be viewed upon navigating to the site [here](). Administrative CRUD capabilites/features can be seen handled in the CRUD subjection of the 'Navigation' Section here above.
 <br>
 
-### Features tested
+### Features and User Stories tested
 <br>
+All means of testing here was done manually. Visual/Static features can be seen in deployed page. Funtional/Dynamic Features can be seen in CRUD sub-section of 'Navigation' section above.
 
 - Navigation bar takes user to various sections and pages upon request - &#x2705;
 <br>
@@ -643,4 +655,25 @@ These bugs do not affect the core functionality of the page, but needs to be fix
 
 
 # Credits:
+
+- My mentor @Simen Daelin who has been very helpful in directing and guding me.
+<br>
+
+- Youtube Videos for guiding me on how to make a modal, animating texts and fading in images
+    [Florin Pop](https://www.youtube.com/watch?v=XH5OW46yO8I) for modal assistance.
+    [GreatStack](https://www.youtube.com/watch?v=qEcXe51-ZTw) for guiding me in animating text.
+    [SimpliCode](https://www.youtube.com/watch?v=27aMG1e5CIQ) for assistance in fading images in.
+<br>
+
+- [Flaticon](https://www.flaticon.com/search?author_id=1&style_id=136&type=standard&word=student) for use of icons
+<br>
+
+- Code Institute Pylinter to validate my Python code.
+<br>
+
+- [W3Schools](https://jigsaw.w3.org/css-validator/) for validating CSS code
+<br>
+
+- [DevIcons](https://devicon.dev/) for use of 'skills' icons.
+<br>
 
