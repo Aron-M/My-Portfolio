@@ -323,7 +323,7 @@ ABOUT ME | PC | TABLET | PHONE
 ## CRUD FUNCTIONALITY (Create, Read, Update, Delete)
 <br>
 
-The pages below demonstrate how the user (if admin) can access the admin-dashboard on the fron-end make use of seperate pages included with forms to add, update/edit and/or delete information. This was done by making contructing various forms, views and models to handle full CRUD-capabilities on the front-end.
+The pages below demonstrate how the user (if admin) can access the admin-dashboard on the page's front-end make use of seperate pages included with forms to add, update/edit and/or delete information, henceforth to be refered to as 'CRUD-pages'. This was done by constructing various forms, views and models to handle creation, augmentation and deletion on the front-end.
 
 <br>
 
@@ -387,8 +387,6 @@ The 'Read' functionality is already performed and demostrated above by the user'
  DESCRIPTION | DELETE PROJECT | DELETED
   :---:|:---:|:--:
   A form is included in the page displaying all input fields of the 'projects model'. Upon completion of the form, the user can then click to add a new project| ![](media/readme-images/delete-project-pc.png)| ![](media/readme-images/delete-project-done.png)
-
-
 </details>
 
 <br>
@@ -434,7 +432,7 @@ The 'Read' functionality is already performed and demostrated above by the user'
 <img src="media/readme-images/elephant-3.png" alt="create database"/>
 </details>
 <br>
-<details><summary>Crete Instance</summary>
+<details><summary>Create Instance</summary>
 <img src="media/readme-images/elephant-4.png" alt="create database"/>
 </details>
 <br>
@@ -451,26 +449,26 @@ The 'Read' functionality is already performed and demostrated above by the user'
 ## Local Development
 
 7. Go to Github repo [here](https://github.com/Aron-M/Project-4-Portfolio) and click the **< CODE >** button, then click **COPY**.
-<details><summary>Picture</summary>
-<img src="docs/deployment/1.png" alt="deployment github"/>
+   <details><summary>Copy My URL</summary>
+   <img src="media/readme-images/github-1.png" alt="deployment github"/>
+   </details>
+   <br>
+
+2. Go to your github repositories and create your own new repository. You can call it whatever you like. Press **Create Repository** and it will lead you to a new page. Press **Gitpod**  and it should open a new workspace for you. 
+ ***If you are using VSCODE, then just open a new workspace***
+<details><summary>Steps to deploy new workspace</summary>
+<img src="media/readme-images/deploy-repo-1.png" alt="github"/>
+<img src="media/readme-images/deploy-repo-2.png" alt="github"/>
+<img src="media/readme-images/deploy-repo-3.png" alt="github"/>
 </details>
 <br>
 
-2. Go to your github repositories and create your own new repo. You can call it whatever you like. Press **Create Repository** and it will lead you to a new page. Press **Gitpod**  and it should open a new workspace for you. 
- ***If you are using VSCODE, then just open a new workspace***
-    <details><summary>Steps to deploy new workspace</summary>
-    <img src="media/readme-images/deploy-repo-1.png" alt="github"/>
-    <img src="media/readme-images/deploy-repo-2.png" alt="github"/>
-    <img src="media/readme-images/deploy-repo-3.png" alt="github"/>
-    </details>
-    <br>
-
-3. When eitherGitpod or VSCODE is open, type in 'git bash' following "**git clone https://github.com/Aron-M/Project-4-Portfolio.git**" without using any quotation marks, and press enter. It will clone my repository.
-    <details><summary>Picture</summary>
-    <img src="media/readme-images/deploy-git-clone-1.png" alt="github"/>
-    <img src="media/readme-images/deploy-git-clone-2.png" alt="github"/>
-    </details>
-    <br>
+3. When eitherGitpod or VSCODE is open, type in 'git bash' following "**git clone https://github.com/Aron-M/Project-4-Portfolio.git**" (The URL you copied earlier) without using any quotation marks, and press enter. It will clone my repository.
+<details><summary>Picture</summary>
+<img src="media/readme-images/deploy-git-clone-1.png" alt="github"/>
+<img src="media/readme-images/deploy-git-clone-2.png" alt="github"/>
+</details>
+<br>
 
 4. Very good! Now you should have your own local repository with all the neccessary code templates to run the game. In the terminal you can type "python3 run.py" to test the game within your local terminal. Next up we have to deploy it on Heroku.
 
@@ -570,6 +568,74 @@ https://........herokuapp.com/accounts/login/
 <br>
 
 16. Project is now ready to be used.
+<br>
+
+# TESTING
+<br>
+
+## Manual Testing
+<br>
+
+Manual testing was done to make sure all features were performing as intended. Visuals/Proof of each working feature can be viewed upon navigating to the site [here](). Administrative CRUD capabilites/features can be seen handled in the CRUD subjection of the 'Navigation' Section here above.
+<br>
+
+### Features tested
+<br>
+
+- Navigation bar takes user to various sections and pages upon request - &#x2705;
+<br>
+- Home Page performs animated text and image rendering upon page load - &#x2705;
+<br>
+- Skills Section has animated icons of skills, each opening dynamic modal displaying each skills info when clicked - &#x2705;
+<br>
+- Project Section displays all my projects, with links to deployed site and repo, and showing unique info on hover -  &#x2705;
+<br>
+- Contact Section shows my location -  &#x2705;
+<br>
+- Contact Section has form linked to my email to send me messages - &#x274C; (Form was added but not yet linked due to time constraints)
+<br>
+- CV Section has a button to download my CV in .pdf format - &#x2705;
+<br>
+- Admin Dashboard on the front end can be accessed (by admin only), once logged into Django admin panel - &#x2705; (admin button appears in the homepage navbar)
+<br>
+- Admin Dashboard gives access to all CRUD pages - &#x2705;
+<br>
+- CRUD pages performs their respective functions successfully on the front end - &#x2705;
+<br>
+- 'About Me' Page can be accessed for further info and personal details - &#x2705; &#x274C; (Visible but not yet styled perfectly due to time constraints)
+
+## BUGS
+
+### Caught and Fixed:
+
+- Database error: Migrarions out of sync.
+    [#73](https://github.com/Aron-M/Project-4-Portfolio/issues/73)
+- Django Admin Login Error.
+    [#2](https://github.com/users/Aron-M/projects/2?pane=issue&itemId=26361315)
+- Applicatrion error when deploying to Heroku.
+    [#4](https://github.com/users/Aron-M/projects/2?pane=issue&itemId=26377040)
+- Could not display data to html templates.
+    [#8](https://github.com/users/Aron-M/projects/2?pane=issue&itemId=26938068)
+- Constant overflowing of 'Status Container'.
+    [#58](https://github.com/users/Aron-M/projects/2?pane=issue&itemId=31759107)
+- Bootstrap styling & local files doesnt render on deployed app.
+    [#74](https://github.com/Aron-M/Project-4-Portfolio/issues/74)
+<br>
+ 
+### Caught Exceptions:
+<br>
+These bugs do not affect the core functionality of the page, but needs to be fixed. They were not yet resloved due to time constraints
+<br>
+
+- Allauth imported login/logout pages not styled.
+    [#40](https://github.com/users/Aron-M/projects/2?pane=issue&itemId=31752563)
+
+    <br>
+
+- CRUD Pages linked to 'Admin-Dashboard' not properly styled for tablet and mobile view
+    - You can see the CRUD subjection within the 'Navigation' section, that tablet and mobile views are visible, but not properly styled for a cleaner look. This was due to time constraints and I left it because me as admin will be the only person making use of those pages.
+
+
 
 # Credits:
 
