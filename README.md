@@ -413,185 +413,6 @@ The 'Read' functionality is already performed and demostrated above by the user'
 
 <br>
 
-# Deployment
-
-## Programs needed:
-
-
-### Cloudinary
-
-1. Create an account [here](https://cloudinary.com/).
-2. Log in.
-<details><summary>Go to Dashboard for info</summary>
-<img src="static/media/readme-images/cloudinary-2.png" alt="cloudinary"/>
-
-</details>
-<br>
-
-
-### Heroku
-
-3. Create an account [here](https://www.heroku.com/)
-
-### GitHub
-
-4. Login to your [GitHub](https://github.com/)
-
-
-### ElephantSQL
-
-5. Create an account [here](https://www.elephantsql.com/).
-6. Log in and set up instance
-<details><summary>Start creating an instance</summary>
-<img src="static/media/readme-images/elephant-1.png" alt="create database"/>
-</details>
-<br>
-<details><summary>Select Plan</summary>
-<img src="static/media/readme-images/elephant-2.png" alt="create database"/>
-</details>
-<br>
-<details><summary>Choose Region</summary>
-<img src="static/media/readme-images/elephant-3.png" alt="create database"/>
-</details>
-<br>
-<details><summary>Create Instance</summary>
-<img src="static/media/readme-images/elephant-4.png" alt="create database"/>
-</details>
-<br>
-<details><summary>Select new Instance</summary>
-<img src="static/media/readme-images/elephant-5.png" alt="create database"/>
-</details>
-<br>
-<details><summary>Copy instance URL</summary>
-<img src="static/media/readme-images/elephant-6.png" alt="create database"/>
-</details>
-<br>
-
-
-## Local Development
-
-7. Go to Github repo [here](https://github.com/Aron-M/Project-4-Portfolio) and click the **< CODE >** button, then click **COPY**.
-   <details><summary>Copy My URL</summary>
-   <img src="static/media/readme-images/github-1.png" alt="deployment github"/>
-   </details>
-   <br>
-
-2. Go to your github repositories and create your own new repository. You can call it whatever you like. Press **Create Repository** and it will lead you to a new page. Press **Gitpod**  and it should open a new workspace for you. 
- ***If you are using VSCODE, then just open a new workspace***
-<details><summary>Steps to deploy new workspace</summary>
-<img src="static/media/readme-images/deploy-repo-1.png" alt="github"/>
-<img src="static/media/readme-images/deploy-repo-2.png" alt="github"/>
-<img src="static/media/readme-images/deploy-repo-3.png" alt="github"/>
-</details>
-<br>
-
-3. When eitherGitpod or VSCODE is open, type in 'git bash' following "**git clone https://github.com/Aron-M/Project-4-Portfolio.git**" (The URL you copied earlier) without using any quotation marks, and press enter. It will clone my repository.
-<details><summary>Picture</summary>
-<img src="static/media/readme-images/deploy-git-clone-1.png" alt="github"/>
-<img src="static/media/readme-images/deploy-git-clone-2.png" alt="github"/>
-</details>
-<br>
-
-4. Very good! Now you should have your own local repository with all the neccessary code templates to run the game. In the terminal you can type "python3 run.py" to test the game within your local terminal. Next up we have to deploy it on Heroku.
-
-
-5. Download all libraries and frameworks to use in this project.
-```
-pip3 install -r requirements.txt
-```
-
-6. Create **env.py** in main folder and add cloudinary api key, elephantSQL and your own secret key. See image below. (DO NOT name the **env.py** file anything differen, or your password will be leaked to your repository.)
-```
-os.environ['DATABASE_URL'] = " url from elephantsql"
-os.environ['SECRET_KEY'] = "secret_key"
-os.environ['CLOUDINARY_URL'] = "api key from, remove 'CLOUDINARY_URL=' FROM BEGINING"
-```
-<details><summary>env.py</summary>
-<img src="static/media/readme-images/env.png" alt="deployment github"/>
-</details>
-<br>
-
-7. Now type in this command into terminal, this will migrate all models to database.
-```
-python3 manage.py migrate
-```
-<details><summary>Migrating files</summary>
-<img src="static/media/readme-images/env.png" alt="deployment github"/>
-</details>
-<br>
-
-8. Now we have to create 'superuser' for django admin panel from within the terminal by typing command:
-
-```
-python3 manage.py createsuperuser
-```
-<details><summary>Create Superuser in CLI</summary>
-<img src="static/media/readme-images/env.png" alt="deployment github"/>
-</details>
-<br>
-
-9. Go to pp4_portfolio folder and open **settings.py** and add this code to **ALLOWED_HOST**
-```
-.herokuapp.com, localhost
-```
-
-
-10. Now we push our code to GitHub by typing:
-```
-git add .
-git commit -m "your own commit"
-git push
-```
-11. Go to [Heroku](https://id.heroku.com/login) and login to your account.
-
-12. At the top right corner click the **New** button and then **Create new app**, next you will
-- Name your app whatever you like, then 
-- Pick server depending which region you are in: For me it was Europe 
-- Then click **Create app**
-    <details><summary>Picture</summary>
-    <img src="static/media/readme-images/heroku-1.png" alt="heroku"/>
-    <img src="static/media/readme-images/heroku-2.png" alt="heroku"/>
-    </details>
-    <br>
-
-13. Go to **Settings** and press **Reveal Config Vars**. In the **KEY** block type in **PORT** and for **VALUE** type in **8000**.
-    <details><summary>Picture</summary>
-    <img src="static/media/readme-images/heroku-3.png" alt="heroku"/>
-    </details>
-    <br>
-
-Additonally, aslo add the following config variables
-```
-DATABASE_URL - url as is in env.py
-SECRET_KEY - your secret key
-CLOUDINARY_URL - API key as is in env.py
-```
-
-14. Now scroll down until you see **Buildpacks**, press **Add buildpack** and select **python** and **save changes**. Afterwards, again **Add buildpack** but this time pick **nodejs** and **save change**. heroku/python should be above nodejs. If its not, then drag it with the hamburger menu on the left of the image or remove with x and add again in the correct order.
-    <details><summary>Picture</summary>
-    <img src="static/media/readme-images/heroku-4.png" alt="heroku"/>
-    </details>
-    <br>
-
-15. Go back to top of the page and click **Deploy**, and click on **GitHub** and connect to it. Next below type in name of your repository and click search, it should automaticaly find the repo. Then click **Connect**
-    <details><summary>Picture</summary>
-    <img src="static/media/readme-images/heroku-5.png" alt="heroku"/>
-    <img src="static/media/readme-images/heroku-6.png" alt="heroku"/>
-    </details>
-    <br>
-
-16. Now in address bar type in after our website url **/accounts/login** and input your superuser password. If everything works you should see frontend admin panel.
-```
-https://........herokuapp.com/accounts/login/
-```
-<details><summary>Django Admin Panel</summary>
-<img src="static/media/readme-images/django-admin.png" alt="deployment heroku"/>
-</details>
-<br>
-
-16. Project is now ready to be used.
-<br>
-
 # TESTING
 <br>
 
@@ -626,6 +447,34 @@ All means of testing here was done manually. Visual/Static features can be seen 
 - CRUD pages performs their respective functions successfully on the front end - &#x2705;
 <br>
 - 'About Me' Page can be accessed for further info and personal details - &#x2705; &#x274C; (Visible but not yet styled perfectly due to time constraints)
+<br>
+
+## Automated Testing
+
+- Code Institute Pylinter tool for validating python code
+<br>
+<details><summary>models.py</summary>
+<img src="static/media/readme-images/linter-models.png">
+</details>
+<br>
+<br>
+<details><summary>views.py</summary>
+<img src="static/media/readme-images/linter-views.png">
+</details>
+**PLEASE NOTE: the three errors shown above in views.py is only cosmetic, and does not affect functionality
+<br>
+<br>
+<details><summary>forms.py</summary>
+<img src="static/media/readme-images/linter-forms.png">
+</details>
+**PLEASE NOTE: the two errors shown above in forms.py is only cosmetic, and does not affect functionality
+<br>
+<br>
+- W3Schools CSS Validator
+<br>
+<details><summary>Deployed app tested</summary>
+<img src="static/media/readme-images/auto-testing-w3schools.png">
+</details>
 
 ## BUGS
 
@@ -659,6 +508,184 @@ These bugs do not affect the core functionality of the page, but needs to be fix
     - You can see the CRUD subjection within the 'Navigation' section, that tablet and mobile views are visible, but not properly styled for a cleaner look. This was due to time constraints and I left it because me as admin will be the only person making use of those pages.
 
 
+# Deployment
+
+## Programs needed:
+
+
+### Cloudinary
+
+1. Create an account [here](https://cloudinary.com/).
+2. Log in.
+<details><summary>Go to Dashboard for info</summary>
+<img src="static/media/readme-images/cloudinary-2.png" alt="cloudinary"/>
+
+</details>
+<br>
+
+
+### Heroku
+
+3. Create an account [here](https://www.heroku.com/)
+
+### GitHub
+
+4. Login to your [GitHub](https://github.com/)
+
+
+### ElephantSQL
+
+5. Create an account [here](https://www.elephantsql.com/).
+<br>
+6. Log in and set up instance
+<details><summary>Start creating an instance</summary>
+<img src="static/media/readme-images/elephant-1.png" alt="create database"/>
+</details>
+<br>
+<details><summary>Select Plan</summary>
+<img src="static/media/readme-images/elephant-2.png" alt="create database"/>
+</details>
+<br>
+<details><summary>Choose Region</summary>
+<img src="static/media/readme-images/elephant-3.png" alt="create database"/>
+</details>
+<br>
+<details><summary>Create Instance</summary>
+<img src="static/media/readme-images/elephant-4.png" alt="create database"/>
+</details>
+<br>
+<details><summary>Select new Instance</summary>
+<img src="static/media/readme-images/elephant-5.png" alt="create database"/>
+</details>
+<br>
+<details><summary>Copy instance URL</summary>
+<img src="static/media/readme-images/elephant-6.png" alt="create database"/>
+</details>
+<br>
+## Local Development
+
+7. Go to Github repo [here](https://github.com/Aron-M/Project-4-Portfolio) and click the **< CODE >** button, then click **COPY**.
+   <details><summary>Copy My URL</summary>
+   <img src="static/media/readme-images/github-1.png" alt="deployment github"/>
+   </details>
+   <br>
+
+8. Go to your github repositories and create your own new repository. You can call it whatever you like. Press **Create Repository** and it will lead you to a new page. Press **Gitpod**  and it should open a new workspace for you. 
+ ***If you are using VSCODE, then just open a new workspace***
+<details><summary>Steps to deploy new workspace</summary>
+<img src="static/media/readme-images/deploy-repo-1.png" alt="github"/>
+<img src="static/media/readme-images/deploy-repo-2.png" alt="github"/>
+<img src="static/media/readme-images/deploy-repo-3.png" alt="github"/>
+</details>
+<br>
+
+9. When eitherGitpod or VSCODE is open, type in 'git bash' following "**git clone https://github.com/Aron-M/Project-4-Portfolio.git**" (The URL you copied earlier) without using any quotation marks, and press enter. It will clone my repository.
+<details><summary>Picture</summary>
+<img src="static/media/readme-images/deploy-git-clone-1.png" alt="github"/>
+<img src="static/media/readme-images/deploy-git-clone-2.png" alt="github"/>
+</details>
+<br>
+
+10. Very good! Now you should have your own local repository with all the neccessary code templates to run the game. In the terminal you can type "python3 run.py" to test the game within your local terminal. Next up we have to deploy it on Heroku.
+
+
+11. Download all libraries and frameworks to use in this project.
+```
+pip3 install -r requirements.txt
+```
+
+12. Create **env.py** in main folder and add cloudinary api key, elephantSQL and your own secret key. See image below. (DO NOT name the **env.py** file anything differen, or your password will be leaked to your repository.)
+```
+os.environ['DATABASE_URL'] = " url from elephantsql"
+os.environ['SECRET_KEY'] = "secret_key"
+os.environ['CLOUDINARY_URL'] = "api key from, remove 'CLOUDINARY_URL=' FROM BEGINING"
+```
+<details><summary>env.py</summary>
+<img src="static/media/readme-images/env.png" alt="deployment github"/>
+</details>
+<br>
+
+13. Now type in this command into terminal, this will migrate all models to database.
+```
+python3 manage.py migrate
+```
+<details><summary>Migrating files</summary>
+<img src="static/media/readme-images/env.png" alt="deployment github"/>
+</details>
+<br>
+
+14. Now we have to create 'superuser' for django admin panel from within the terminal by typing command:
+
+```
+python3 manage.py createsuperuser
+```
+<details><summary>Create Superuser in CLI</summary>
+<img src="static/media/readme-images/env.png" alt="deployment github"/>
+</details>
+<br>
+
+15. Go to pp4_portfolio folder and open **settings.py** and add this code to **ALLOWED_HOST**
+```
+.herokuapp.com, localhost
+```
+
+
+16. Now we push our code to GitHub by typing:
+```
+git add .
+git commit -m "your own commit"
+git push
+```
+17. Go to [Heroku](https://id.heroku.com/login) and login to your account.
+
+18. At the top right corner click the **New** button and then **Create new app**, next you will
+- Name your app whatever you like, then 
+- Pick server depending which region you are in: For me it was Europe 
+- Then click **Create app**
+    <details><summary>Picture</summary>
+    <img src="static/media/readme-images/heroku-1.png" alt="heroku"/>
+    <img src="static/media/readme-images/heroku-2.png" alt="heroku"/>
+    </details>
+    <br>
+
+19. Go to **Settings** and press **Reveal Config Vars**. In the **KEY** block type in **PORT** and for **VALUE** type in **8000**.
+    <details><summary>Picture</summary>
+    <img src="static/media/readme-images/heroku-3.png" alt="heroku"/>
+    </details>
+    <br>
+
+Additonally, aslo add the following config variables
+```
+DATABASE_URL - url as is in env.py
+SECRET_KEY - your secret key
+CLOUDINARY_URL - API key as is in env.py
+```
+
+20. Now scroll down until you see **Buildpacks**, press **Add buildpack** and select **python** and **save changes**. Afterwards, again **Add buildpack** but this time pick **nodejs** and **save change**. heroku/python should be above nodejs. If its not, then drag it with the hamburger menu on the left of the image or remove with x and add again in the correct order.
+    <details><summary>Picture</summary>
+    <img src="static/media/readme-images/heroku-4.png" alt="heroku"/>
+    </details>
+    <br>
+
+21. Go back to top of the page and click **Deploy**, and click on **GitHub** and connect to it. Next below type in name of your repository and click search, it should automaticaly find the repo. Then click **Connect**
+    <details><summary>Picture</summary>
+    <img src="static/media/readme-images/heroku-5.png" alt="heroku"/>
+    <img src="static/media/readme-images/heroku-6.png" alt="heroku"/>
+    </details>
+    <br>
+
+22. Now in address bar type in after our website url **/accounts/login** and input your superuser password. If everything works you should see frontend admin panel.
+```
+https://........herokuapp.com/accounts/login/
+```
+<details><summary>Django Admin Panel</summary>
+<img src="static/media/readme-images/django-admin.png" alt="deployment heroku"/>
+</details>
+<br>
+
+23. Project is now ready to be used.
+<br>
+
 
 # Credits:
 
@@ -676,7 +703,7 @@ These bugs do not affect the core functionality of the page, but needs to be fix
 - [Flaticon](https://www.flaticon.com/search?author_id=1&style_id=136&type=standard&word=student) for use of icons
 <br>
 
-- Code Institute Pylinter to validate my Python code.
+- [Code Institute Pylinter](https://pep8ci.herokuapp.com/#) to validate my Python code.
 <br>
 
 - [W3Schools](https://jigsaw.w3.org/css-validator/) for validating CSS code
@@ -685,3 +712,7 @@ These bugs do not affect the core functionality of the page, but needs to be fix
 - [DevIcons](https://devicon.dev/) for use of 'skills' icons.
 <br>
 
+- [Bootstrap Documentation](https://getbootstrap.com/docs/4.1/getting-started/introduction/) in guiding me how to utilize Bootstrap effectively.
+<br>
+
+- [Django Documentation](https://docs.djangoproject.com/en/4.2/) guiding me how to implement models, views and forms effectively.
