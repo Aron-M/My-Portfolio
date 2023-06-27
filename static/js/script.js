@@ -3,7 +3,7 @@
 
 // Get the modal element
 let modalDiv = document.getElementById("modal-div");
-let avatarImage = document.getElementById("avatar-img"); // Get the avatar image element
+let avatarImage = document.getElementById("avatar-img");
 
 // Get the image and text elements inside the modal
 let modalImage = document.getElementById("modal-image");
@@ -119,20 +119,20 @@ projectImages.forEach((image) => {
   });
 });
 
-loremParagraph.style.display = "none"; // Hide the text initially
+loremParagraph.style.display = "none";
 
 document.addEventListener("DOMContentLoaded", () => {
   projectImages.forEach((image) => {
     const projectExtraInfo = image.parentElement.querySelector(".lorem-text").dataset.extraInfo;
 
     image.addEventListener("mouseenter", () => {
-      loremParagraph.style.display = "block"; // Show the text when hovering over an image
+      loremParagraph.style.display = "block";
       resetLoremText(projectExtraInfo);
     });
 
     image.addEventListener("mouseleave", () => {
-      loremParagraph.style.display = "none"; // Hide the text when the mouse leaves the image
-      resetLoremText(projectExtraInfo); // Reset the text animation
+      loremParagraph.style.display = "none";
+      resetLoremText(projectExtraInfo);
     });
   });
 });
