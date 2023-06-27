@@ -48,8 +48,9 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'cloudinary_storage',
     'django.contrib.staticfiles',
-    'cloudinary',
     'my_pf',
+    'cloudinary',
+
  
 ]
 
