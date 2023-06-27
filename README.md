@@ -1,11 +1,17 @@
-# Aron's Personal Potfolio Webpage
-
-Welcome to to Aron's Personal Portfolio Webpage! 
 <br>
+
+# Aron's Personal Potfolio Webpage
+<br>
+
+## Welcome to to Aron's Personal Portfolio Webpage! 
+<br>
+
 <img src="static/media/readme-images/headings-home-page.png">
+
 <br>
 
 Hello and welcome to my portfolio page. [Please click here](https://aron-portfolio.herokuapp.com/) to view the deployed page. **PLEASE NOTE Images and data might have been updated sice the writing of this README. You might see screenshots containing different images below, however the general structure of the page remains identical to the visuals that this README depicts.
+
 <br>
 
 
@@ -660,9 +666,11 @@ These bugs do not affect the core functionality of the page, but needs to be fix
 <br>
 
 - Youtube Videos for guiding me on how to make a modal, animating texts and fading in images
-    [Florin Pop](https://www.youtube.com/watch?v=XH5OW46yO8I) for modal assistance.
-    [GreatStack](https://www.youtube.com/watch?v=qEcXe51-ZTw) for guiding me in animating text.
-    [SimpliCode](https://www.youtube.com/watch?v=27aMG1e5CIQ) for assistance in fading images in.
+<br>
+    - [Florin Pop](https://www.youtube.com/watch?v=XH5OW46yO8I) for modal assistance.
+    - [GreatStack](https://www.youtube.com/watch?v=qEcXe51-ZTw) for guiding me in animating text.
+    - [SimpliCode](https://www.youtube.com/watch?v=27aMG1e5CIQ) for assistance in fading images in.
+    <br>
 <br>
 
 - [Flaticon](https://www.flaticon.com/search?author_id=1&style_id=136&type=standard&word=student) for use of icons

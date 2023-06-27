@@ -370,7 +370,6 @@ a,
 
 .card-img-top {
   height: 8rem;
-  object-fit:auto;
 }
 
 .projects-section .card-title,
@@ -704,11 +703,6 @@ justify-self: center;
 
   .status-text {
     font-size: 0.8rem;
-  }
-
-  .status-box {
-    display: flex;
-    flex-direction: flex-start;
   }
 
   .study-images {
