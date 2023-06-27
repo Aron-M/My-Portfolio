@@ -199,49 +199,49 @@ Colors schema for this site is blue, white and dark grey.
 
 - Home page Top.
     <details><summary>Headings</summary>
-    <img src="media/readme-images/wireframe-headings.png" alt="home page"/>
+    <img src="static/media/readme-images/wireframe-headings.png" alt="home page"/>
     </details>
     <br>
 
 - Skills Section.
     <details><summary>Skills</summary>
-    <img src="media/readme-images/wireframe-skills.png" alt="about me page"/>
+    <img src="static/media/readme-images/wireframe-skills.png" alt="about me page"/>
     </details>
     <br>
 
 - Projects Section.
     <details><summary>Projects</summary>
-    <img src="media/readme-images/wireframe-projects.png" alt="projects page"/>
+    <img src="static/media/readme-images/wireframe-projects.png" alt="projects page"/>
     </details>
     <br>
 
 
 - Admin-CRUD page.
     <details><summary>Edit/Add/Delete pages</summary>
-    <img src="media/readme-images/wireframe-crud-page.png" alt="front panel details section"/>
+    <img src="static/media/readme-images/wireframe-crud-page.png" alt="front panel details section"/>
     </details>
     <br>
 
 - Admin-Dashboard Section.
     <details><summary>Picture</summary>
-    <img src="media/readme-images/wireframe-dashboard.png" alt="front panel details section"/>
+    <img src="static/media/readme-images/wireframe-dashboard.png" alt="front panel details section"/>
     </details>
     <br>
 
 - About Me page.
     <details><summary>Picture</summary>
-    <img src="media/readme-images/wireframe-about-me.png" alt="front panel details section"/>
+    <img src="static/media/readme-images/wireframe-about-me.png" alt="front panel details section"/>
     </details>
     <br>
 
 
 ## Home Page Workflow
 
-<img src="media/readme-images/homepage-workflow.png" style="max-width: 40rem;">
+<img src="static/media/readme-images/homepage-workflow.png" style="max-width: 40rem;">
 
 <br>
 
-<img src="media/readme-images/portfolio-flowchart.png" style="max-width: 40rem;">
+<img src="static/media/readme-images/portfolio-flowchart.png" style="max-width: 40rem;">
 
 
 <br>
@@ -257,7 +257,7 @@ Colors schema for this site is blue, white and dark grey.
 
   HEADINGS | PC | TABLET | PHONE
   :---:|:---:|:--:|:--:
-  'Headings' Section which will be the first thing the user sees when opening the page | ![](media/readme-images/headings-home-page.png) | ![](media/readme-images/headings-home-page-tablet.png)| ![](media/readme-images/headings-home-page-phone.png)
+  'Headings' Section which will be the first thing the user sees when opening the page | ![](static/media/readme-images/headings-home-page.png) | ![](static/media/readme-images/headings-home-page-tablet.png)| ![](static/media/readme-images/headings-home-page-phone.png)
 
 </details>
 
@@ -269,7 +269,7 @@ Colors schema for this site is blue, white and dark grey.
 
   SKILLS | PC | TABLET | PHONE
   :---:|:---:|:--:|:--:
-  'Skill' Section which displays current skills and an info-modal | ![](media/readme-images/skills-section-pc.png) | ![](media/readme-images/skills-section-tablet.png)| ![](media/readme-images/skills-section-phone.png)
+  'Skill' Section which displays current skills and an info-modal | ![](static/media/readme-images/skills-section-pc.png) | ![](static/media/readme-images/skills-section-tablet.png)| ![](staticmedia/readme-images/skills-section-phone.png)
 
 </details>
 
@@ -280,7 +280,7 @@ Colors schema for this site is blue, white and dark grey.
 
   PROJECTS | PC | TABLET | PHONE
   :---:|:---:|:--:|:--:
-  'Project' section displaying all my current projects | ![](media/readme-images/projects-section-pc.png) | ![](media/readme-images/projects-section-tablet.png)| ![](media/readme-images/projects-section-phone.png)
+  'Project' section displaying all my current projects | ![](static/media/readme-images/projects-section-pc.png) | ![](static/media/readme-images/projects-section-tablet.png)| ![](static/media/readme-images/projects-section-phone.png)
 
 </details>
 
@@ -291,7 +291,7 @@ Colors schema for this site is blue, white and dark grey.
 
 CONTACT | PC | TABLET | PHONE
   :---:|:---:|:--:|:--:
-  'Contact' section where user can find and contact me | ![](media/readme-images/contact-section-pc.png) | ![](media/readme-images/contact-section-tablet.png)| ![](media/readme-images/contact-section-phone.png)
+  'Contact' section where user can find and contact me | ![](static/media/readme-images/contact-section-pc.png) | ![](static/edia/readme-images/contact-section-tablet.png)| ![](static/media/readme-images/contact-section-phone.png)
 
 </details>
 
@@ -305,7 +305,7 @@ CONTACT | PC | TABLET | PHONE
 
 ABOUT ME | PC | TABLET | PHONE
   :---:|:---:|:--:|:--:
-  'About Me' page where user can get more personal info | ![](media/readme-images/about-section-pc.png) | ![](media/readme-images/about-section-tablet.png)| ![](media/readme-images/about-section-phone.png)
+  'About Me' page where user can get more personal info | ![](static/media/readme-images/about-section-pc.png) | ![](static/media/readme-images/about-section-tablet.png)| ![](static/media/readme-images/about-section-phone.png)
 
 </details>
 
@@ -319,7 +319,7 @@ ABOUT ME | PC | TABLET | PHONE
 
  PC | TABLET | PHONE
   :---:|:---:|:--:
- ![](media/readme-images/admin-dashboard-pc.png) | ![](media/readme-images/admin-dashboard-tablet.png)| ![](media/readme-images/admin-dashboard-phone.png)
+ ![](static/media/readme-images/admin-dashboard-pc.png) | ![](static/media/readme-images/admin-dashboard-tablet.png)| ![](static/media/readme-images/admin-dashboard-phone.png)
 
 </details>
 
@@ -354,7 +354,7 @@ SUMMARY OF HOW EACH MODEL CAN BE AUGMENTED:
 
  DESCRIPTION | ADD SKILL | NEW SKILL ADDED
   :---:|:---:|:--:
-A form is included in the page displaying all inout fields of the 'skills model'. Upon completion of the form, the user can then click to add a new skill| ![](media/readme-images/add-skill-pc.png)| ![](media/readme-images/add-skill-new.png)
+A form is included in the page displaying all inout fields of the 'skills model'. Upon completion of the form, the user can then click to add a new skill| ![](static/media/readme-images/add-skill-pc.png)| ![](static/media/readme-images/add-skill-new.png)
 
 </details>
 
@@ -376,7 +376,7 @@ The 'Read' functionality is already performed and demostrated above by the user'
 
  DESCRIPTION | EDIT HEADING | UPDATED
   :---:|:---:|:--:
-  A form is included in the page displaying all input fields of the 'headings model'. Upon updating the chosen information within the form, the user can then click to edit a part of the section| ![](media/readme-images/edit-headings.png)| ![](media/readme-images/edit-heading-edited.png)
+  A form is included in the page displaying all input fields of the 'headings model'. Upon updating the chosen information within the form, the user can then click to edit a part of the section| ![](static/media/readme-images/edit-headings.png)| ![](static/media/readme-images/edit-heading-edited.png)
 
 </details>
 
@@ -391,7 +391,7 @@ The 'Read' functionality is already performed and demostrated above by the user'
 
  DESCRIPTION | DELETE PROJECT | DELETED
   :---:|:---:|:--:
-  A form is included in the page displaying all input fields of the 'projects model'. Upon completion of the form, the user can then click to add a new project| ![](media/readme-images/delete-project-pc.png)| ![](media/readme-images/delete-project-done.png)
+  A form is included in the page displaying all input fields of the 'projects model'. Upon completion of the form, the user can then click to add a new project| ![](static/media/readme-images/delete-project-pc.png)| ![](static/media/readme-images/delete-project-done.png)
 </details>
 
 <br>
@@ -406,7 +406,7 @@ The 'Read' functionality is already performed and demostrated above by the user'
 1. Create an account [here](https://cloudinary.com/).
 2. Log in.
 <details><summary>Go to Dashboard for info</summary>
-<img src="media/readme-images/cloudinary-2.png" alt="cloudinary"/>
+<img src="static/media/readme-images/cloudinary-2.png" alt="cloudinary"/>
 
 </details>
 <br>
@@ -426,27 +426,27 @@ The 'Read' functionality is already performed and demostrated above by the user'
 5. Create an account [here](https://www.elephantsql.com/).
 6. Log in and set up instance
 <details><summary>Start creating an instance</summary>
-<img src="media/readme-images/elephant-1.png" alt="create database"/>
+<img src="static/media/readme-images/elephant-1.png" alt="create database"/>
 </details>
 <br>
 <details><summary>Select Plan</summary>
-<img src="media/readme-images/elephant-2.png" alt="create database"/>
+<img src="static/media/readme-images/elephant-2.png" alt="create database"/>
 </details>
 <br>
 <details><summary>Choose Region</summary>
-<img src="media/readme-images/elephant-3.png" alt="create database"/>
+<img src="static/media/readme-images/elephant-3.png" alt="create database"/>
 </details>
 <br>
 <details><summary>Create Instance</summary>
-<img src="media/readme-images/elephant-4.png" alt="create database"/>
+<img src="static/media/readme-images/elephant-4.png" alt="create database"/>
 </details>
 <br>
 <details><summary>Select new Instance</summary>
-<img src="media/readme-images/elephant-5.png" alt="create database"/>
+<img src="static/media/readme-images/elephant-5.png" alt="create database"/>
 </details>
 <br>
 <details><summary>Copy instance URL</summary>
-<img src="media/readme-images/elephant-6.png" alt="create database"/>
+<img src="static/media/readme-images/elephant-6.png" alt="create database"/>
 </details>
 <br>
 
@@ -455,23 +455,23 @@ The 'Read' functionality is already performed and demostrated above by the user'
 
 7. Go to Github repo [here](https://github.com/Aron-M/Project-4-Portfolio) and click the **< CODE >** button, then click **COPY**.
    <details><summary>Copy My URL</summary>
-   <img src="media/readme-images/github-1.png" alt="deployment github"/>
+   <img src="static/media/readme-images/github-1.png" alt="deployment github"/>
    </details>
    <br>
 
 2. Go to your github repositories and create your own new repository. You can call it whatever you like. Press **Create Repository** and it will lead you to a new page. Press **Gitpod**  and it should open a new workspace for you. 
  ***If you are using VSCODE, then just open a new workspace***
 <details><summary>Steps to deploy new workspace</summary>
-<img src="media/readme-images/deploy-repo-1.png" alt="github"/>
-<img src="media/readme-images/deploy-repo-2.png" alt="github"/>
-<img src="media/readme-images/deploy-repo-3.png" alt="github"/>
+<img src="static/media/readme-images/deploy-repo-1.png" alt="github"/>
+<img src="static/media/readme-images/deploy-repo-2.png" alt="github"/>
+<img src="static/media/readme-images/deploy-repo-3.png" alt="github"/>
 </details>
 <br>
 
 3. When eitherGitpod or VSCODE is open, type in 'git bash' following "**git clone https://github.com/Aron-M/Project-4-Portfolio.git**" (The URL you copied earlier) without using any quotation marks, and press enter. It will clone my repository.
 <details><summary>Picture</summary>
-<img src="media/readme-images/deploy-git-clone-1.png" alt="github"/>
-<img src="media/readme-images/deploy-git-clone-2.png" alt="github"/>
+<img src="static/media/readme-images/deploy-git-clone-1.png" alt="github"/>
+<img src="static/media/readme-images/deploy-git-clone-2.png" alt="github"/>
 </details>
 <br>
 
@@ -490,7 +490,7 @@ os.environ['SECRET_KEY'] = "secret_key"
 os.environ['CLOUDINARY_URL'] = "api key from, remove 'CLOUDINARY_URL=' FROM BEGINING"
 ```
 <details><summary>env.py</summary>
-<img src="media/readme-images/env.png" alt="deployment github"/>
+<img src="static/media/readme-images/env.png" alt="deployment github"/>
 </details>
 <br>
 
@@ -499,7 +499,7 @@ os.environ['CLOUDINARY_URL'] = "api key from, remove 'CLOUDINARY_URL=' FROM BEGI
 python3 manage.py migrate
 ```
 <details><summary>Migrating files</summary>
-<img src="media/readme-images/env.png" alt="deployment github"/>
+<img src="static/media/readme-images/env.png" alt="deployment github"/>
 </details>
 <br>
 
@@ -509,7 +509,7 @@ python3 manage.py migrate
 python3 manage.py createsuperuser
 ```
 <details><summary>Create Superuser in CLI</summary>
-<img src="media/readme-images/env.png" alt="deployment github"/>
+<img src="static/media/readme-images/env.png" alt="deployment github"/>
 </details>
 <br>
 
@@ -532,14 +532,14 @@ git push
 - Pick server depending which region you are in: For me it was Europe 
 - Then click **Create app**
     <details><summary>Picture</summary>
-    <img src="media/readme-images/heroku-1.png" alt="heroku"/>
-    <img src="media/readme-images/heroku-2.png" alt="heroku"/>
+    <img src="static/media/readme-images/heroku-1.png" alt="heroku"/>
+    <img src="static/media/readme-images/heroku-2.png" alt="heroku"/>
     </details>
     <br>
 
 13. Go to **Settings** and press **Reveal Config Vars**. In the **KEY** block type in **PORT** and for **VALUE** type in **8000**.
     <details><summary>Picture</summary>
-    <img src="media/readme-images/heroku-3.png" alt="heroku"/>
+    <img src="static/media/readme-images/heroku-3.png" alt="heroku"/>
     </details>
     <br>
 
@@ -552,14 +552,14 @@ CLOUDINARY_URL - API key as is in env.py
 
 14. Now scroll down until you see **Buildpacks**, press **Add buildpack** and select **python** and **save changes**. Afterwards, again **Add buildpack** but this time pick **nodejs** and **save change**. heroku/python should be above nodejs. If its not, then drag it with the hamburger menu on the left of the image or remove with x and add again in the correct order.
     <details><summary>Picture</summary>
-    <img src="media/readme-images/heroku-4.png" alt="heroku"/>
+    <img src="static/media/readme-images/heroku-4.png" alt="heroku"/>
     </details>
     <br>
 
 15. Go back to top of the page and click **Deploy**, and click on **GitHub** and connect to it. Next below type in name of your repository and click search, it should automaticaly find the repo. Then click **Connect**
     <details><summary>Picture</summary>
-    <img src="media/readme-images/heroku-5.png" alt="heroku"/>
-    <img src="media/readme-images/heroku-6.png" alt="heroku"/>
+    <img src="static/media/readme-images/heroku-5.png" alt="heroku"/>
+    <img src="static/media/readme-images/heroku-6.png" alt="heroku"/>
     </details>
     <br>
 
@@ -568,7 +568,7 @@ CLOUDINARY_URL - API key as is in env.py
 https://........herokuapp.com/accounts/login/
 ```
 <details><summary>Django Admin Panel</summary>
-<img src="media/readme-images/django-admin.png" alt="deployment heroku"/>
+<img src="static/media/readme-images/django-admin.png" alt="deployment heroku"/>
 </details>
 <br>
 
