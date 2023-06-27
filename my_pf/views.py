@@ -198,6 +198,7 @@ def add_skill(request):
 def add_project(request):
     if request.method == 'POST':
         project_form = ProjectForm(request.POST)
+        projects = Project.objects.all()
         if project_form.is_valid():
             project = project_form.save(commit=False)
             project.image = request.FILES['image']
