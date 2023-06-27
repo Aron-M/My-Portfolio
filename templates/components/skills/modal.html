@@ -1,3 +1,5 @@
+{% load static %}
+
 <div id="modal-div" class="col-lg-12 d-flex align-items-center justify-content-end">
   <div id="modal-box" class="col-lg-12 d-flex align-items-center justify-content-end">
     <div class="row">
@@ -21,8 +23,8 @@
           </div>
         </div>
       </div>
-      <div id="avatar-img" class="col-md-12 d-flex align-items-center justify-content-end">
-        <img class="avatar" src="../media/skills-images/avataaars-3.png" alt="avatar2">
+      <div id="avatar-img" class="col-md-12 mt-3 d-flex align-items-center justify-content-end">
+        <img class="avatar" src="{% static 'media/skills-images/business-person.png' %}" alt="avatar2">
       </div>
     </div>
   </div>

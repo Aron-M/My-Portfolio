@@ -29,7 +29,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["aron-portfolio.herokuapp.com", "localhost", '8000-aronm-project4portfoli-w899pig2hdb.ws-eu100.gitpod.io']
 
