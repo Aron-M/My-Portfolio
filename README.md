@@ -198,37 +198,42 @@ Colors schema for this site is blue, white and dark grey.
 ## Wireframes
 
 - Home page Top.
-    <details><summary>Picture</summary>
-    <img src="media/readme-images/about-me-wireframe.png" alt="home page"/>
+    <details><summary>Headings</summary>
+    <img src="media/readme-images/wireframe-headings.png" alt="home page"/>
     </details>
     <br>
 
-- About Me Section.
-    <details><summary>Picture</summary>
-    <img src="media/readme-images/about-me-wireframe.png" alt="about me page"/>
+- Skills Section.
+    <details><summary>Skills</summary>
+    <img src="media/readme-images/wireframe-skills.png" alt="about me page"/>
     </details>
     <br>
 
 - Projects Section.
-    <details><summary>Picture</summary>
-    <img src="media/readme-images/about-me-wireframe.png" alt="projects page"/>
+    <details><summary>Projects</summary>
+    <img src="media/readme-images/wireframe-projects.png" alt="projects page"/>
     </details>
     <br>
 
 
-- Admin-Dashboard page.
-    <details><summary>Picture</summary>
-    <img src="docs/front-panel-details.png" alt="front panel details section"/>
+- Admin-CRUD page.
+    <details><summary>Edit/Add/Delete pages</summary>
+    <img src="media/readme-images/wireframe-crud-page.png" alt="front panel details section"/>
     </details>
     <br>
+
+- Admin-Dashboard Section.
     <details><summary>Picture</summary>
-    <img src="docs/front-panel-skills.png" alt="front panel skills section"/>
+    <img src="media/readme-images/wireframe-dashboard.png" alt="front panel details section"/>
     </details>
     <br>
+
+- About Me page.
     <details><summary>Picture</summary>
-    <img src="docs/front-panel-projects.png" alt="front panel projects section"/>
+    <img src="media/readme-images/wireframe-about-me.png" alt="front panel details section"/>
     </details>
     <br>
+
 
 ## Home Page Workflow
 
