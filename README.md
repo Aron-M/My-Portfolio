@@ -1,16 +1,20 @@
 <br>
 
-# Aron's Personal Potfolio Webpage
+# Aron's Personal Portfolio Webpage
 <br>
-
-## Welcome to to Aron's Personal Portfolio Webpage! 
 <br>
 
 <img src="static/media/readme-images/headings-home-page.png">
 
 <br>
 
-Hello and welcome to my portfolio page. [Please click here](https://aron-portfolio.herokuapp.com/) to view the deployed page. **PLEASE NOTE Images and data might have been updated sice the writing of this README. You might see screenshots containing different images below, however the general structure of the page remains identical to the visuals that this README depicts.
+### Hello and welcome to my portfolio page!
+<br>
+
+[Please click here](https://aron-portfolio.herokuapp.com/) to view the deployed page. 
+<br>
+<br>
+**PLEASE NOTE Images and data might have been updated since the writing of this README. You might see screenshots containing different images below, however the general structure of the page remains identical to the visuals that this README depicts.
 
 <br>
 
@@ -328,8 +332,26 @@ ABOUT ME | PC | TABLET | PHONE
 
 <br>
 
-## ADMIN DASHBOARD
+## ADMIN DASHBOARD (FOR ADMINISTRATORS)
 <br>
+
+- For those who have authorisation/access to the administrative panel of this page, where all front-end modification occurs, an 'Admin Dashboard button will appear in the top-navbar once logged into the Django Admin panel.
+<br>
+
+- To do this the administrator will have to type in the site url followed by /admin.
+<br>
+
+- Once the admin is logged in from there, a blue 'Admin Dashboard button will appear which gives them access to the dashboard. when they redirect to the front end.
+<br>
+<details>
+  <summary>Public User --> Django Admin Login --> Admin-Access</summary>
+
+PUBLIC USER | DJANGO LOGIN | ADMIN ACCESS |
+  :---:|:---:|:--:|
+   ![](static/media/readme-images/admin-before-login.png) | ![](static/media/readme-images/django-admin-panel.png)| ![](static/media/readme-images/admin-after-login.png)
+</details>
+<br>
+From the 'Admin Dashboard' button, the administrator will then have access to edit/add/delete information on the front end as shown below.
 
 <details>
   <summary>Admin Dashboard</summary>
@@ -345,8 +367,7 @@ ABOUT ME | PC | TABLET | PHONE
 ## CRUD FUNCTIONALITY (Create, Read, Update, Delete)
 <br>
 
-The pages below demonstrate how the user (if admin) can access the admin-dashboard on the page's front-end make use of seperate pages included with forms to add, update/edit and/or delete information, henceforth to be refered to as 'CRUD-pages'. This was done by constructing various forms, views and models to handle creation, augmentation and deletion on the front-end.
-
+The pages below demonstrate how the user (if admin) can access the admin-dashboard on the page's front-end and to then get access to seperate pages included with forms to add, update/edit and/or delete information, henceforth to be refered to as 'CRUD-pages'. This was done by constructing various forms, views and models to handle creation, augmentation and deletion on the front-end. It will bring them to the admin page.
 <br>
 
 PLEASE NOTE: Below I will use one example for each section to demostrate CRUD capabilities. This is to prevent mass repetitiveness and to not flood the section with multiple images of each seperate page doing the exact same function. However, feel free to read the code files to explore more if you wish, specifically 'views.py' to see how each CRUD function is operating.
@@ -692,11 +713,13 @@ https://........herokuapp.com/accounts/login/
 - My mentor @Simen Daelin who has been very helpful in directing and guding me.
 <br>
 
-- Youtube Videos for guiding me on how to make a modal, animating texts and fading in images
+- Youtube Videos for guiding me on how to make a modal, writing relevant views, animating texts and fading in images
 <br>
+
     - [Florin Pop](https://www.youtube.com/watch?v=XH5OW46yO8I) for modal assistance.
-    - [GreatStack](https://www.youtube.com/watch?v=qEcXe51-ZTw) for guiding me in animating text.
+    - [GreatStack](https://www.youtube.com/watch?v=qEcXe51-ZTw) & [DarkCode](https://www.youtube.com/watch?v=5lo_QdeWm_g) for guiding me in animating text.
     - [SimpliCode](https://www.youtube.com/watch?v=27aMG1e5CIQ) for assistance in fading images in.
+    - [CodeEntrepeneurs](https://www.youtube.com/playlist?list=PLEsfXFp6DpzRMby_cSoWTFw8zaMdTEXgL) TryDjango tutorials 30 to 39 for extra guidance on how to create views and urls.
     <br>
 <br>
 
