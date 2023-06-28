@@ -710,7 +710,7 @@ https://........herokuapp.com/accounts/login/
 
 # Credits:
 
-- My mentor @Simen Daelin who has been very helpful in directing and guding me.
+- My mentor [Simen Daelin](https://github.com/Eventyret) who has been very helpful in directing and guding me.
 <br>
 
 - Youtube Videos for guiding me on how to make a modal, writing relevant views, animating texts and fading in images
@@ -719,7 +719,7 @@ https://........herokuapp.com/accounts/login/
     - [Florin Pop](https://www.youtube.com/watch?v=XH5OW46yO8I) for modal assistance.
     - [GreatStack](https://www.youtube.com/watch?v=qEcXe51-ZTw) & [DarkCode](https://www.youtube.com/watch?v=5lo_QdeWm_g) for guiding me in animating text.
     - [SimpliCode](https://www.youtube.com/watch?v=27aMG1e5CIQ) for assistance in fading images in.
-    - [CodeEntrepeneurs](https://www.youtube.com/playlist?list=PLEsfXFp6DpzRMby_cSoWTFw8zaMdTEXgL) TryDjango tutorials 30 to 39 for extra guidance on how to create views and urls.
+    - [CodeEntrepeneurs](https://www.youtube.com/playlist?list=PLEsfXFp6DpzRMby_cSoWTFw8zaMdTEXgL) 'TryDjango' tutorials 30 to 39 for extra guidance on how to create views and urls.
     <br>
 <br>
 
