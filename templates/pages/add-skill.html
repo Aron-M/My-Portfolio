@@ -5,7 +5,7 @@
 <div class="container-lg">
   <div class="row justify-content-center">
     <div class="text-center mb-4">
-      <h1 class="justify-content-center" style="margin-bottom: 4rem;">Add a Skill</h1>
+      <h1 class="justify-content-center">Add a Skill</h1>
     </div>
     <div class="col-md-4 mb-4">
       <div class="bg-grey">
@@ -34,7 +34,7 @@
             {{ skills_form.category }}
           </div>
           <div class="text-center">
-            <button type="submit" class="btn btn-primary mt-2">Add</button>
+            <button type="submit" class="btn btn-success mt-2">Add</button>
           </div>
           <div class="text-center mt-3">
             <a href="{% url 'dashboard' %}" class="btn btn-warning">Back</a>
@@ -42,7 +42,7 @@
         </form>
       </div>
     </div>
-    <div class="col-md-8 mb-4">
+    <div class="col-md-8">
       <div class="bg-dark">
         {% include 'components/skills/skills.html' %}
       </div>

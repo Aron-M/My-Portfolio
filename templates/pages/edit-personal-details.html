@@ -7,56 +7,56 @@
       <form method="POST" class="edit" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="text-center mb-4">
-          <h1 class="justify-content-center" style="margin-bottom: 4rem;">Edit Personal Details</h1>
+          <h1 class="justify-content-center">Edit Personal Details</h1>
         </div>
         <div class="row">
           <div class="col-md-5 mb-4">
-            <div style="background-color: rgb(185, 185, 184); padding: 20px;">
-              <div class="form-group" style="margin-bottom: 1rem;">
+            <div class="bg-grey">
+              <div class="form-group mb-4">
                 {{ personal_details_form.profile_image.label_tag }}
                 {{ personal_details_form.profile_image }}
               </div>
-              <div class="form-group" style="margin-bottom: 1rem;">
+              <div class="form-group mb-4">
                 {{ personal_details_form.full_name.label_tag }}
                 {{ personal_details_form.full_name }}
               </div>
-              <div class="form-group" style="margin-bottom: 1rem;">
+              <div class="form-group mb-4">
                 {{ personal_details_form.nationality.label_tag }}
                 {{ personal_details_form.nationality }}
               </div>
-              <div class="form-group" style="margin-bottom: 1rem;">
+              <div class="form-group mb-4">
                 {{ personal_details_form.flag_nationality.label_tag }}
                 {{ personal_details_form.flag_nationality }}
               </div>
-              <div class="form-group" style="margin-bottom: 1rem;">
+              <div class="form-group mb-4">
                 {{ personal_details_form.residency.label_tag }}
                 {{ personal_details_form.residency }}
               </div>
-              <div class="form-group" style="margin-bottom: 1rem;">
+              <div class="form-group mb-4">
                 {{ personal_details_form.flag_residency.label_tag }}
                 {{ personal_details_form.flag_residency }}
               </div>
-              <div class="form-group" style="margin-bottom: 1rem;">
+              <div class="form-group mb-4">
                 {{ personal_details_form.languages.label_tag }}
                 {{ personal_details_form.languages }}
               </div>
-              <div class="form-group" style="margin-bottom: 1rem;">
+              <div class="form-group mb-4">
                 {{ personal_details_form.studying.label_tag }}
                 {{ personal_details_form.studying }}
               </div>
-              <div class="form-group" style="margin-bottom: 4rem;">
+              <div class="form-group mb-4">
                 {{ personal_details_form.study_icon.label_tag }}
                 {{ personal_details_form.study_icon }}
               </div>
-              <div class="form-group" style="margin-bottom: 4rem;">
+              <div class="form-group mb-4">
                 {{ personal_details_form.paragraph_1.label_tag }}
                 {{ personal_details_form.paragraph_1 }}
               </div>
-              <div class="form-group" style="margin-bottom: 4rem;">
+              <div class="form-group mb-4">
                 {{ personal_details_form.paragraph_2.label_tag }}
                 {{ personal_details_form.paragraph_2 }}
               </div>
-              <div class="form-group" style="margin-bottom: 4rem;">
+              <div class="form-group mb-4">
                 {{ personal_details_form.paragraph_3.label_tag }}
                 {{ personal_details_form.paragraph_3 }}
               </div>

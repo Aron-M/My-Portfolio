@@ -19,6 +19,12 @@ a,
   color: #f7f6f6;
 }
 
+.text-center {
+  color: #0e0e0e;
+  margin-bottom: 3rem;
+  
+}
+
 .header-container-blue {
   padding-top: 5rem !important;
   padding-bottom: 5rem !important;
@@ -246,12 +252,6 @@ a,
   box-sizing: content-box;
   padding: 0.5rem;
   
-}
-
-.text-center {
-  color: #f7f6f6;
-  margin-bottom: 3rem;
-  ;
 }
 
 .display-4 {

@@ -24,9 +24,9 @@
               </div>
               <div class="text-center mt-auto">
                 {% if user.is_authenticated %}
-                  <a href="{% url 'edit-headings' %}" class="btn btn-primary edit-button">Edit</a>
+                  <a href="{% url 'edit-headings' %}" class="btn btn-primary edit-button">Edit Heading</a>
                 {% else %}
-                  <a href="{% url 'account_login' %}?next={% url 'edit-headings' %}" class="btn btn-primary edit-button">Edit</a>
+                  <a href="{% url 'account_login' %}?next={% url 'edit-headings' %}" class="btn btn-primary edit-button">Edit Heading</a>
                 {% endif %}
               </div>
             </div>
@@ -43,7 +43,7 @@
               <div class="text-center mt-auto">
                 {% if user.is_authenticated %}
                   <div class="d-flex justify-content-between">
-                    <a href="{% url 'edit-skills' 29 %}" class="nav-link btn btn-primary">Edit</a>
+                    <a href="{% url 'edit-skills' 29 %}" class="nav-link btn btn-primary">Edit Skills</a>
                     <div style="margin-left: 0.5rem;"></div>
                     <a href="{% url 'add-skill' %}" class="nav-link btn btn-success">Add Skill</a>
                     <div style="margin-left: 0.5rem;"></div>
@@ -51,7 +51,7 @@
                   </div>
                 {% else %}
                   <div class="d-flex justify-content-between">
-                    <a href="{% url 'account_login' %}?next={% url 'edit-skills' 29 %}" class="nav-link btn btn-primary">Edit</a>
+                    <a href="{% url 'account_login' %}?next={% url 'edit-skills' 29 %}" class="nav-link btn btn-primary">Edit Skills</a>
                     <div style="margin-left: 0.5rem;"></div>
                     <a href="{% url 'account_login' %}?next={% url 'add-skill' %}" class="nav-link btn btn-success">Add Skill</a>
                     <div style="margin-left: 0.5rem;"></div>
@@ -75,7 +75,7 @@
               <div class="text-center mt-auto">
                 {% if user.is_authenticated %}
                   <div class="d-flex justify-content-between">
-                    <a href="{% url 'edit-projects' 52 %}" class="nav-link btn btn-primary">Edit</a>
+                    <a href="{% url 'edit-projects' 52 %}" class="nav-link btn btn-primary">Edit Projects</a>
                     <div style="margin-left: 0.5rem;"></div>
                     <a href="{% url 'add-project' %}" class="nav-link btn btn-success">Add Project</a>
                     <div style="margin-left: 0.5rem;"></div>
@@ -83,7 +83,7 @@
                   </div>
                 {% else %}
                   <div class="d-flex justify-content-between">
-                    <a href="{% url 'account_login' %}?next={% url 'edit-projects' 52 %}" class="nav-link btn btn-primary">Edit</a>
+                    <a href="{% url 'account_login' %}?next={% url 'edit-projects' 52 %}" class="nav-link btn btn-primary">Edit Projects</a>
                     <div style="margin-left: 0.5rem;"></div>
                     <a href="{% url 'account_login' %}?next={% url 'add-project' %}" class="nav-link btn btn-success">Add Project</a>
                     <div style="margin-left: 0.5rem;"></div>
@@ -104,9 +104,9 @@
               </div>
               <div class="text-center mt-auto">
                 {% if user.is_authenticated %}
-                  <a href="{% url 'edit-personal-details' %}" class="btn btn-primary edit-button">Edit</a>
+                  <a href="{% url 'edit-personal-details' %}" class="btn btn-primary edit-button">Edit Details</a>
                 {% else %}
-                  <a href="{% url 'account_login' %}?next={% url 'edit-personal-details' %}" class="btn btn-primary edit-button">Edit</a>
+                  <a href="{% url 'account_login' %}?next={% url 'edit-personal-details' %}" class="btn btn-primary edit-button">Edit Details</a>
                 {% endif %}
               </div>
             </div>
