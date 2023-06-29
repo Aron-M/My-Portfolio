@@ -9,12 +9,12 @@ let avatarImage = document.getElementById("avatar-img");
 let modalImage = document.getElementById("modal-image");
 let modalText = document.getElementById("modal-text");
 let modalTitle = document.querySelector("#modal-box h2");
-let modalBox = document.getElementById("modal-box")
+let modalContent = document.getElementById("modal-display-content")
 
 // Function to open the modal and display the content with fade-in effect
 function openModal(imageSrc, textContent, titleContent) {
   modalDiv.style.display = "block";
-  modalBox.classList.add("fade-in");
+  modalContent.classList.add("fade-in");
   closeButton.style.display = "block";
   modalImage.src = imageSrc;
   modalImage.classList.remove("fade-in"); 
