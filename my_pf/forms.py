@@ -37,4 +37,4 @@ class SkillIconForm(forms.Form):
 class ProjectForm(forms.ModelForm):
     class Meta:
         model = Project
-        fields = ['name', 'image', 'description', 'extra_info', 'github_url']
+        fields = ['name', 'image', 'description', 'extra_info', 'live_site', 'github_url']
