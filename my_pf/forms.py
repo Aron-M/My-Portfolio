@@ -18,6 +18,7 @@ class HeadingsForm(forms.ModelForm):
             'par2': forms.Textarea(attrs={'rows': 3, 'cols': 60}),
             'par3': forms.Textarea(attrs={'rows': 3, 'cols': 60}),
             'par4': forms.Textarea(attrs={'rows': 3, 'cols': 60}),
+            'par5': forms.Textarea(attrs={'rows': 3, 'cols': 60}),
         }
 
     def __init__(self, *args, **kwargs):

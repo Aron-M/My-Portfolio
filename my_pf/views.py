@@ -41,7 +41,7 @@ def display_all(request):
 @redirect_if_not_admin
 def dashboard_view(request):
     skills = Skills.objects.all()
-    skill = get_object_or_404(Skills, id=5)
+    skill = get_object_or_404(Skills, id=29)
     project = get_object_or_404(Project, id=52)
     context = {
         'skill': skill, 'project': project, 'skills': skills
@@ -93,6 +93,43 @@ def display_edit_headings(request):
     return render(request, 'pages/edit-headings.html', context)
 
 
+def add_skill(request):
+    skills = Skills.objects.all()
+    skills_form = SkillsForm()
+    category = SkillCategory.objects.all()
+    if request.method == 'POST':
+        skills_form = SkillsForm(request.POST)
+        if skills_form.is_valid():
+            skills_form.save()
+            return redirect('add-skill')
+    else:
+        context = {
+            'skills': skills,
+            'skills_form': skills_form,
+            'category': category
+        }
+        return render(request, 'pages/add-skill.html', context)
+
+
+def add_project(request):
+    if request.method == 'POST':
+        project_form = ProjectForm(request.POST)
+        if project_form.is_valid():
+            project = project_form.save(commit=False)
+            project.image = request.FILES['image']
+            project.save()
+            return redirect('add-project')
+    else:
+        project_form = ProjectForm()
+
+    projects = Project.objects.all()
+    context = {
+        'projects': projects,
+        'project_form': project_form
+    }
+    return render(request, 'pages/add-project.html', context)
+
+
 def display_edit_skills(request, skill_id):
     skill = get_object_or_404(Skills, id=skill_id)
     skills_form = SkillsForm(instance=skill)
@@ -126,7 +163,7 @@ def delete_skill(request, skill_id):
 
     if request.method == 'POST':
         skill.delete()
-        return redirect('home')
+        return redirect('delete-skill')
 
     context = {
         'skill': skill,
@@ -167,7 +204,7 @@ def delete_project(request, project_id):
 
     if request.method == 'POST':
         project.delete()
-        return redirect('home')
+        return redirect('delete-project')
 
     context = {
         'project': project,
@@ -175,44 +212,6 @@ def delete_project(request, project_id):
         'project_form': project_form,
     }
     return render(request, 'pages/delete-project.html', context)
-
-
-def add_skill(request):
-    skills = Skills.objects.all()
-    skills_form = SkillsForm()
-    category = SkillCategory.objects.all()
-    if request.method == 'POST':
-        skills_form = SkillsForm(request.POST)
-        if skills_form.is_valid():
-            skills_form.save()
-            return redirect('add-skill')
-    else:
-        context = {
-            'skills': skills,
-            'skills_form': skills_form,
-            'category': category
-        }
-        return render(request, 'pages/add-skill.html', context)
-
-
-def add_project(request):
-    if request.method == 'POST':
-        project_form = ProjectForm(request.POST)
-        projects = Project.objects.all()
-        if project_form.is_valid():
-            project = project_form.save(commit=False)
-            project.image = request.FILES['image']
-            project.save()
-            return redirect('add-project')
-    else:
-        project_form = ProjectForm()
-
-    projects = Project.objects.all()
-    context = {
-        'projects': projects,
-        'project_form': project_form
-    }
-    return render(request, 'pages/add-project.html', context)
 
 
 

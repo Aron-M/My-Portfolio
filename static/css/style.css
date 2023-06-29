@@ -42,6 +42,10 @@ a,
   background-color: #292c31;
 }
 
+.navbar-brand {
+  color: #f7f6f6;
+}
+
 .btn-purple {
   background-color:#0d6efd;
 }
@@ -58,17 +62,18 @@ a,
   margin-bottom: 3rem;
 }
 
-.heading {
+.big-header {
   display: flex;
   justify-content: center;
   font-size: 4rem;
 }
 
-.subheading {
+.sub-header {
   display: flex;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #f7f6f6;
+  margin-bottom: 3rem;
 }
 
 
@@ -89,7 +94,7 @@ a,
 
 
 .intro-par-1 {
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin-top: 5rem !important;
 }
 
@@ -98,7 +103,7 @@ a,
 }
 
 .intro-par-2 {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 
@@ -114,7 +119,7 @@ a,
 }
 
 .status-text {
- font-size: 0.8rem;
+ font-size: 0.9rem;
  max-width: 10rem;
  text-align: center;
 }
@@ -190,7 +195,7 @@ a,
 .skills-container {
   padding-bottom: 0 !important;
   padding-top: 0 !important;
-  transform: scale(0.95);
+  /* transform: scale(0.95); */
 }
 
 .model-title {
@@ -261,11 +266,14 @@ a,
 }
 
 .modal-content {
+  background-color: #f7f6f6;
   position: relative;
   height:fit-content;
+  border-radius: 0.4rem;
 }
 
 .modal-close-button {
+  color:#292c31;
   display: block;
   position: absolute !important;
   top: 10px;
@@ -273,12 +281,6 @@ a,
   cursor: pointer;
   font-weight: bold;
   font-size: 1.5rem;
-}
-
-#modal-text {
-  color: black;
-  padding: 0.5rem;
-  margin-bottom: 0 !important;
 }
 
 .modal-image-inside {
@@ -303,10 +305,13 @@ a,
     align-items: center;
     justify-content: center;
     font-size: 0.9rem;
+    margin-bottom: 0 !important;
     padding: 0.8rem;
+    color:#292c31;
 }
 
 #modal-title {
+  color: #292c31;
   font-size: 3rem;
   margin-top: 2rem;
 }
