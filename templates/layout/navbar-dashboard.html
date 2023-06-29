@@ -7,18 +7,12 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'account_login' %}">Log In</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'account_logout' %}">Log Out</a>
-          </li>
+        <ul class="navbar-nav ms-auto">>
           <li class="nav-item">
             <a class="nav-link btn btn-warning" href="{% url 'home' %}">Back to Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-danger ml-3" href="{% url 'account_logout' %}">Log Out</a>
           </li>
         </ul>
       </div>
