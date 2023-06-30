@@ -27,6 +27,7 @@
     - [User Stories](#user-stories)
     - [Website Goals](#website-goals)
     - [Requirements](#requirements)
+    - [Features](#features)
     - [Expectations](#expectations)
     - [Design](#design)
     - [Wireframes](#wireframes)
@@ -150,9 +151,11 @@ This webpage aims to serve as an informational web application to showcase perso
 
 ## Design
 
-This site was designed mainly by making use of bootstrap. I downloaded a specific template from [Bootswatch.com](https://bootswatch.com/) called 'Superhero.
+This site was designed mainly by making use of bootstrap. I downloaded a specific template from [Bootswatch.com](https://bootswatch.com/) called 'Superhero'.
+<br>
 
-Colors schema for this site is blue, white and dark grey.
+Colors schema for this site is blue, white and dark grey, with buttons in the 'admin-pages' ranging between blue, yellow, green and red.
+<br>
 
 # Data Structure
 
@@ -334,6 +337,9 @@ ABOUT ME | PC | TABLET | PHONE
 
 ## ADMIN DASHBOARD (FOR ADMINISTRATORS)
 <br>
+-  <b>IMPORTANT NOTICE</b> : I have made a very active decision, for security purposes, not to display any login features or include the below-mentioned 'Admin Dashboard' button to be seen by any public users. This site was specifically made only for me as the administrator (or anyone who I give authority) to have access to the admin-dashboard. Public users should not be able to explore/view front-end admin access in order to minimize risk of malicious behaviour.
+
+<br>
 
 - For those who have authorisation/access to the administrative panel of this page, where all front-end modification occurs, an 'Admin Dashboard button will appear in the top-navbar once logged into the Django Admin panel.
 <br>
@@ -342,7 +348,9 @@ ABOUT ME | PC | TABLET | PHONE
 <br>
 
 - Once the admin is logged in from there, a blue 'Admin Dashboard button will appear which gives them access to the dashboard. when they redirect to the front end.
+
 <br>
+
 <details>
   <summary>Public User --> Django Admin Login --> Admin-Access</summary>
 
@@ -721,6 +729,9 @@ https://........herokuapp.com/accounts/login/
     - [SimpliCode](https://www.youtube.com/watch?v=27aMG1e5CIQ) for assistance in fading images in.
     - [CodeEntrepeneurs](https://www.youtube.com/playlist?list=PLEsfXFp6DpzRMby_cSoWTFw8zaMdTEXgL) 'TryDjango' tutorials 30 to 39 for extra guidance on how to create views and urls.
     <br>
+<br>
+
+- [Bootswatch.com](https://bootswatch.com/) for use of 'SuperHero' template.
 <br>
 
 - [Flaticon](https://www.flaticon.com/search?author_id=1&style_id=136&type=standard&word=student) for use of icons

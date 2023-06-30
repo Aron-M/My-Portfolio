@@ -24,18 +24,22 @@ from allauth.account import views as allauth_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.display_all, name='all'),
+    path('dashboard/', views.dashboard_view, name='dashboard'),
+    path('accounts/', include('allauth.urls')),
+    path('home/', views.display_all, name='home'),
     path('edit-personal-details/', views.display_edit_personal_details, name='edit-personal-details'),
     path('me-irl/', views.display_me_irl, name='me-irl'),
     path('edit-headings/', views.display_edit_headings, name='edit-headings'),
-    path('delete-skill/<skill_id>/', views.delete_skill, name='delete-skill'),
-    path('edit-skills/<skill_id>/', views.display_edit_skills, name='edit-skills'),
-    path('delete-project/<project_id>/', views.delete_project, name='delete-project'),
-    path('edit-projects/<project_id>/', views.display_edit_projects, name='edit-projects'),
-    path('add-skill/', views.add_skill, name='add-skill'),
     path('add-project/', views.add_project, name='add-project'),
-    path('dashboard/', views.dashboard_view, name='dashboard'),
-    path('accounts/', include('allauth.urls')),
-    path('home/', views.display_all, name='home')
-    
+    path('add-skill/', views.add_skill, name='add-skill'),
+    path('edit-skills/', views.display_edit_skills, name='edit-skills'),
+    path('edit-skills/<skill_id>/', views.display_edit_skills, name='edit-skills'),
+    path('delete-skill/', views.delete_skill, name='delete-skill'),
+    path('delete-skill/<skill_id>/', views.delete_skill, name='delete-skill'),
+    path('edit-projects/', views.display_edit_projects, name='edit-projects'),
+    path('edit-projects/<project_id>/', views.display_edit_projects, name='edit-projects'),
+    path('delete-project/', views.delete_project, name='delete-project'),
+    path('delete-project/<project_id>/', views.delete_project, name='delete-project')
+
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

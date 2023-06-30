@@ -41,12 +41,13 @@ def display_all(request):
 @redirect_if_not_admin
 def dashboard_view(request):
     skills = Skills.objects.all()
-    skill = get_object_or_404(Skills, id=29)
-    project = get_object_or_404(Project, id=52)
+    project = Project.objects.all()
     context = {
-        'skill': skill, 'project': project, 'skills': skills
+        'project': project, 'skills': skills
     }
+
     return render(request, 'pages/dashboard.html')
+
 
 def display_edit_personal_details(request):
     detail = get_object_or_404(PersonalDetails)
@@ -130,24 +131,35 @@ def add_project(request):
     return render(request, 'pages/add-project.html', context)
 
 
-def display_edit_skills(request, skill_id):
-    skill = get_object_or_404(Skills, id=skill_id)
-    skills_form = SkillsForm(instance=skill)
+def display_edit_skills(request, skill_id=None):
     skills = Skills.objects.all()
     category = SkillCategory.objects.all()
     
+    if skill_id:
+        skill = get_object_or_404(Skills, id=skill_id)
+        skills_form = SkillsForm(instance=skill)
+    else:
+        skills_form = SkillsForm()
+    
     if request.method == 'POST':
-        skills = Skills.objects.all()
-        skills_form = SkillsForm(request.POST, request.FILES, instance=skill)
+        if skill_id:
+            skill = get_object_or_404(Skills, id=skill_id)
+            skills_form = SkillsForm(request.POST, request.FILES, instance=skill)
+        else:
+            skills_form = SkillsForm(request.POST, request.FILES)
+        
         if skills_form.is_valid():
             skills_form.save()
             messages.success(request, 'Skills updated successfully.')
-            return redirect('edit-skills', skill_id=skill.id)
+            if skill_id:
+                return redirect('edit-skills', skill_id=skill.id)
+            else:
+                return redirect('edit-skills')
         else:
             messages.error(request, 'Error updating skills.')
     
     context = {
-        'skill': skill,
+        'skill': skill if skill_id else None,
         'skills_form': skills_form,
         'category': category,
         'skills': skills
@@ -155,18 +167,23 @@ def display_edit_skills(request, skill_id):
     return render(request, 'pages/edit-skills.html', context)
 
 
-def delete_skill(request, skill_id):
-    skill = get_object_or_404(Skills, id=skill_id)
-    skills_form = SkillsForm(instance=skill)
+def delete_skill(request, skill_id=None):
     skills = Skills.objects.all()
     category = SkillCategory.objects.all()
 
-    if request.method == 'POST':
-        skill.delete()
-        return redirect('delete-skill')
+    if skill_id:
+        skill = get_object_or_404(Skills, id=skill_id)
+        skills_form = SkillsForm(instance=skill)
+    else:
+        skills_form = SkillsForm()
 
+    if request.method == 'POST':
+        if skill_id:
+            skill.delete()
+            return redirect('delete-skill')
+    
     context = {
-        'skill': skill,
+        'skill': skill if skill_id else None,
         'skills_form': skills_form,
         'category': category,
         'skills': skills
@@ -174,12 +191,14 @@ def delete_skill(request, skill_id):
     return render(request, 'pages/delete-skill.html', context)
 
 
-
-
-def display_edit_projects(request, project_id):
-    project = get_object_or_404(Project, id=project_id)
-    project_form = ProjectForm(instance=project)
+def display_edit_projects(request, project_id=None):
     projects = Project.objects.all()
+
+    if project_id:
+        project = get_object_or_404(Project, id=project_id)
+        project_form = ProjectForm(instance=project)
+    else:
+        project_form = ProjectForm()
 
     if request.method == 'POST':
         project_form = ProjectForm(request.POST, request.FILES, instance=project)
@@ -187,31 +206,37 @@ def display_edit_projects(request, project_id):
             project_form.save()
             return redirect('edit-projects', project_id=project.id)
         else:
-            messages.error(request, 'Error updating skills.')
+            messages.error(request, 'Error updating projects.')
 
     context = {
         'projects': projects,
         'project_form': project_form,
-        'project': project
+        'project': project if project_id else None,
     }
     return render(request, 'pages/edit-projects.html', context)
 
 
-def delete_project(request, project_id):
-    project = get_object_or_404(Project, id=project_id)
-    project_form = ProjectForm(instance=project)
+def delete_project(request, project_id=None):
     projects = Project.objects.all()
 
-    if request.method == 'POST':
-        project.delete()
-        return redirect('delete-project')
+    if project_id:
+        project = get_object_or_404(Project, id=project_id)
+        project_form = ProjectForm(instance=project)
+    else:
+        project_form = ProjectForm()
 
+    if request.method == 'POST':
+        if project_id:
+            project.delete()
+            return redirect('delete-project')
+    
     context = {
-        'project': project,
+        'project': project if project_id else None,
         'projects': projects,
         'project_form': project_form,
     }
     return render(request, 'pages/delete-project.html', context)
+
 
 
 
