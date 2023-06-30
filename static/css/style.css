@@ -543,6 +543,14 @@ a,
 }
 
 
+@media (min-width: 575px) and (max-width: 990px) {
+
+  .project-card {
+    width: 15rem !important;
+  }
+
+}
+
 @media (min-width: 600px) and (max-width: 769px) {
 
 .skills-container { 
@@ -550,13 +558,20 @@ a,
 }
 
 .icon-section {
-  max-width: 18rem;
+  width: 18rem;
+  margin-right: 5vw;
 }
 
 .modal-section {
   max-width: 50vw;
   display: flex;
   justify-content: flex-end;
+}
+
+.project-card {
+  width: 13rem !important;
+}
+
 }
 
 
@@ -592,7 +607,7 @@ a,
 @media (min-width: 840px) and (max-width: 990px) {
 
 .project-card {
-  width:15rem;
+  width:15rem !important;
 }
   
 }
@@ -601,7 +616,7 @@ a,
 @media (min-width: 990px) and (max-width: 1200px) {
 
 .project-card {
-  width: 15rem;
+  width: 15rem !important;
 }
   
 }
