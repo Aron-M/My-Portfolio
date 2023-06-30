@@ -114,7 +114,7 @@ a,
 
 
 .status-images {
-  max-width: 4rem;
+  width: 4rem;
   height:auto;
   display: flex;
   justify-content: center;
@@ -125,7 +125,7 @@ a,
 }
 
 .status-text {
- font-size: 0.9rem;
+ font-size: 1rem;
  max-width: 10rem;
  text-align: center;
 }
@@ -141,7 +141,12 @@ a,
   justify-content: center;
   align-items: center;
   justify-items: center;
-  max-width: 5rem;
+  width: 5rem;
+  height:2.7rem;
+}
+
+.ireland-flag { 
+  height: 5rem;
 }
 
 .status-container {
@@ -537,10 +542,68 @@ a,
 
 }
 
+
+@media (min-width: 600px) and (max-width: 769px) {
+
+.skills-container { 
+  max-width: 920px;
+}
+
+.icon-section {
+  max-width: 18rem;
+}
+
+.modal-section {
+  max-width: 50vw;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
 @media (min-width: 769px) and (max-width: 990px) {
 
   .prof-pic {
-    margin-right: 1.5rem;
+    margin-right: 1rem;
   }
+
+  .skills-container { 
+    max-width: 920px;
+  }
+
+  .project-card {
+    width: 38vw;
+  }
+
+  .project-card {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .card-text {
+    font-size: large;
+  }
+
+  .card-title {
+    font-size: larger;
+  }
+  
+}
+
+
+@media (min-width: 840px) and (max-width: 990px) {
+
+.project-card {
+  width:15rem;
+}
+  
+}
+
+
+@media (min-width: 990px) and (max-width: 1200px) {
+
+.project-card {
+  width: 15rem;
+}
   
 }
