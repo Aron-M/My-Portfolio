@@ -73,7 +73,6 @@ def display_edit_personal_details(request):
 
 
 def display_edit_headings(request):
-    print("display_edit_firing")
     all_headings = Headings.objects.all()
     heading = get_object_or_404(Headings)
 
