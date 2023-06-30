@@ -570,11 +570,9 @@ a,
     max-width: 920px;
   }
 
-  .project-card {
-    width: 38vw;
-  }
 
   .project-card {
+    width: 15rem;
     display: flex;
     justify-items: center;
     align-items: center;
