@@ -38,7 +38,7 @@ class Headings(models.Model):
 
 class Project(models.Model):
     name = models.CharField(max_length=200)
-    image = CloudinaryField('image', null=True, blank=True)
+    image = CloudinaryField(max_length=200, null=True, blank=True)
     description = models.CharField(max_length=200)
     live_site = models.URLField()
     github_url = models.URLField()
